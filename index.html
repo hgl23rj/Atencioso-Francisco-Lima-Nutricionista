@@ -13,6 +13,8 @@
             --bg-light: #f4f6f0;       /* Off-white natural */
             --text-dark: #2b2d42;      /* Cinza escuro para leitura confortável */
             --white: #ffffff;
+            /* Cor de fundo translúcida para os cartões (85% de opacidade) */
+            --card-bg-translucent: rgba(255, 255, 255, 0.85); 
             --whatsapp-green: #25d366; /* Verde oficial WhatsApp */
         }
 
@@ -23,14 +25,21 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
+        /* PLANO DE FUNDO COM TRANSPARÊNCIA LEVE (60%) PARA A PLANTA APARECER MAIS */
         body {
             background-color: var(--bg-light);
+            background-image: linear-gradient(rgba(244, 246, 240, 0.60), rgba(244, 246, 240, 0.60)), 
+                              url('https://i.imgur.com/QW87UrX.jpeg');
+            background-position: center;
+            background-size: cover;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
             color: var(--text-dark);
             line-height: 1.6;
         }
 
         header {
-            background-color: var(--primary);
+            background-color: rgba(45, 90, 39, 0.92); /* Cabeçalho levemente translúcido */
             color: var(--white);
             padding: 2.5rem 1rem;
             text-align: center;
@@ -55,11 +64,12 @@
 
         /* --- CARTÃO DE APRESENTAÇÃO PESSOAL --- */
         .profile-card {
-            background: var(--white);
+            background: var(--card-bg-translucent);
+            backdrop-filter: blur(4px); /* Suaviza o fundo atrás da caixa */
             border-radius: 12px;
             padding: 2rem;
             margin-bottom: 3rem;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
             display: flex;
             align-items: center;
             gap: 2rem;
@@ -87,7 +97,7 @@
 
         .profile-badge {
             display: inline-block;
-            background-color: #e8f0e6;
+            background-color: rgba(232, 240, 230, 0.9);
             color: var(--primary);
             font-size: 0.95rem;
             font-weight: 600;
@@ -99,7 +109,7 @@
         .profile-crn {
             display: block;
             font-size: 0.9rem;
-            color: #666;
+            color: #444;
             font-weight: bold;
             margin-top: -0.5rem;
             margin-bottom: 1rem;
@@ -107,18 +117,19 @@
 
         .profile-bio p {
             font-size: 1.05rem;
-            color: #444;
+            color: #2b2d42;
             line-height: 1.7;
         }
 
         /* --- SEÇÃO DEDICADA À FITOTERAPIA & FÓRMULAS --- */
         .fitoterapia-section {
-            background-color: var(--white);
+            background-color: var(--card-bg-translucent);
+            backdrop-filter: blur(4px);
             border-left: 6px solid var(--primary-light);
             border-radius: 8px;
             padding: 2rem;
             margin-bottom: 3rem;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.08);
         }
 
         .fitoterapia-section h2 {
@@ -135,10 +146,10 @@
         }
 
         .therapy-item {
-            background: var(--bg-light);
+            background: rgba(244, 246, 240, 0.75);
             padding: 1.2rem;
             border-radius: 8px;
-            border: 1px solid #e2e8dc;
+            border: 1px solid rgba(226, 232, 220, 0.8);
         }
 
         .therapy-item h4 {
@@ -149,7 +160,7 @@
 
         .therapy-item p {
             font-size: 0.95rem;
-            color: #555;
+            color: #333;
             font-style: normal;
         }
 
@@ -218,6 +229,11 @@
             color: var(--primary);
             margin-bottom: 2rem;
             font-size: 2rem;
+            background: rgba(255, 255, 255, 0.6);
+            display: inline-block;
+            padding: 0.3rem 1.5rem;
+            border-radius: 30px;
+            width: 100%;
         }
 
         .grid-2 {
@@ -228,10 +244,11 @@
         }
 
         .card {
-            background: var(--white);
+            background: var(--card-bg-translucent);
+            backdrop-filter: blur(4px);
             padding: 2rem;
             border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.08);
             border-top: 4px solid var(--primary-light);
         }
 
@@ -265,10 +282,11 @@
 
         /* --- FORMULÁRIO DE CONTATO / TRIAGEM --- */
         .contact-section {
-            background: var(--white);
+            background: var(--card-bg-translucent);
+            backdrop-filter: blur(4px);
             padding: 2.5rem;
             border-radius: 12px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
         }
 
         .contact-section h2 {
@@ -295,6 +313,7 @@
             border: 1px solid #ccc;
             border-radius: 6px;
             font-size: 1rem;
+            background: rgba(255, 255, 255, 0.9);
         }
 
         .btn-submit {
@@ -346,7 +365,7 @@
         footer {
             text-align: center;
             padding: 2rem;
-            background: var(--primary);
+            background: rgba(45, 90, 39, 0.95);
             color: var(--white);
             margin-top: 3rem;
             font-size: 0.9rem;
@@ -392,7 +411,7 @@
         <!-- Destaque Fitoterapia & Fórmulas Magistrais -->
         <section class="fitoterapia-section">
             <h2>🌿 Terapias Naturais & Fórmulas Personalizadas</h2>
-            <p style="font-style: italic; color: #444; margin-bottom: 1.5rem;">
+            <p style="font-style: italic; color: #333; margin-bottom: 1.5rem;">
                 "A verdadeira cura vem do equilíbrio. Unimos o cuidado nutricional com estratégias fitoterápicas sob medida para acalmar a mente e restaurar a energia vital do organismo."
             </p>
 
@@ -444,7 +463,9 @@
         </section>
 
         <!-- Serviços Clínicos -->
-        <h2 class="services-title">Como Posso Te Ajudar</h2>
+        <div style="text-align: center;">
+            <h2 class="services-title">Como Posso Te Ajudar</h2>
+        </div>
         
         <div class="grid-2">
             <!-- Atendimentos Clínicos -->
@@ -470,42 +491,45 @@
             </div>
         </div>
 
-        <!-- Formulário de Triagem Inicial Enviando Direto pro WhatsApp -->
+        <!-- Formulário de Triagem Inicial Enviando Direto pro E-mail -->
         <section class="contact-section">
             <h2>Dê o Primeiro Passo</h2>
-            <p style="text-align: center; margin-bottom: 1.5rem; color: #666;">
+            <p style="text-align: center; margin-bottom: 1.5rem; color: #555;">
                 Conte-me um pouco sobre você para que eu possa orientar seu atendimento da melhor forma.
             </p>
 
-            <form onsubmit="
-                event.preventDefault();
-                const nome = document.getElementById('nome').value;
-                const objetivo = document.getElementById('objetivo').value;
-                const mensagem = document.getElementById('mensagem').value;
-                const texto = `Olá Dr. Francisco! Meu nome é ${nome}.\nMeu objetivo: ${objetivo}.\n\nDetalhes: ${mensagem}`;
-                window.open(`https://wa.me/5521986807805?text=${encodeURIComponent(texto)}`, '_blank');
-            ">
+            <form action="https://formsubmit.co/limadepaula470@gmail.com" method="POST">
+                <!-- Campos ocultos para controle do FormSubmit -->
+                <input type="hidden" name="_subject" value="Novo contato do site - Dr. Francisco">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_template" value="table">
+
                 <div class="form-group">
                     <label for="nome">Seu Nome:</label>
-                    <input type="text" id="nome" required placeholder="Digite seu nome completo">
+                    <input type="text" id="nome" name="Nome" required placeholder="Digite seu nome completo">
+                </div>
+
+                <div class="form-group">
+                    <label for="contato">Contato:</label>
+                    <input type="text" id="contato" name="Contato" required placeholder="deixe seu contato por email ou whatsapp.">
                 </div>
 
                 <div class="form-group">
                     <label for="objetivo">Qual é o seu principal objetivo no momento?</label>
-                    <select id="objetivo" required>
+                    <select id="objetivo" name="Objetivo Principal" required>
                         <option value="">Selecione uma opção...</option>
-                        <option value="digestao">Melhorar a digestão / Cuidado intestinal</option>
-                        <option value="calma">Reduzir estresse / Dicas de Fitoterapia para calma</option>
-                        <option value="energia">Ter mais energia e disposição no dia a dia</option>
-                        <option value="peso">Controle de peso (emagrecimento ou ganho)</option>
-                        <option value="exames">Avaliar exames de sangue / Tratar uma condição específica</option>
-                        <option value="outro">Outro objetivo</option>
+                        <option value="Melhorar a digestão / Cuidado intestinal">Melhorar a digestão / Cuidado intestinal</option>
+                        <option value="Reduzir estresse / Dicas de Fitoterapia para calma">Reduzir estresse / Dicas de Fitoterapia para calma</option>
+                        <option value="Ter mais energia e disposição no dia a dia">Ter mais energia e disposição no dia a dia</option>
+                        <option value="Controle de peso (emagrecimento ou ganho)">Controle de peso (emagrecimento ou ganho)</option>
+                        <option value="Avaliar exames de sangue / Tratar uma condição específica">Avaliar exames de sangue / Tratar uma condição específica</option>
+                        <option value="Outro objetivo">Outro objetivo</option>
                     </select>
                 </div>
 
                 <div class="form-group">
                     <label for="mensagem">Detalhe um pouco mais (opcional):</label>
-                    <textarea id="mensagem" rows="4" placeholder="Conte-me um pouco sobre sua rotina ou o que mais te incomoda hoje..."></textarea>
+                    <textarea id="mensagem" name="Mensagem/Detalhes" rows="4" placeholder="Conte-me um pouco sobre sua rotina ou o que mais te incomoda hoje..."></textarea>
                 </div>
 
                 <button type="submit" class="btn-submit">Enviar e Agendar Orientação</button>
