@@ -2,20 +2,41 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
+<head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dr. Francisco de Paula | Nutrição Integrativa & Fitoterapia</title>
+    <meta name="description" content="Atendimento nutricional especializado em nutrição integrativa, acompanhamento por bioimpedância, suporte no uso de canetas emagrecedoras e fitoterapia.">
+    <!-- SEO Local e Termos-Chave -->
+<meta name="keywords" content="Nutricionista, Bioimpedância, Fitoterapia, Canetas Emagrecedoras, Emagrecimento Saudável, Rio de Janeiro, CRN-4">
+<meta name="author" content="Dr. Francisco de Paula Gonçalves de Lima">
+<meta name="robots" content="index, follow">
+<!-- Open Graph / WhatsApp / Redes Sociais -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://dr-francisco-lima-nutricionista.infinityfree.io/">
+<meta property="og:title" content="Dr. Francisco de Paula | Nutrição Integrativa & Bioimpedância">
+<meta property="og:description" content="Acompanhamento nutricional especializado em emagrecimento, bioimpedância, fitoterapia e suporte no uso de medicamentos.">
+<meta property="og:image" content="https://i.imgur.com/DSku3YK.png">
+    
+    <title>Dr. Francisco de Paula | Nutrição Integrativa & Bioimpedância</title>
+
+    <!-- FAVICON -->
+    <link rel="icon" type="image/png" href="https://i.imgur.com/DSku3YK.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
     <style>
-        /* --- ESTILOS GERAIS E PALETA DE CORES --- */
         :root {
-            --primary: #2d5a27;        /* Verde floresta */
-            --primary-light: #4e8752;  /* Verde folha */
-            --accent: #d4a373;         /* Tom terroso / Canela */
-            --bg-light: #f4f6f0;       /* Off-white natural */
-            --text-dark: #2b2d42;      /* Cinza escuro para leitura confortável */
+            --primary: #2d5a27;
+            --primary-light: #4e8752;
+            --accent: #d4a373;
+            --bg-light: #f4f6f0;
+            --text-dark: #2b2d42;
             --white: #ffffff;
-            /* Cor de fundo translúcida para os cartões (85% de opacidade) */
-            --card-bg-translucent: rgba(255, 255, 255, 0.85); 
-            --whatsapp-green: #25d366; /* Verde oficial WhatsApp */
+            --card-bg: rgba(255, 255, 255, 0.90);
+            --danger-bg: rgba(217, 83, 79, 0.08);
+            --danger-border: #d9534f;
+            --whatsapp-green: #25d366;
         }
 
         * {
@@ -25,21 +46,25 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
-        /* PLANO DE FUNDO COM TRANSPARÊNCIA LEVE (60%) PARA A PLANTA APARECER MAIS */
         body {
             background-color: var(--bg-light);
-            background-image: linear-gradient(rgba(244, 246, 240, 0.60), rgba(244, 246, 240, 0.60)), 
-                              url('https://i.imgur.com/QW87UrX.jpeg');
+            background-image:
+                linear-gradient(
+                    rgba(0, 0, 0, 0.0),
+                    rgba(0, 0, 0, 0.0)
+                ),
+                url('https://i.imgur.com/QW87UrX.jpeg');
             background-position: center;
             background-size: cover;
             background-attachment: fixed;
             background-repeat: no-repeat;
             color: var(--text-dark);
             line-height: 1.6;
+            padding-bottom: 80px;
         }
 
         header {
-            background-color: rgba(45, 90, 39, 0.92); /* Cabeçalho levemente translúcido */
+            background-color: rgba(45, 90, 39, 0.92);
             color: var(--white);
             padding: 2.5rem 1rem;
             text-align: center;
@@ -62,22 +87,21 @@
             padding: 2rem 1rem;
         }
 
-        /* --- CARTÃO DE APRESENTAÇÃO PESSOAL --- */
-        .profile-card {
-            background: var(--card-bg-translucent);
-            backdrop-filter: blur(4px); /* Suaviza o fundo atrás da caixa */
+        .card-box {
+            background: var(--card-bg);
+            backdrop-filter: blur(4px);
             border-radius: 12px;
             padding: 2rem;
-            margin-bottom: 3rem;
+            margin-bottom: 2.5rem;
             box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-            display: flex;
-            align-items: center;
-            gap: 2rem;
             border-top: 5px solid var(--primary);
         }
 
-        .profile-img-container {
-            flex-shrink: 0;
+        /* PERFIL */
+        .profile-card {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
         }
 
         .profile-img {
@@ -115,186 +139,67 @@
             margin-bottom: 1rem;
         }
 
-        .profile-bio p {
-            font-size: 1.05rem;
-            color: #2b2d42;
-            line-height: 1.7;
-        }
-
-        /* --- SEÇÃO DEDICADA À FITOTERAPIA & FÓRMULAS --- */
-        .fitoterapia-section {
-            background-color: var(--card-bg-translucent);
-            backdrop-filter: blur(4px);
-            border-left: 6px solid var(--primary-light);
-            border-radius: 8px;
-            padding: 2rem;
-            margin-bottom: 3rem;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.08);
-        }
-
-        .fitoterapia-section h2 {
+        /* TITULOS DE SEÇÃO */
+        .section-title {
             color: var(--primary);
             font-size: 1.6rem;
-            margin-bottom: 1rem;
-        }
-
-        .therapies-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-            gap: 1.2rem;
-            margin-top: 1.5rem;
-        }
-
-        .therapy-item {
-            background: rgba(244, 246, 240, 0.75);
-            padding: 1.2rem;
-            border-radius: 8px;
-            border: 1px solid rgba(226, 232, 220, 0.8);
-        }
-
-        .therapy-item h4 {
-            color: var(--primary);
-            margin-bottom: 0.5rem;
-            font-size: 1.1rem;
-        }
-
-        .therapy-item p {
-            font-size: 0.95rem;
-            color: #333;
-            font-style: normal;
-        }
-
-        /* --- SEÇÃO INTERATIVA: SELVA & CORPO HUMANO --- */
-        .jungle-section {
-            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
-                        url('http://googleusercontent.com/image_collection/image_retrieval/2024594150050262867_0') center/cover no-repeat;
-            border-radius: 12px;
-            padding: 3rem 1.5rem;
-            color: var(--white);
-            margin-bottom: 3rem;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.15);
-        }
-
-        .jungle-header {
-            text-align: center;
-            margin-bottom: 2rem;
-        }
-
-        .jungle-header h2 {
-            color: #f7d070;
-            font-size: 1.8rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .systems-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 1.5rem;
-            margin-top: 2rem;
-        }
-
-        .system-card {
-            background: rgba(0, 0, 0, 0.4);
-            backdrop-filter: blur(6px);
-            border: 1px solid rgba(255, 255, 255, 0.25);
-            border-radius: 8px;
-            padding: 1.2rem;
-            transition: transform 0.3s ease;
-        }
-
-        .system-card:hover {
-            transform: translateY(-5px);
-            background: rgba(0, 0, 0, 0.55);
-        }
-
-        .system-card h3 {
-            color: #f7d070;
-            margin-bottom: 0.5rem;
-            font-size: 1.2rem;
-        }
-
-        .warning-box {
-            background-color: rgba(0, 0, 0, 0.5);
-            border-left: 4px solid #f7d070;
-            padding: 1.2rem;
-            margin-top: 2rem;
-            border-radius: 4px;
-            font-size: 0.95rem;
-            line-height: 1.6;
-        }
-
-        /* --- SEÇÃO DE SERVIÇOS --- */
-        .services-title {
-            text-align: center;
-            color: var(--primary);
-            margin-bottom: 2rem;
-            font-size: 2rem;
-            background: rgba(255, 255, 255, 0.6);
-            display: inline-block;
-            padding: 0.3rem 1.5rem;
-            border-radius: 30px;
-            width: 100%;
-        }
-
-        .grid-2 {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-bottom: 3rem;
-        }
-
-        .card {
-            background: var(--card-bg-translucent);
-            backdrop-filter: blur(4px);
-            padding: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.08);
-            border-top: 4px solid var(--primary-light);
-        }
-
-        .card h3 {
-            color: var(--primary);
             margin-bottom: 1rem;
             display: flex;
             align-items: center;
             gap: 0.5rem;
         }
 
-        .card ul {
-            list-style: none;
+        /* GRIDS */
+        .grid-2 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
         }
 
-        .card ul li {
-            margin-bottom: 0.8rem;
-            position: relative;
-            padding-left: 1.5rem;
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 1.2rem;
+            margin-top: 1rem;
         }
 
-        .card ul li::before {
-            content: "•";
-            color: var(--primary-light);
-            font-weight: bold;
-            font-size: 1.5rem;
-            position: absolute;
-            left: 0;
-            top: -0.2rem;
+        .item-box {
+            background: rgba(244, 246, 240, 0.75);
+            padding: 1.2rem;
+            border-radius: 8px;
+            border: 1px solid rgba(226, 232, 220, 0.8);
         }
 
-        /* --- FORMULÁRIO DE CONTATO / TRIAGEM --- */
-        .contact-section {
-            background: var(--card-bg-translucent);
-            backdrop-filter: blur(4px);
-            padding: 2.5rem;
-            border-radius: 12px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-        }
-
-        .contact-section h2 {
+        .item-box h4 {
             color: var(--primary);
-            margin-bottom: 1rem;
-            text-align: center;
+            margin-bottom: 0.5rem;
         }
 
+        /* ALERTA */
+        .alert-box {
+            background-color: var(--danger-bg);
+            border-left: 5px solid var(--danger-border);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-top: 1.5rem;
+        }
+
+        .alert-box h4 {
+            color: #a94442;
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .alert-box ul {
+            margin-left: 1.2rem;
+            color: #333;
+        }
+
+        .alert-box li {
+            margin-bottom: 0.4rem;
+        }
+
+        /* FORMULÁRIO */
         .form-group {
             margin-bottom: 1.2rem;
         }
@@ -305,15 +210,15 @@
             font-weight: 600;
         }
 
-        .form-group input, 
-        .form-group select, 
+        .form-group input,
+        .form-group select,
         .form-group textarea {
             width: 100%;
             padding: 0.8rem;
             border: 1px solid #ccc;
             border-radius: 6px;
             font-size: 1rem;
-            background: rgba(255, 255, 255, 0.9);
+            background: rgba(255, 255, 255, 0.95);
         }
 
         .btn-submit {
@@ -332,7 +237,7 @@
             background-color: var(--primary-light);
         }
 
-        /* --- BOTÃO FLUTUANTE WHATSAPP --- */
+        /* WHATSAPP */
         .whatsapp-float {
             position: fixed;
             bottom: 25px;
@@ -348,12 +253,6 @@
             display: flex;
             align-items: center;
             gap: 10px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .whatsapp-float:hover {
-            transform: scale(1.05);
-            box-shadow: 0 6px 16px rgba(0,0,0,0.35);
         }
 
         .whatsapp-icon {
@@ -371,187 +270,225 @@
             font-size: 0.9rem;
         }
 
-        /* Responsividade para celular */
         @media (max-width: 768px) {
             .profile-card {
                 flex-direction: column;
                 text-align: center;
-            }
-            .profile-img {
-                width: 140px;
-                height: 140px;
             }
         }
     </style>
 </head>
 <body>
 
-    <header>
-        <h1>Nutrição Integrativa & Fitoterapia</h1>
-        <p>Caminhos naturais para uma vida mais calma, leve e saudável</p>
-    </header>
+<!-- CABEÇALHO -->
+<header>
+    <h1>Nutrição Integrativa & Bioimpedância Clínica</h1>
+    <p>Acompanhamento de precisão para emagrecimento saudável, preservação muscular e fitoterapia</p>
+</header>
 
-    <div class="container">
+<div class="container">
 
-        <!-- CARTÃO DE APRESENTAÇÃO PESSOAL -->
-        <section class="profile-card">
-            <div class="profile-img-container">
-                <img src="https://i.imgur.com/DSku3YK.png" alt="Dr. Francisco de Paula - Nutricionista" class="profile-img">
-            </div>
-            <div class="profile-bio">
-                <h2>Dr. Francisco de Paula Gonçalves de Lima</h2>
-                <span class="profile-badge">Nutricionista • Pós-Graduando em Fitoterapia</span>
-                <span class="profile-crn">CRN-4: 26101256</span>
-                <p>
-                    Seja bem-vindo(a)! Meu propósito é conectar a ciência da nutrição à sabedoria ancestral da medicina vegetal. Através de um olhar integrativo e personalizado, utilizo a nutrição clínica aliada às plantas medicinais para restabelecer a calma, a saúde intestinal, a vitalidade e o equilíbrio que o seu corpo precisa.
-                </p>
-            </div>
-        </section>
-
-        <!-- Destaque Fitoterapia & Fórmulas Magistrais -->
-        <section class="fitoterapia-section">
-            <h2>🌿 Terapias Naturais & Fórmulas Personalizadas</h2>
-            <p style="font-style: italic; color: #333; margin-bottom: 1.5rem;">
-                "A verdadeira cura vem do equilíbrio. Unimos o cuidado nutricional com estratégias fitoterápicas sob medida para acalmar a mente e restaurar a energia vital do organismo."
-            </p>
-
-            <div class="therapies-grid">
-                <div class="therapy-item">
-                    <h4>🍵 Infusões e Chás Medicinais</h4>
-                    <p>Combinações sinérgicas de ervas para atuar no controle do estresse, ansiedade e melhora da qualidade do sono.</p>
-                </div>
-                <div class="therapy-item">
-                    <h4>🧪 Fórmulas Magistrais</h4>
-                    <p>Prescrição individualizada em cápsulas, tinturas ou gotas com fitoterápicos padronizados para o seu objetivo exato.</p>
-                </div>
-                <div class="therapy-item">
-                    <h4>🌾 Extratos & Bioativos</h4>
-                    <p>Compostos naturais concentrados que auxiliam na modulação intestinal, imunidade e saúde metabólica.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Mapeamento na Selva/Natureza -->
-        <section class="jungle-section">
-            <div class="jungle-header">
-                <h2>Visão Integrativa: O Corpo na Natureza</h2>
-                <p>Assim como o ecossistema natural funciona em perfeita harmonia, seu organismo precisa de equilíbrio entre todos os sistemas.</p>
-            </div>
-
-            <div class="systems-grid">
-                <div class="system-card">
-                    <h3>🌿 Sistema Digestivo</h3>
-                    <p>Avaliação da absorção de nutrientes, saúde intestinal e otimização da digestão.</p>
-                </div>
-                <div class="system-card">
-                    <h3>🧠 Sistema Nervoso</h3>
-                    <p>Mapeamento de estresse, ansiedade e uso de fitoterápicos para indução da calma e sono de qualidade.</p>
-                </div>
-                <div class="system-card">
-                    <h3>🛡️ Sistema Imunológico</h3>
-                    <p>Fortalecimento das defesas naturais através da alimentação e compostos bioativos.</p>
-                </div>
-                <div class="system-card">
-                    <h3>⚖️ Sistema Metabólico</h3>
-                    <p>Leitura de exames de sangue para equilíbrio hormonal e de energia do corpo.</p>
-                </div>
-            </div>
-
-            <div class="warning-box">
-                <strong>📋 Check-up Nutricional e Triagem Médica:</strong> Durante a consulta, realizamos uma triagem profunda de todos os sistemas do seu corpo. Se for identificado qualquer desequilíbrio metabólico ou clínico severo, o acompanhamento será prontamente integrado ou encaminhado para um <strong>médico especialista</strong>.
-            </div>
-        </section>
-
-        <!-- Serviços Clínicos -->
-        <div style="text-align: center;">
-            <h2 class="services-title">Como Posso Te Ajudar</h2>
+    <!-- PERFIL -->
+    <section class="card-box profile-card">
+        <div>
+            <img src="https://i.imgur.com/DSku3YK.png" alt="Dr. Francisco de Paula - Nutricionista" class="profile-img">
         </div>
-        
+
+        <div class="profile-bio">
+            <h2>Dr. Francisco de Paula Gonçalves de Lima</h2>
+            <span class="profile-badge">Nutricionista • Pós-Graduando em Fitoterapia</span>
+            <span class="profile-crn">CRN-4: 26101256</span>
+            <p>
+                Acolhimento clínico alinhado à tecnologia. Meu objetivo é conduzir sua transformação corporal 
+                monitorando exatamente o que o seu corpo perde e ganha, garantindo vitalidade, saúde intestinal 
+                e preservação da massa magra.
+            </p>
+        </div>
+    </section>
+
+    <!-- BIOIMPEDÂNCIA -->
+    <section class="card-box">
+        <h2 class="section-title">📊 Controle de Peso e Massa Muscular por Bioimpedância</h2>
+        <p style="margin-bottom: 1rem;">
+            Subir na balança comum não mostra a realidade da composição corporal. Através da bioimpedância elétrica, mapeamos com precisão a evolução do seu tratamento:
+        </p>
+
+        <div class="grid-3">
+            <div class="item-box">
+                <h4>💪 Preservação de Massa Magra</h4>
+                <p>Garantimos que o emagrecimento aconteça sem perda de tecido muscular, mantendo sua força e taxa metabólica basal elevadas.</p>
+            </div>
+
+            <div class="item-box">
+                <h4>🔥 Redução de Gordura Visceral</h4>
+                <p>Acompanhamento detalhado da gordura profunda que envolve os órgãos internos, crucial para a saúde cardiovascular e metabólica.</p>
+            </div>
+
+            <div class="item-box">
+                <h4>💧 Equilíbrio de Água Corporal</h4>
+                <p>Mapeamento da retenção de líquidos e hidratação celular para ajustar condutas diuréticas fitoterápicas e nutricionais.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CANETAS EMAGRECEDORAS -->
+    <section class="card-box">
+        <h2 class="section-title">💉 Orientação Nutricional para Uso de Canetas Emagrecedoras</h2>
+        <p style="margin-bottom: 1rem;">
+            Medicamentos injetáveis para emagrecimento (como análogos de GLP-1) necessitam de acompanhamento nutricional rigoroso para que os resultados sejam sustentáveis e seguros.
+        </p>
+
         <div class="grid-2">
-            <!-- Atendimentos Clínicos -->
-            <div class="card">
-                <h3>Atendimentos Clínicos</h3>
-                <ul>
-                    <li><strong>Avaliação do corpo:</strong> Medição precisa de peso, composição corporal e porcentagem de gordura.</li>
-                    <li><strong>Plano alimentar personalizado:</strong> Criação de cardápios práticos e realistas para a sua rotina.</li>
-                    <li><strong>Uso de suplementos e fitoterapia:</strong> Indicação das vitaminas e plantas medicinais certas para você.</li>
-                    <li><strong>Cuidado com o intestino:</strong> Estratégias para melhorar a digestão, flora intestinal e bem-estar geral.</li>
-                </ul>
+            <div class="item-box">
+                <h4>🥗 Dieta Estratégica em Uso do Medicamento</h4>
+                <p>Como a medicação reduz drasticamente o apetite e desacelera o esvaziamento gástrico, ajustamos refeições com alta densidade nutritiva, consumo proteico adequado e adequação fitoterápica para amenizar náuseas e constipação.</p>
             </div>
 
-            <!-- Fases e Objetivos -->
-            <div class="card">
-                <h3>Fases & Objetivos</h3>
-                <ul>
-                    <li><strong>Saúde geral:</strong> Prevenção de doenças e estratégias para garantir mais energia no dia a dia.</li>
-                    <li><strong>Fases da vida:</strong> Orientação nutricional dedicada para gestação, pós-parto ou maturidade.</li>
-                    <li><strong>Controle de peso:</strong> Suporte para perda ou ganho de massa muscular de forma saudável.</li>
-                    <li><strong>Análise de exames de sangue:</strong> Leitura detalhada de biomarcadores para ajustar com precisão a sua nutrição.</li>
-                </ul>
+            <div class="item-box">
+                <h4>🛡️ Prevenção do Efeito Sanfona e Sarcopenia</h4>
+                <p>O emagrecimento rápido sem supervisão nutricional pode provocar grande perda de músculos. O plano alimentar aliado à bioimpedância assegura que o peso perdido venha prioritariamente da gordura corporal.</p>
             </div>
         </div>
 
-        <!-- Formulário de Triagem Inicial Enviando Direto pro E-mail -->
-        <section class="contact-section">
-            <h2>Dê o Primeiro Passo</h2>
-            <p style="text-align: center; margin-bottom: 1.5rem; color: #555;">
-                Conte-me um pouco sobre você para que eu possa orientar seu atendimento da melhor forma.
+        <div class="alert-box">
+            <h4>⚠️ Atenção: Riscos do Uso de Canetas sem Prescrição e Acompanhamento Médico</h4>
+            <p style="margin-bottom: 0.5rem; font-weight: 600;">
+                A utilização desses medicamentos sem a devida prescrição de um médico especialista e sem o acompanhamento nutricional adequado traz sérios riscos à saúde:
             </p>
+            <ul>
+                <li><strong>Perda severa de massa muscular (sarcopenia):</strong> Flacidez acentuada e desaceleração permanente do metabolismo.</li>
+                <li><strong>Efeitos colaterais gastrointestinais graves:</strong> Náuseas intensas, vômitos, desidratação e paralisia estomacal (gastroparesia).</li>
+                <li><strong>Efeito rebote acelerado:</strong> Reganho de todo o peso perdido (ou até mais) ao interromper o uso por falta de reeducação alimentar.</li>
+                <li><strong>Riscos pancreáticos e biliares:</strong> Aumento das chances de pancreatite e cálculos na vesícula devido à perda rápida de peso sem suporte clínico.</li>
+            </ul>
+        </div>
+    </section>
 
-            <form action="https://formsubmit.co/depaulalima958@gmail.com" method="POST">
-                <!-- Campos ocultos para controle do FormSubmit -->
-                <input type="hidden" name="_subject" value="Novo contato do site - Dr. Francisco">
-                <input type="hidden" name="_captcha" value="false">
-                <input type="hidden" name="_template" value="table">
+    <!-- FITOTERAPIA -->
+    <section class="card-box">
+        <h2 class="section-title">🌿 Terapias Naturais & Fitoterapia Integrativa</h2>
+        <div class="grid-3">
+            <div class="item-box">
+                <h4>🍵 Infusões e Chás Medicinais</h4>
+                <p>Fórmulas direcionadas para controle da ansiedade, melhora da qualidade do sono e digestão.</p>
+            </div>
 
-                <div class="form-group">
-                    <label for="nome">Seu Nome:</label>
-                    <input type="text" id="nome" name="Nome" required placeholder="Digite seu nome completo">
-                </div>
+            <div class="item-box">
+                <h4>🧪 Fórmulas Magistrais</h4>
+                <p>Prescrição individualizada em cápsulas ou gotas padronizadas de acordo com suas necessidades clínicas.</p>
+            </div>
 
-                <div class="form-group">
-                    <label for="contato">Contato:</label>
-                    <input type="text" id="contato" name="Contato" required placeholder="deixe seu contato por email ou whatsapp.">
-                </div>
+            <div class="item-box">
+                <h4>🌾 Saúde Intestinal & Flora</h4>
+                <p>Estratégias para modulação da microbiota, otimizando a absorção de nutrientes e imunidade.</p>
+            </div>
+        </div>
+    </section>
 
-                <div class="form-group">
-                    <label for="objetivo">Qual é o seu principal objetivo no momento?</label>
-                    <select id="objetivo" name="Objetivo Principal" required>
-                        <option value="">Selecione uma opção...</option>
-                        <option value="Melhorar a digestão / Cuidado intestinal">Melhorar a digestão / Cuidado intestinal</option>
-                        <option value="Reduzir estresse / Dicas de Fitoterapia para calma">Reduzir estresse / Dicas de Fitoterapia para calma</option>
-                        <option value="Ter mais energia e disposição no dia a dia">Ter mais energia e disposição no dia a dia</option>
-                        <option value="Controle de peso (emagrecimento ou ganho)">Controle de peso (emagrecimento ou ganho)</option>
-                        <option value="Avaliar exames de sangue / Tratar uma condição específica">Avaliar exames de sangue / Tratar uma condição específica</option>
-                        <option value="Outro objetivo">Outro objetivo</option>
-                    </select>
-                </div>
+    <!-- FORMULÁRIO DE TRIAGEM -->
+    <section class="card-box">
+        <h2 style="text-align: center; color: var(--primary); margin-bottom: 0.5rem;">Dê o Primeiro Passo</h2>
+        <p style="text-align: center; margin-bottom: 1.5rem; color: #555;">Preencha os dados abaixo para direcionar seu agendamento de forma personalizada.</p>
 
-                <div class="form-group">
-                    <label for="mensagem">Detalhe um pouco mais (opcional):</label>
-                    <textarea id="mensagem" name="Mensagem/Detalhes" rows="4" placeholder="Conte-me um pouco sobre sua rotina ou o que mais te incomoda hoje..."></textarea>
-                </div>
+        <form id="contact-form" action="https://formsubmit.co/depaulalima958@gmail.com" method="POST">
+            <!-- Configurações do FormSubmit -->
+            <input type="hidden" name="_subject" value="NOVO PACIENTE - Formulário do Site">
+            <input type="hidden" name="_autoresponse" value="Olá! Um controle alimentar é fundamental para uma boa ação metabólica, mesmo com o uso de medicamentos para emagrecimento. Para isso, precisamos de um acompanhamento adequado. Qual é o seu melhor horário para agendarmos uma consulta? Aguardo suas dúvidas e respostas. Tenha um excelente dia! Dr. Francisco Lima - Nutricionista / Fitoterapeuta CRN-4: 26101256.">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_next" value="https://dr-francisco-lima-nutricionista.infinityfree.io/">
+            <input type="hidden" name="_url" value="https://dr-francisco-lima-nutricionista.infinityfree.io/">
 
-                <button type="submit" class="btn-submit">Enviar e Agendar Orientação</button>
-            </form>
-        </section>
+            <!-- CAMPOS OCULTOS PARA RASTREAMENTO DE ANÚNCIOS -->
+            <input type="hidden" id="utm_source" name="Origem (utm_source)" value="Direto">
+            <input type="hidden" id="utm_medium" name="Meio (utm_medium)" value="-">
+            <input type="hidden" id="utm_campaign" name="Campanha (utm_campaign)" value="-">
+            <input type="hidden" id="gclid" name="Google Ads ID (gclid)" value="-">
 
-    </div>
+            <!-- DADOS DO PACIENTE -->
+            <div class="form-group">
+                <label for="nome">Seu Nome:</label>
+                <input type="text" id="nome" name="Nome" required placeholder="Digite seu nome completo">
+            </div>
 
-    <!-- Botão Flutuante do WhatsApp -->
-    <a href="https://wa.me/5521986807805?text=Olá!%20Vim%20pelo%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20a%20consulta." 
-       class="whatsapp-float" 
-       target="_blank" 
-       rel="noopener noreferrer">
-        <svg class="whatsapp-icon" viewBox="0 0 24 24">
-            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
-        </svg>
-        Falar no WhatsApp
-    </a>
+            <div class="form-group">
+                <label for="email">Seu E-mail para Contato:</label>
+                <input type="email" id="email" name="email" required placeholder="Seu melhor e-mail">
+            </div>
 
-    <footer>
-        <p>&copy; 2026 Dr. Francisco de Paula Gonçalves de Lima - CRN-4: 26101256. Todos os direitos reservados.</p>
-    </footer>
+            <div class="form-group">
+                <label for="whatsapp">WhatsApp / Telefone (Opcional):</label>
+                <input type="tel" id="whatsapp" name="WhatsApp" placeholder="(21) 99999-9999">
+            </div>
+
+            <div class="form-group">
+                <label for="objetivo">Qual é o seu principal objetivo no momento?</label>
+                <select id="objetivo" name="Objetivo Principal" required>
+                    <option value="">Selecione uma opção...</option>
+                    <option value="Emagrecimento com Bioimpedância">Emagrecimento / Controle de massa por Bioimpedância</option>
+                    <option value="Suporte em uso de Canetas Emagrecedoras">Acompanhamento Nutricional para Canetas Emagrecedoras</option>
+                    <option value="Melhorar a digestão / Cuidado intestinal">Melhorar a digestão / Cuidado intestinal</option>
+                    <option value="Fitoterapia para ansiedade e sono">Reduzir estresse / Fitoterapia integrativa</option>
+                    <option value="Outro objetivo">Outro objetivo</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="mensagem">Detalhe um pouco mais (opcional):</label>
+                <textarea id="mensagem" name="Mensagem/Detalhes" rows="4" placeholder="Conte-me se faz uso de medicação, suas metas ou dúvidas principais..."></textarea>
+            </div>
+
+            <button type="submit" class="btn-submit">Enviar e Agendar Orientação</button>
+        </form>
+    </section>
+
+</div>
+
+<!-- WHATSAPP -->
+<a id="whatsapp-btn" aria-label="Contato direto via WhatsApp com Dr. Francisco" href="https://wa.me/5521986807805?text=Olá!%20Vim%20pelo%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20a%20consulta." class="whatsapp-float" target="_blank" rel="noopener noreferrer">
+    <svg class="whatsapp-icon" viewBox="0 0 24 24">
+        <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"></path>
+    </svg>
+    Falar no WhatsApp
+</a>
+
+<!-- RODAPÉ -->
+<footer>
+    <p>© 2026 Dr. Francisco de Paula Gonçalves de Lima - CRN-4: 26101256. Todos os direitos reservados.</p>
+</footer>
+
+<!-- SCRIPT DE RASTREAMENTO AUTOMÁTICO DE ANÚNCIOS -->
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const params = new URLSearchParams(window.location.search);
+        
+        const trackingData = {
+            source: params.get('utm_source') || '',
+            medium: params.get('utm_medium') || '',
+            campaign: params.get('utm_campaign') || '',
+            gclid: params.get('gclid') || ''
+        };
+
+        if (trackingData.source || trackingData.gclid) {
+            sessionStorage.setItem('ad_tracking', JSON.stringify(trackingData));
+        }
+
+        const savedTracking = JSON.parse(sessionStorage.getItem('ad_tracking')) || trackingData;
+
+        if (savedTracking.source) document.getElementById('utm_source').value = savedTracking.source;
+        if (savedTracking.medium) document.getElementById('utm_medium').value = savedTracking.medium;
+        if (savedTracking.campaign) document.getElementById('utm_campaign').value = savedTracking.campaign;
+        if (savedTracking.gclid) document.getElementById('gclid').value = savedTracking.gclid;
+
+        const waBtn = document.getElementById('whatsapp-btn');
+        if (waBtn && (savedTracking.source || savedTracking.gclid)) {
+            let origemTexto = savedTracking.source ? savedTracking.source : 'Google Ads';
+            let campanhaTexto = savedTracking.campaign ? ` (Campanha: ${savedTracking.campaign})` : '';
+            
+            let novaMensagem = `Olá! Vim pelo anúncio no ${origemTexto}${campanhaTexto} e gostaria de agendar uma consulta.`;
+            waBtn.href = `https://wa.me/5521986807805?text=${encodeURIComponent(novaMensagem)}`;
+        }
+    });
+</script>
 
 </body>
 </html>
