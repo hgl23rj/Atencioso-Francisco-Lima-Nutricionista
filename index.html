@@ -46,7 +46,61 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
-        body {
+        body 
+        <!-- Estrutura do Letreiro (Ribbon) -->
+<div class="ribbon-banner">
+  <div class="ribbon-track">
+    <!-- Texto duplicado para criar o efeito infinito sem interrupções -->
+    <span>Mês do Nutri &bull; Bata um papo com um Nutri &bull;&nbsp;</span>
+    <span>Mês do Nutri &bull; Bata um papo com um Nutri &bull;&nbsp;</span>
+    <span>Mês do Nutri &bull; Bata um papo com um Nutri &bull;&nbsp;</span>
+    <span>Mês do Nutri &bull; Bata um papo com um Nutri &bull;&nbsp;</span>
+  </div>
+</div>
+
+<!-- Estilos e Animação CSS -->
+<style>
+  .ribbon-banner {
+    width: 100%;
+    background-color: #1a365d; /* Azul escuro profissional */
+    color: #ffffff; /* Texto em branco */
+    overflow: hidden;
+    white-space: nowrap;
+    padding: 12px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
+  .ribbon-track {
+    display: inline-block;
+    white-space: nowrap;
+    animation: scroll-left 15s linear infinite;
+  }
+
+  .ribbon-track span {
+    display: inline-block;
+  }
+
+  /* Animação para fazer o texto deslizar infinitamente */
+  @keyframes scroll-left {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  /* Pausa a animação quando o usuário passa o mouse por cima */
+  .ribbon-banner:hover .ribbon-track {
+    animation-play-state: paused;
+  }
+</style> 
+    {
             background-color: var(--bg-light);
             background-image:
                 linear-gradient(
