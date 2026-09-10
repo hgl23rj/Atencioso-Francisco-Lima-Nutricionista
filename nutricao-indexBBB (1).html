@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="google-site-verification" content="google694236ae3d54fc6f">
+  <meta name="description" content="Dr. Francisco de Paula – Nutrição Integrativa, Fitoterapia Clínica e acompanhamento com bioimpedância. Emagrecimento saudável e preservação muscular.">
+  <title>Dr. Francisco de Paula | Nutrição Integrativa & Fitoterapia Clínica</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background: #05080f;
+      min-height: 100vh;
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      color: #e2edf7;
+      line-height: 1.65;
+      overflow-x: hidden;
+    }
+
+    #bgCanvas {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100vw; height: 100vh;
+      display: block;
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    .container {
+      position: relative;
+      z-index: 1;
+      max-width: 920px;
+      margin: 0 auto;
+      padding: 32px 22px 70px;
+      min-height: 100vh;
+      background: rgba(5, 8, 15, 0.58);
+      backdrop-filter: blur(3px);
+      -webkit-backdrop-filter: blur(3px);
+      border-left: 1px solid rgba(56, 189, 248, 0.08);
+      border-right: 1px solid rgba(56, 189, 248, 0.08);
+      box-shadow: 0 0 80px rgba(0, 0, 0, 0.55);
+    }
+
+    /* ===== HERO ===== */
+    .hero {
+      display: flex;
+      gap: 28px;
+      align-items: center;
+      flex-wrap: wrap;
+      margin-bottom: 1.5rem;
+      padding-bottom: 1.8rem;
+      border-bottom: 1px solid rgba(56, 189, 248, 0.12);
+    }
+
+    .hero-photo {
+      flex-shrink: 0;
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid rgba(56, 189, 248, 0.45);
+      box-shadow: 0 0 28px rgba(56, 189, 248, 0.25), 0 8px 32px rgba(0,0,0,0.4);
+      background: #0a1220;
+    }
+
+    .hero-text { flex: 1; min-width: 240px; }
+
+    .badge {
+      display: inline-block;
+      background: rgba(56, 189, 248, 0.10);
+      border: 1px solid rgba(56, 189, 248, 0.18);
+      padding: 4px 14px;
+      border-radius: 20px;
+      font-size: 0.78rem;
+      color: #38bdf8;
+      margin-bottom: 0.9rem;
+    }
+
+    h1 {
+      font-size: 1.85rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.35rem;
+      background: linear-gradient(135deg, #38bdf8, #34d399);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      line-height: 1.25;
+    }
+
+    .hero-role {
+      font-size: 1.05rem;
+      color: #94a3b8;
+      margin-bottom: 0.35rem;
+    }
+
+    .hero-crn {
+      font-size: 0.88rem;
+      color: #64748b;
+      margin-bottom: 1rem;
+    }
+
+    .hero-cta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 0.6rem;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 11px 20px;
+      border-radius: 28px;
+      font-size: 0.92rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.25s;
+      border: none;
+      cursor: pointer;
+      font-family: inherit;
+    }
+
+    .btn-whatsapp {
+      background: linear-gradient(135deg, #22c55e, #16a34a);
+      color: #fff;
+      box-shadow: 0 4px 22px rgba(34, 197, 94, 0.45), 0 0 0 1px rgba(74, 222, 128, 0.35);
+      text-shadow: 0 1px 1px rgba(0,0,0,0.15);
+    }
+    .btn-whatsapp:hover {
+      transform: translateY(-2px);
+      background: linear-gradient(135deg, #4ade80, #22c55e);
+      box-shadow: 0 8px 28px rgba(34, 197, 94, 0.55), 0 0 0 1px rgba(134, 239, 172, 0.5);
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #38bdf8, #34d399);
+      color: #0a0e1a;
+      box-shadow: 0 4px 18px rgba(56, 189, 248, 0.2);
+    }
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 26px rgba(56, 189, 248, 0.3);
+    }
+
+    /* ===== SECTIONS ===== */
+    h2 {
+      font-size: 1.45rem;
+      margin-top: 2.2rem;
+      margin-bottom: 0.75rem;
+      color: #38bdf8;
+      font-weight: 650;
+    }
+
+    h3 {
+      font-size: 1.1rem;
+      margin-top: 0;
+      margin-bottom: 0.4rem;
+      color: #34d399;
+      font-weight: 600;
+    }
+
+    h4 {
+      font-size: 1.02rem;
+      margin-top: 0;
+      margin-bottom: 0.35rem;
+      color: #facc15;
+      font-weight: 600;
+    }
+
+    p, li { color: #cbd5e1; margin-bottom: 0.75rem; }
+    ul, ol { padding-left: 1.5rem; margin-bottom: 1rem; }
+    li { margin-bottom: 0.35rem; }
+    strong { color: #e2edf7; }
+
+    .intro {
+      font-size: 1.05rem;
+      color: #e2edf7;
+      margin: 0.8rem 0 0.5rem;
+    }
+
+    .divider {
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(56, 189, 248, 0.18), transparent);
+      margin: 2rem 0;
+    }
+
+    /* Cards grid */
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 14px;
+      margin: 1.2rem 0;
+    }
+
+    .card {
+      background: rgba(56, 189, 248, 0.04);
+      border: 1px solid rgba(56, 189, 248, 0.12);
+      border-radius: 12px;
+      padding: 1.15rem 1.25rem;
+      transition: border-color 0.25s, background 0.25s;
+    }
+    .card:hover {
+      border-color: rgba(56, 189, 248, 0.28);
+      background: rgba(56, 189, 248, 0.07);
+    }
+    .card h3 { color: #34d399; margin-bottom: 0.45rem; }
+    .card p { margin-bottom: 0; font-size: 0.95rem; }
+
+    /* Highlight boxes */
+    .highlight-box {
+      background: rgba(52, 211, 153, 0.05);
+      border-left: 3px solid #34d399;
+      padding: 1.1rem 1.3rem;
+      border-radius: 0 10px 10px 0;
+      margin: 1rem 0;
+    }
+    .highlight-box.warning {
+      border-left-color: #facc15;
+      background: rgba(250, 204, 21, 0.05);
+    }
+    .highlight-box.warning h4 { color: #facc15; }
+    .highlight-box.danger {
+      border-left-color: #f43f5e;
+      background: rgba(244, 63, 94, 0.06);
+    }
+    .highlight-box.danger h4,
+    .highlight-box.danger strong { color: #f87171; }
+
+    /* Contact strip */
+    .contact-strip {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px 20px;
+      align-items: center;
+      margin: 1rem 0 1.4rem;
+      padding: 1.1rem 1.3rem;
+      background: rgba(56, 189, 248, 0.05);
+      border: 1px solid rgba(56, 189, 248, 0.12);
+      border-radius: 12px;
+    }
+    .contact-strip a {
+      color: #38bdf8;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .contact-strip a:hover { text-decoration: underline; }
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.95rem;
+    }
+
+    /* Form */
+    .form-section {
+      margin-top: 0.6rem;
+      padding: 1.6rem;
+      background: rgba(56, 189, 248, 0.04);
+      border-radius: 12px;
+      border: 1px solid rgba(56, 189, 248, 0.12);
+    }
+    .form-group { margin-bottom: 1.1rem; }
+    .form-group label {
+      display: block;
+      font-size: 0.84rem;
+      font-weight: 500;
+      color: #94a3b8;
+      margin-bottom: 0.3rem;
+    }
+    .form-group label .required { color: #f43f5e; margin-left: 2px; }
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 11px 14px;
+      background: rgba(15, 23, 42, 0.75);
+      border: 1px solid rgba(56, 189, 248, 0.16);
+      border-radius: 8px;
+      color: #e2edf7;
+      font-size: 0.95rem;
+      font-family: inherit;
+      transition: border-color 0.25s, box-shadow 0.25s;
+      outline: none;
+    }
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      border-color: #38bdf8;
+      box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.12);
+    }
+    .form-group input::placeholder,
+    .form-group textarea::placeholder { color: #64748b; }
+    .form-group textarea { resize: vertical; min-height: 90px; }
+    .form-group select {
+      appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%2364748b' stroke-width='1.5' fill='none'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 14px center;
+      cursor: pointer;
+    }
+    .form-group select option { background: #0a0e1a; }
+
+    .btn-submit {
+      background: linear-gradient(135deg, #38bdf8, #34d399);
+      color: #0a0e1a;
+      padding: 13px 28px;
+      border: none;
+      border-radius: 30px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.25s;
+      font-family: inherit;
+      box-shadow: 0 4px 20px rgba(56, 189, 248, 0.18);
+      width: 100%;
+    }
+    .btn-submit:hover {
+      transform: scale(1.015);
+      box-shadow: 0 6px 28px rgba(56, 189, 248, 0.28);
+    }
+    .btn-submit:disabled { opacity: 0.6; cursor: not-allowed; transform: none; }
+
+    .form-message {
+      margin-top: 1rem;
+      padding: 12px 16px;
+      border-radius: 8px;
+      font-size: 0.9rem;
+      display: none;
+    }
+    .form-message.success {
+      display: block;
+      background: rgba(52, 211, 153, 0.10);
+      border: 1px solid #34d399;
+      color: #34d399;
+    }
+    .form-message.error {
+      display: block;
+      background: rgba(244, 63, 94, 0.10);
+      border: 1px solid #f43f5e;
+      color: #f87171;
+    }
+
+    .footer-note {
+      text-align: center;
+      font-size: 0.8rem;
+      color: #64748b;
+      margin-top: 2.8rem;
+      padding-top: 1.4rem;
+      border-top: 1px solid rgba(56, 189, 248, 0.08);
+    }
+    .footer-note a { color: #38bdf8; text-decoration: none; }
+    .footer-note a:hover { text-decoration: underline; }
+
+    @media (max-width: 640px) {
+      .container { padding: 22px 14px 50px; background: rgba(5, 8, 15, 0.72); }
+      .hero { flex-direction: column; text-align: center; }
+      .hero-photo { width: 130px; height: 130px; }
+      .hero-cta { justify-content: center; }
+      h1 { font-size: 1.5rem; }
+      h2 { font-size: 1.25rem; }
+      .form-section { padding: 1.15rem; }
+      .cards { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Fundo lunar (mantido) -->
+  <canvas id="bgCanvas"></canvas>
+  <script>
+    (function () {
+      const canvas = document.getElementById('bgCanvas');
+      const ctx = canvas.getContext('2d');
+      function resize() {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+      }
+      window.addEventListener('resize', resize);
+      resize();
+
+      let stars = [];
+      function initStars() {
+        stars = [];
+        for (let i = 0; i < 280; i++) {
+          stars.push({
+            x: Math.random() * canvas.width,
+            y: Math.random() * canvas.height,
+            size: Math.random() * 1.8 + 0.4,
+            speed: Math.random() * 1.2 + 0.1,
+            color: `rgba(${180 + Math.random() * 75}, ${180 + Math.random() * 75}, 255, ${0.5 + Math.random() * 0.5})`
+          });
+        }
+      }
+      initStars();
+
+      let moonX, moonY, moonRadius = 65;
+      function updateMoonPos() {
+        moonX = canvas.width - 180;
+        moonY = 140;
+      }
+      updateMoonPos();
+
+      let boss = { x: canvas.width / 2, y: canvas.height / 2, radius: 58 };
+      canvas.addEventListener('mousemove', (e) => { boss.x = e.clientX; boss.y = e.clientY; });
+      canvas.addEventListener('touchmove', (e) => {
+        e.preventDefault();
+        const t = e.touches[0];
+        if (t) { boss.x = t.clientX; boss.y = t.clientY; }
+      }, { passive: false });
+
+      let swarm = [];
+      const SWARM_COUNT = 36, ORBIT_RADIUS = 130;
+      for (let i = 0; i < SWARM_COUNT; i++) {
+        swarm.push({
+          angle: Math.random() * Math.PI * 2,
+          radius: ORBIT_RADIUS + (Math.random() - 0.5) * 60,
+          speed: 0.015 + Math.random() * 0.035,
+          heightOffset: (Math.random() - 0.5) * 90,
+          x: boss.x, y: boss.y,
+          color: `hsl(${25 + Math.random() * 25}, 95%, ${50 + Math.random() * 25}%)`
+        });
+      }
+
+      let time = 0;
+      function animate() {
+        requestAnimationFrame(animate);
+        time += 0.04;
+        ctx.fillStyle = 'rgba(5, 8, 15, 0.25)';
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+        for (let s of stars) {
+          s.x -= s.speed * 0.6;
+          if (s.x < -5) s.x = canvas.width + 5;
+          ctx.globalAlpha = 0.7 + 0.3 * Math.sin(time * 0.5 + s.x);
+          ctx.fillStyle = s.color;
+          ctx.beginPath();
+          ctx.arc(s.x, s.y, s.size, 0, Math.PI * 2);
+          ctx.fill();
+        }
+        ctx.globalAlpha = 1;
+        updateMoonPos();
+
+        ctx.shadowColor = 'rgba(255, 248, 200, 0.6)';
+        ctx.shadowBlur = 60;
+        ctx.fillStyle = '#fdfdd0';
+        ctx.beginPath();
+        ctx.arc(moonX, moonY, moonRadius, 0, Math.PI * 2);
+        ctx.fill();
+        ctx.shadowBlur = 0;
+        ctx.fillStyle = 'rgba(190, 190, 140, 0.35)';
+        ctx.beginPath(); ctx.arc(moonX - 18, moonY - 12, 14, 0, Math.PI * 2); ctx.fill();
+        ctx.beginPath(); ctx.arc(moonX + 22, moonY + 18, 10, 0, Math.PI * 2); ctx.fill();
+        ctx.beginPath(); ctx.arc(moonX + 8, moonY - 28, 6, 0, Math.PI * 2); ctx.fill();
+
+        const breathing = 1 + 0.08 * Math.sin(time * 0.6);
+        for (let e of swarm) {
+          e.angle += e.speed;
+          let offsetX = Math.cos(e.angle) * e.radius * breathing;
+          let offsetY = Math.sin(e.angle) * e.radius * 0.5 * breathing;
+          let offsetZ = Math.sin(e.angle * 2.0) * e.heightOffset;
+          e.x += (boss.x + offsetX - e.x) * 0.07;
+          e.y += (boss.y + offsetY + offsetZ - e.y) * 0.07;
+          ctx.shadowColor = e.color;
+          ctx.shadowBlur = 18;
+          ctx.fillStyle = e.color;
+          ctx.beginPath();
+          ctx.arc(e.x, e.y, 5 + 2 * Math.sin(time * 0.8 + e.angle), 0, Math.PI * 2);
+          ctx.fill();
+        }
+        ctx.shadowBlur = 0;
+
+        // ===== LARANJA (substitui o sol) =====
+        const R = boss.radius;
+        // Glow externo (suco)
+        ctx.shadowColor = 'rgba(255, 140, 0, 0.75)';
+        ctx.shadowBlur = 55;
+        ctx.fillStyle = 'rgba(255, 160, 40, 0.22)';
+        ctx.beginPath();
+        ctx.arc(boss.x, boss.y, R * 1.7, 0, Math.PI * 2);
+        ctx.fill();
+        ctx.shadowBlur = 0;
+
+        // Casca externa
+        const peel = ctx.createRadialGradient(boss.x - R*0.25, boss.y - R*0.25, R*0.1, boss.x, boss.y, R);
+        peel.addColorStop(0, '#ffa94d');
+        peel.addColorStop(0.7, '#ff922b');
+        peel.addColorStop(1, '#e8590c');
+        ctx.fillStyle = peel;
+        ctx.beginPath();
+        ctx.arc(boss.x, boss.y, R, 0, Math.PI * 2);
+        ctx.fill();
+
+        // Anel da casca (albedo branco)
+        ctx.strokeStyle = 'rgba(255, 243, 224, 0.85)';
+        ctx.lineWidth = Math.max(2, R * 0.08);
+        ctx.beginPath();
+        ctx.arc(boss.x, boss.y, R * 0.88, 0, Math.PI * 2);
+        ctx.stroke();
+
+        // Polpa (círculo interno)
+        const pulp = ctx.createRadialGradient(boss.x, boss.y, 0, boss.x, boss.y, R * 0.82);
+        pulp.addColorStop(0, '#ffe8a3');
+        pulp.addColorStop(0.5, '#ffc078');
+        pulp.addColorStop(1, '#ff922b');
+        ctx.fillStyle = pulp;
+        ctx.beginPath();
+        ctx.arc(boss.x, boss.y, R * 0.82, 0, Math.PI * 2);
+        ctx.fill();
+
+        // Gomos (segmentos da laranja)
+        ctx.strokeStyle = 'rgba(255, 243, 224, 0.75)';
+        ctx.lineWidth = Math.max(1.2, R * 0.04);
+        const segments = 8;
+        for (let i = 0; i < segments; i++) {
+          const a = (i / segments) * Math.PI * 2 - Math.PI / 2;
+          ctx.beginPath();
+          ctx.moveTo(boss.x, boss.y);
+          ctx.lineTo(boss.x + Math.cos(a) * R * 0.82, boss.y + Math.sin(a) * R * 0.82);
+          ctx.stroke();
+        }
+
+        // Centro (miolo)
+        ctx.fillStyle = '#fff3e0';
+        ctx.beginPath();
+        ctx.arc(boss.x, boss.y, R * 0.12, 0, Math.PI * 2);
+        ctx.fill();
+
+        // Brilho
+        const pulse = 0.5 + 0.5 * Math.sin(time * 1.2);
+        ctx.fillStyle = `rgba(255, 255, 255, ${0.15 + pulse * 0.12})`;
+        ctx.beginPath();
+        ctx.ellipse(boss.x - R * 0.28, boss.y - R * 0.28, R * 0.22, R * 0.14, -0.5, 0, Math.PI * 2);
+        ctx.fill();
+
+        // Folha sutil no topo (quando zoom ok)
+        if (R > 20) {
+          ctx.fillStyle = 'rgba(64, 145, 70, 0.85)';
+          ctx.beginPath();
+          ctx.ellipse(boss.x + R * 0.55, boss.y - R * 0.75, R * 0.28, R * 0.12, 0.6, 0, Math.PI * 2);
+          ctx.fill();
+          ctx.strokeStyle = 'rgba(40, 100, 50, 0.6)';
+          ctx.lineWidth = 1;
+          ctx.beginPath();
+          ctx.moveTo(boss.x + R * 0.35, boss.y - R * 0.55);
+          ctx.quadraticCurveTo(boss.x + R * 0.5, boss.y - R * 0.85, boss.x + R * 0.7, boss.y - R * 0.7);
+          ctx.stroke();
+        }
+      }
+
+      window.addEventListener('resize', () => {
+        resize();
+        updateMoonPos();
+        for (let s of stars) {
+          if (s.x > canvas.width) s.x = 0;
+          if (s.y > canvas.height) s.y = 0;
+        }
+      });
+      animate();
+    })();
+  </script>
+
+  <div class="container">
+
+    <!-- HERO com foto -->
+    <header class="hero">
+      <img
+        class="hero-photo"
+        src="https://i.imgur.com/RxdYMi4h.jpg"
+        alt="Dr. Francisco de Paula Gonçalves de Lima – Nutricionista"
+        width="160"
+        height="160"
+        loading="eager"
+      >
+      <div class="hero-text">
+        <div class="badge">✦ Acolhimento clínico alinhado à tecnologia</div>
+        <h1>Nutrição Integrativa &amp; Fitoterapia Clínica</h1>
+        <p class="hero-role"><strong>Dr. Francisco de Paula Gonçalves de Lima</strong></p>
+        <p class="hero-crn">Nutricionista · Pós-Graduação em Fitoterapia e Suplementação · CRN-4: 26101256</p>
+        <div class="hero-cta">
+          <a class="btn btn-whatsapp" href="https://wa.me/5521986807805?text=Ol%C3%A1%2C%20Dr.%20Francisco%2C%20gostaria%20de%20agendar%20uma%20consulta." target="_blank" rel="noopener">
+            💬 WhatsApp
+          </a>
+          <a class="btn btn-primary" href="#agendar">
+            📅 Agendar consulta
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <p class="intro">
+      Meu objetivo é conduzir sua transformação corporal monitorando exatamente o que o seu corpo perde e ganha, garantindo vitalidade, saúde intestinal e preservação da massa magra.
+    </p>
+
+    <div class="divider"></div>
+
+    <!-- Serviços em cards -->
+    <h2>Como posso te ajudar</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>✅ Massa magra preservada</h3>
+        <p>Emagrecimento com bioimpedância para garantir que o peso perdido venha da gordura, não do músculo.</p>
+      </div>
+      <div class="card">
+        <h3>✅ Gordura visceral</h3>
+        <p>Acompanhamento da gordura profunda que envolve os órgãos — essencial para saúde cardiovascular e metabólica.</p>
+      </div>
+      <div class="card">
+        <h3>✅ Hidratação e retenção</h3>
+        <p>Mapeamento da água corporal para ajustar condutas fitoterápicas e nutricionais com precisão.</p>
+      </div>
+      <div class="card">
+        <h3>🌿 Fitoterapia clínica</h3>
+        <p>Chás, infusões e fórmulas magistrais personalizadas para sono, ansiedade, digestão e microbiota.</p>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- Bioimpedância -->
+    <h2>Controle de peso e massa muscular por bioimpedância</h2>
+    <p>
+      A balança comum não mostra a realidade da composição corporal. Com a bioimpedância elétrica mapeamos com precisão a evolução do tratamento: massa magra, gordura visceral e equilíbrio hídrico.
+    </p>
+
+    <div class="divider"></div>
+
+    <!-- Canetas -->
+    <h2>Orientação nutricional para uso de canetas emagrecedoras</h2>
+    <p>
+      Medicamentos injetáveis (análogos de GLP-1) exigem acompanhamento nutricional rigoroso para resultados sustentáveis e seguros.
+    </p>
+
+    <div class="highlight-box">
+      <h4 style="color:#34d399;">🥗 Dieta estratégica durante o uso</h4>
+      <p style="margin-bottom:0;">
+        Como a medicação reduz o apetite e desacelera o esvaziamento gástrico, ajustamos refeições com alta densidade nutritiva, proteína adequada e suporte fitoterápico para náuseas e constipação.
+      </p>
+    </div>
+
+    <div class="highlight-box">
+      <h4 style="color:#34d399;">🛡️ Prevenção do efeito sanfona e sarcopenia</h4>
+      <p style="margin-bottom:0;">
+        O emagrecimento rápido sem supervisão pode provocar grande perda muscular. O plano alimentar + bioimpedância assegura que o peso perdido venha prioritariamente da gordura.
+      </p>
+    </div>
+
+    <div class="highlight-box warning">
+      <h4>⚠️ Riscos do uso sem prescrição e acompanhamento</h4>
+      <p>O uso desses medicamentos sem médico especialista e sem acompanhamento nutricional traz riscos sérios:</p>
+      <ul style="margin-bottom:0;">
+        <li><strong>Perda severa de massa muscular (sarcopenia)</strong> — flacidez e desaceleração do metabolismo</li>
+        <li><strong>Efeitos gastrointestinais graves</strong> — náuseas, vômitos, desidratação e gastroparesia</li>
+        <li><strong>Efeito rebote</strong> — reganho de peso ao interromper sem reeducação alimentar</li>
+        <li><strong>Riscos pancreáticos e biliares</strong> — pancreatite e cálculos na vesícula</li>
+      </ul>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- Fitoterapia -->
+    <h2>Terapias naturais com fitoterapia integrativa</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>🌿 Infusões e chás medicinais</h3>
+        <p>Fórmulas para ansiedade, qualidade do sono e digestão.</p>
+      </div>
+      <div class="card">
+        <h3>💊 Fórmulas magistrais</h3>
+        <p>Cápsulas ou gotas padronizadas conforme sua necessidade clínica.</p>
+      </div>
+      <div class="card">
+        <h3>🧬 Saúde intestinal</h3>
+        <p>Modulação da microbiota para absorção de nutrientes e imunidade.</p>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- Contato rápido -->
+    <h2 id="agendar">Agende sua consulta</h2>
+    <p>Entre em contato pelo WhatsApp ou preencha o formulário abaixo.</p>
+
+    <div class="contact-strip">
+      <div class="contact-item">
+        <span>📱</span>
+        <a href="https://wa.me/5521986807805?text=Ol%C3%A1%2C%20Dr.%20Francisco%2C%20gostaria%20de%20agendar%20uma%20consulta." target="_blank" rel="noopener">(21) 98680-7805</a>
+      </div>
+      <div class="contact-item">
+        <span>✉️</span>
+        <a href="mailto:depaulalima958@gmail.com">depaulalima958@gmail.com</a>
+      </div>
+      <a class="btn btn-whatsapp" href="https://wa.me/5521986807805?text=Ol%C3%A1%2C%20Dr.%20Francisco%2C%20gostaria%20de%20agendar%20uma%20consulta." target="_blank" rel="noopener" style="margin-left:auto;">
+        💬 Chamar no WhatsApp
+      </a>
+    </div>
+
+    <!-- Formulário -->
+    <div class="form-section">
+      <form id="contactForm" action="https://formspree.io/f/maeylvbp" method="POST">
+        <div class="form-group">
+          <label for="nome">Seu nome <span class="required">*</span></label>
+          <input type="text" id="nome" name="nome" placeholder="Nome completo" required>
+        </div>
+        <div class="form-group">
+          <label for="email">E-mail <span class="required">*</span></label>
+          <input type="email" id="email" name="email" placeholder="Seu melhor e-mail" required>
+        </div>
+        <div class="form-group">
+          <label for="whatsapp">WhatsApp</label>
+          <input type="tel" id="whatsapp" name="whatsapp" placeholder="(21) 99999-9999">
+        </div>
+        <div class="form-group">
+          <label for="assunto">O que você procura? <span class="required">*</span></label>
+          <select id="assunto" name="assunto" required>
+            <option value="">Selecione...</option>
+            <option value="Emagrecimento e composição corporal">Emagrecimento e composição corporal</option>
+            <option value="Fitoterapia e plantas medicinais">Fitoterapia e plantas medicinais</option>
+            <option value="Saúde intestinal e microbiota">Saúde intestinal e microbiota</option>
+            <option value="Acompanhamento com caneta emagrecedora">Acompanhamento com caneta emagrecedora</option>
+            <option value="Outro assunto">Outro assunto</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="mensagem">Conte um pouco mais (opcional)</label>
+          <textarea id="mensagem" name="mensagem" placeholder="Objetivo, dúvidas ou se utiliza algum medicamento..."></textarea>
+        </div>
+        <button type="submit" class="btn-submit" id="submitBtn">Enviar e solicitar contato</button>
+        <div id="formMessage" class="form-message"></div>
+      </form>
+    </div>
+
+    <div class="footer-note">
+      <p style="margin-bottom:0.25rem; color:#94a3b8;">Dr. Francisco de Paula Gonçalves de Lima</p>
+      <p style="margin-bottom:0.25rem; color:#64748b; font-size:0.75rem;">Nutricionista · CRN-4: 26101256</p>
+      <p style="margin-bottom:0; color:#475569; font-size:0.7rem;">
+        <a href="https://hgl23rj.github.io/Atencioso-Francisco-Lima-Nutricionista/" target="_blank" rel="noopener">hgl23rj.github.io/Atencioso-Francisco-Lima-Nutricionista</a>
+      </p>
+    </div>
+  
+    <!-- easter egg: clique no pontinho laranja -->
+    <a href="https://hgl23rj.github.io/yeladimASCIIgame-/" target="_blank" rel="noopener"
+       title="🍊 segredo..."
+       style="position:fixed;bottom:10px;right:12px;width:14px;height:14px;border-radius:50%;
+              background:radial-gradient(circle at 30% 30%, #ffd8a8, #ff922b 60%, #e8590c);
+              opacity:0.35;z-index:5;box-shadow:0 0 8px rgba(255,146,43,0.4);
+              transition:opacity 0.3s, transform 0.3s;"
+       onmouseover="this.style.opacity='0.95';this.style.transform='scale(1.3)'"
+       onmouseout="this.style.opacity='0.35';this.style.transform='scale(1)'"
+       aria-label="segredo"></a>
+
+  </div>
+
+  <script>
+    (function () {
+      const form = document.getElementById('contactForm');
+      const submitBtn = document.getElementById('submitBtn');
+      const messageDiv = document.getElementById('formMessage');
+      form.addEventListener('submit', async function (e) {
+        e.preventDefault();
+        const formData = new FormData(form);
+        const data = Object.fromEntries(formData.entries());
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Enviando...';
+        messageDiv.className = 'form-message';
+        messageDiv.style.display = 'none';
+        try {
+          const response = await fetch(form.action, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+            body: JSON.stringify(data)
+          });
+          if (response.ok) {
+            messageDiv.className = 'form-message success';
+            messageDiv.textContent = '✅ Mensagem enviada com sucesso! Entrarei em contato em breve.';
+            messageDiv.style.display = 'block';
+            form.reset();
+          } else {
+            throw new Error('Erro no envio');
+          }
+        } catch (err) {
+          messageDiv.className = 'form-message error';
+          messageDiv.textContent = '❌ Erro ao enviar. Tente novamente ou chame no WhatsApp.';
+          messageDiv.style.display = 'block';
+        } finally {
+          submitBtn.disabled = false;
+          submitBtn.textContent = 'Enviar e solicitar contato';
+        }
+      });
+    })();
+  </script>
+</body>
+</html>
