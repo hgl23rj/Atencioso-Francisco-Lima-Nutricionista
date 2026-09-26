@@ -71,12 +71,15 @@
 }
 
 /* --- AJUSTES PARA CELULAR (Telas menores que 768px) --- */
+/* REMOVA ISSO DO SEU CSS */
 @media (max-width: 768px) {
-  .hero {
-    flex-direction: column; /* Coloca a foto em cima e texto embaixo */
-    text-align: center;     /* Centraliza o texto */
-    gap: 16px;
+  .hero-cta {
+    flex-direction: column; /* Isso empilha os botões */
   }
+  .btn {
+    width: 100%; /* Isso estica os botões */
+  }
+}
 
   .hero-photo {
     width: 110px;  /* Foto menor no celular */
