@@ -86,39 +86,68 @@
     height: 110px;
   }
 
-  .hero-cta {
-    display: flex;
-    flex-direction: column; /* Botões um embaixo do outro */
-    width: 100%;
-  }
-
-  .btn {
-    width: 100%; /* Botões ocupam largura total no celular */
-    justify-content: center;
-  }
+ /* Container que segura os botões */
+.hero-cta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px; /* Espaço entre um botão e outro */
+  margin-top: 24px;
 }
 
-    .btn-whatsapp {
-      background: linear-gradient(135deg, #22c55e, #16a34a);
-      color: #fff;
-      box-shadow: 0 4px 22px rgba(34, 197, 94, 0.45), 0 0 0 1px rgba(74, 222, 128, 0.35);
-      text-shadow: 0 1px 1px rgba(0,0,0,0.15);
-    }
-    .btn-whatsapp:hover {
-      transform: translateY(-2px);
-      background: linear-gradient(135deg, #4ade80, #22c55e);
-      box-shadow: 0 8px 28px rgba(34, 197, 94, 0.55), 0 0 0 1px rgba(134, 239, 172, 0.5);
-    }
+/* Estilo base de TODOS os botões */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px; /* Espaço entre o emoji e o texto */
+  padding: 14px 28px; /* Deixa o botão alto e largo como na imagem */
+  border-radius: 50px; /* Isso cria o formato de pílula */
+  font-weight: 700; /* Texto em negrito */
+  font-size: 16px;
+  text-decoration: none;
+  color: #ffffff;
+  transition: all 0.3s ease;
+  border: none;
+}
 
-    .btn-primary {
-      background: linear-gradient(135deg, #38bdf8, #34d399);
-      color: #0a0e1a;
-      box-shadow: 0 4px 18px rgba(56, 189, 248, 0.2);
-    }
-    .btn-primary:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 6px 26px rgba(56, 189, 248, 0.3);
-    }
+/* Efeito de passar o mouse por cima */
+.btn:hover {
+  transform: translateY(-3px); /* Levanta o botão levemente */
+  filter: brightness(1.1); /* Deixa a cor um pouco mais clara */
+}
+
+/* --- BOTÃO WHATSAPP (Verde) --- */
+.btn-whatsapp {
+  background-color: #22c55e; /* Cor verde */
+  /* AQUI ESTÁ A MÁGICA DO BRILHO VERDE: */
+  box-shadow: 0 0 20px rgba(34, 197, 94, 0.5); 
+}
+
+.btn-whatsapp:hover {
+  box-shadow: 0 0 30px rgba(34, 197, 94, 0.8); /* Aumenta o brilho no hover */
+}
+
+/* --- BOTÃO AGENDAR (Azul/Ciano) --- */
+.btn-primary {
+  background-color: #06b6d4; /* Cor azul/ciano */
+  /* AQUI ESTÁ A MÁGICA DO BRILHO AZUL: */
+  box-shadow: 0 0 20px rgba(6, 182, 212, 0.5);
+}
+
+.btn-primary:hover {
+  box-shadow: 0 0 30px rgba(6, 182, 212, 0.8); /* Aumenta o brilho no hover */
+}
+
+/* Ajuste para telas de celular */
+@media (max-width: 480px) {
+  .hero-cta {
+    justify-content: center; /* Centraliza os botões no celular */
+  }
+  .btn {
+    padding: 12px 20px; /* Diminui um pouco o tamanho para caberem lado a lado */
+    font-size: 14px;
+  }
+}
 
     /* ===== SECTIONS ===== */
     h2 {
