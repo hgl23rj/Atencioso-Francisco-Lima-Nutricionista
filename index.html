@@ -43,91 +43,57 @@
     }
 
     /* ===== HERO ===== */
-    .hero {
-      display: flex;
-      gap: 28px;
-      align-items: center;
-      flex-wrap: wrap;
-      margin-bottom: 1.5rem;
-      padding-bottom: 1.8rem;
-      border-bottom: 1px solid rgba(56, 189, 248, 0.12);
-    }
-
-    .hero-photo {
-      flex-shrink: 0;
-      width: 80px;
-      height: 160px;
-      border-radius: 40%;
-      .sua-classe-da-foto img {
-    object-fit: cover;
-    object-position: center top; /* Ajuste 'top' para 'center center' ou use porcentagens como 'center 30%' para descer o rosto */
-    width: 80px ;
-    height: 120px ;
-        object-position: center 20px;
+   /* Container principal do Hero (Alinha a foto e o texto) */
+.hero {
+  display: flex;
+  align-items: center; /* Centraliza verticalmente */
+  gap: 24px; /* Espaço entre a foto e o texto */
+  padding: 20px;
+  flex-wrap: wrap; /* Permite quebrar linha no celular */
 }
-      border: 1px solid rgba(56, 189, 248, 0.45);
-      box-shadow: 0 0 28px rgba(56, 189, 248, 0.25), 0 8px 32px rgba(0,0,0,0.4);
-      background: #0a1220;
-    }
 
-    .hero-text { flex: 1; min-width: 240px; }
+/* Estilo da Foto */
+.hero-photo {
+  width: 140px;          /* Tamanho no PC */
+  height: 140px;         /* Tamanho no PC */
+  border-radius: 50%;    /* Deixa a foto redonda */
+  object-fit: cover;     /* Garante que a imagem não distorça */
+  object-position: top;  /* Foca no rosto (topo da imagem) */
+  border: 3px solid #2dd4bf; /* Borda ciano igual ao design */
+  box-shadow: 0 0 20px rgba(45, 212, 191, 0.3); /* Brilho ao redor */
+  flex-shrink: 0;        /* Impede que a foto seja esmagada */
+}
 
-    .badge {
-      display: inline-block;
-      background: rgba(56, 189, 248, 0.10);
-      border: 1px solid rgba(56, 189, 248, 0.18);
-      padding: 4px 14px;
-      border-radius: 20px;
-      font-size: 0.78rem;
-      color: #38bdf8;
-      margin-bottom: 0.9rem;
-    }
+/* Área do texto */
+.hero-text {
+  flex: 1; /* Ocupa o resto do espaço */
+  min-width: 300px; /* Garante que o texto não fique muito apertado */
+}
 
-    h1 {
-      font-size: 1.85rem;
-      font-weight: 700;
-      letter-spacing: -0.02em;
-      margin-bottom: 0.35rem;
-      background: linear-gradient(135deg, #38bdf8, #34d399);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      line-height: 1.25;
-    }
+/* --- AJUSTES PARA CELULAR (Telas menores que 768px) --- */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column; /* Coloca a foto em cima e texto embaixo */
+    text-align: center;     /* Centraliza o texto */
+    gap: 16px;
+  }
 
-    .hero-role {
-      font-size: 1.05rem;
-      color: #94a3b8;
-      margin-bottom: 0.35rem;
-    }
+  .hero-photo {
+    width: 110px;  /* Foto menor no celular */
+    height: 110px;
+  }
 
-    .hero-crn {
-      font-size: 0.88rem;
-      color: #64748b;
-      margin-bottom: 1rem;
-    }
+  .hero-cta {
+    display: flex;
+    flex-direction: column; /* Botões um embaixo do outro */
+    width: 100%;
+  }
 
-    .hero-cta {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 0.6rem;
-    }
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 11px 20px;
-      border-radius: 28px;
-      font-size: 0.92rem;
-      font-weight: 600;
-      text-decoration: none;
-      transition: all 0.25s;
-      border: none;
-      cursor: pointer;
-      font-family: inherit;
-    }
+  .btn {
+    width: 100%; /* Botões ocupam largura total no celular */
+    justify-content: center;
+  }
+}
 
     .btn-whatsapp {
       background: linear-gradient(135deg, #22c55e, #16a34a);
@@ -573,26 +539,31 @@
 
   <div class="container">
 
-    <!-- HERO com foto -->
-    <header class="hero">
-      <img
-        class="hero-photo"
-  <img src="https://i.imgur.com/Omp63F0.png" alt="Dr. Francisco Lima" class="w-full h-full object-cover object-top" onerror="this.src='https://placehold.co/100x100/16a34a/ffffff?text=FL'">
-      <div class="hero-text">
-        <div class="badge">✦ Acolhimento clínico alinhado à tecnologia</div>
-        <h1>Nutrição Integrativa &amp; Fitoterapia Clínica</h1>
-        <p class="hero-role"><strong>Dr. Francisco de Paula Gonçalves de Lima</strong></p>
-        <p class="hero-crn">Nutricionista · Pós-Graduação em Fitoterapia e Suplementação · CRN-4: 26101256</p>
-        <div class="hero-cta">
-          <a class="btn btn-whatsapp" href="https://wa.me/5521986807805?text=Ol%C3%A1%2C%20Dr.%20Francisco%2C%20gostaria%20de%20agendar%20uma%20consulta." target="_blank" rel="noopener">
-            💬 WhatsApp
-          </a>
-          <a class="btn btn-primary" href="#agendar">
-            📅 Agendar consulta
-          </a>
-        </div>
-      </div>
-    </header>
+<header class="hero">
+  <!-- Foto corrigida -->
+  <img 
+    src="https://i.imgur.com/Omp63F0.png" 
+    alt="Dr. Francisco Lima" 
+    class="hero-photo" 
+    onerror="this.src='https://placehold.co/100x100/16a34a/ffffff?text=FL'"
+  >
+  
+  <div class="hero-text">
+    <div class="badge">✦ Acolhimento clínico alinhado à tecnologia</div>
+    <h1>Nutrição Integrativa &amp; Fitoterapia Clínica</h1>
+    <p class="hero-role"><strong>Dr. Francisco de Paula Gonçalves de Lima</strong></p>
+    <p class="hero-crn">Nutricionista · Pós-Graduação em Fitoterapia e Suplementação · CRN-4: 26101256</p>
+    <div class="hero-cta">
+      <a class="btn btn-whatsapp" href="https://wa.me/5521986807805?text=Ol%C3%A1%2C%20Dr.%20Francisco%2C%20gostaria%20de%20agendar%20uma%20consulta." target="_blank" rel="noopener">
+        💬 WhatsApp
+      </a>
+      <a class="btn btn-primary" href="#agendar">
+        📅 Agendar consulta
+      </a>
+    </div>
+  </div>
+</header>    
+   
 
     <p class="intro">
       Meu objetivo é conduzir sua transformação corporal monitorando exatamente o que o seu corpo perde e ganha, garantindo vitalidade, saúde intestinal e preservação da massa magra.
