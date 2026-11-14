@@ -1,22 +1,18 @@
-<html lang="pt-BR" class="scroll-smooth"><head>
-    <meta name="google-site-verification" content="google694236ae3d54fc6f">
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="google-site-verification" content="google694236ae3d54fc6f">
   <title>Dr. Francisco de Paula | Nutrição Integrativa &amp; Fitoterapia Clínica — CRN-4 26101256</title>
   <meta name="description" content="Nutrição Integrativa, Clínica, Esportiva, Geriátrica e Fitoterapia Clínica no Rio de Janeiro com o Dr. Francisco de Paula Gonçalves de Lima (CRN-4: 26101256 | FITO/CRN4/0151/2026).">
 
-  <!-- Google Fonts: Cormorant Garamond + Plus Jakarta Sans -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600;1,700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
-
-  <!-- Font Awesome -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600;1,700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
-  <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
-
-  <!-- Configuração de Cores Vibrantes e Tipografia -->
   <script>
     tailwind.config = {
       theme: {
@@ -26,33 +22,11 @@
             serif: ['"Cormorant Garamond"', 'Georgia', 'serif'],
           },
           colors: {
-            forest: {
-              950: '#062319',
-              900: '#0b3325',
-              800: '#114734',
-              700: '#175e45',
-            },
-            emeraldLive: {
-              500: '#10b981',
-              600: '#059669',
-              700: '#047857',
-            },
-            amberGold: {
-              300: '#fcd34d',
-              400: '#fbbf24',
-              500: '#f59e0b',
-              600: '#d97706',
-            },
-            terracotta: {
-              500: '#f97316',
-              600: '#ea580c',
-              700: '#c2410c',
-            },
-            cream: {
-              50: '#fffbeb',
-              100: '#fef6e4',
-              200: '#fdecc8',
-            }
+            forest: { 950:'#062319', 900:'#0b3325', 800:'#114734', 700:'#175e45' },
+            emeraldLive: { 500:'#10b981', 600:'#059669', 700:'#047857' },
+            amberGold: { 300:'#fcd34d', 400:'#fbbf24', 500:'#f59e0b', 600:'#d97706' },
+            terracotta: { 500:'#f97316', 600:'#ea580c', 700:'#c2410c' },
+            cream: { 50:'#fffbeb', 100:'#fef6e4', 200:'#fdecc8' }
           },
           boxShadow: {
             'vibrant': '0 20px 50px -12px rgba(6, 35, 25, 0.25)',
@@ -65,154 +39,63 @@
   </script>
 
   <style>
-    /* ==================== ANIMAÇÕES PERSONALIZADAS ==================== */
-    @keyframes floatSlow {
-      0%, 100% { transform: translateY(0px) rotate(0deg); }
-      50% { transform: translateY(-14px) rotate(2deg); }
-    }
+    @keyframes floatSlow { 0%,100%{transform:translateY(0) rotate(0)} 50%{transform:translateY(-14px) rotate(2deg)} }
+    @keyframes floatReverse { 0%,100%{transform:translateY(0) rotate(0)} 50%{transform:translateY(12px) rotate(-2.5deg)} }
+    @keyframes pulseSparkle { 0%,100%{opacity:.35;transform:scale(.85)} 50%{opacity:1;transform:scale(1.2)} }
+    @keyframes shimmerSweep { 0%{transform:translateX(-120%) skewX(-20deg)} 100%{transform:translateX(220%) skewX(-20deg)} }
+    @keyframes pulseRing { 0%{transform:scale(.95);opacity:.85} 70%{transform:scale(1.45);opacity:0} 100%{transform:scale(1.45);opacity:0} }
 
-    @keyframes floatReverse {
-      0%, 100% { transform: translateY(0px) rotate(0deg); }
-      50% { transform: translateY(12px) rotate(-2.5deg); }
-    }
-
-    @keyframes spinOrbit {
-      from { transform: rotate(0deg); }
-      to { transform: rotate(360deg); }
-    }
-
-    @keyframes spinOrbitReverse {
-      from { transform: rotate(360deg); }
-      to { transform: rotate(0deg); }
-    }
-
-    @keyframes pulseSparkle {
-      0%, 100% { opacity: 0.35; transform: scale(0.85); }
-      50% { opacity: 1; transform: scale(1.2); }
-    }
-
-    @keyframes shimmerSweep {
-      0% { transform: translateX(-120%) skewX(-20deg); }
-      100% { transform: translateX(220%) skewX(-20deg); }
-    }
-
-    @keyframes pulseRing {
-      0% { transform: scale(0.95); opacity: 0.85; }
-      70% { transform: scale(1.45); opacity: 0; }
-      100% { transform: scale(1.45); opacity: 0; }
-    }
-
-    .animate-float-slow {
-      animation: floatSlow 6s ease-in-out infinite;
-    }
-
-    .animate-float-reverse {
-      animation: floatReverse 7s ease-in-out infinite;
-    }
-
-    .animate-orbit {
-      transform-origin: 240px 240px;
-      animation: spinOrbit 34s linear infinite;
-    }
-
-    .animate-orbit-reverse {
-      transform-origin: 240px 240px;
-      animation: spinOrbitReverse 26s linear infinite;
-    }
-
+    .animate-float-slow { animation: floatSlow 6s ease-in-out infinite; }
+    .animate-float-reverse { animation: floatReverse 7s ease-in-out infinite; }
     .sparkle-1 { animation: pulseSparkle 3.2s ease-in-out infinite; }
-    .sparkle-2 { animation: pulseSparkle 4.1s ease-in-out 0.8s infinite; }
+    .sparkle-2 { animation: pulseSparkle 4.1s ease-in-out .8s infinite; }
     .sparkle-3 { animation: pulseSparkle 2.8s ease-in-out 1.5s infinite; }
 
-    /* Botão com brilho dinâmico (Shimmer) */
-    .btn-shimmer {
-      position: relative;
-      overflow: hidden;
-    }
+    .btn-shimmer { position: relative; overflow: hidden; }
     .btn-shimmer::after {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 45%;
-      height: 100%;
-      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.35), transparent);
-      animation: shimmerSweep 3.4s infinite;
-      pointer-events: none;
+      content:''; position:absolute; top:0; left:0; width:45%; height:100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,.35), transparent);
+      animation: shimmerSweep 3.4s infinite; pointer-events:none;
     }
 
-    /* Anel pulsante no botão flutuante do WhatsApp */
     .whatsapp-ring::before {
-      content: '';
-      position: absolute;
-      inset: -4px;
-      border-radius: 9999px;
-      border: 2px solid #fbbf24;
-      background: rgba(16, 185, 129, 0.35);
-      animation: pulseRing 2.2s cubic-bezier(0.24, 0, 0.38, 1) infinite;
-      z-index: -1;
+      content:''; position:absolute; inset:-4px; border-radius:9999px;
+      border:2px solid #fbbf24; background: rgba(16,185,129,.35);
+      animation: pulseRing 2.2s cubic-bezier(.24,0,.38,1) infinite; z-index:-1;
     }
 
-    /* Revelação suave ao rolar (IntersectionObserver) */
-    .reveal {
-      opacity: 0;
-      transform: translateY(28px);
-      transition: opacity 0.75s cubic-bezier(0.22, 1, 0.36, 1), transform 0.75s cubic-bezier(0.22, 1, 0.36, 1);
-    }
-    .reveal.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
+    .reveal { opacity:0; transform:translateY(28px); transition: opacity .75s cubic-bezier(.22,1,.36,1), transform .75s cubic-bezier(.22,1,.36,1); }
+    .reveal.visible { opacity:1; transform:translateY(0); }
+    .reveal-scale { opacity:0; transform:scale(.94); transition: opacity .75s cubic-bezier(.22,1,.36,1), transform .75s cubic-bezier(.22,1,.36,1); }
+    .reveal-scale.visible { opacity:1; transform:scale(1); }
 
-    .reveal-scale {
-      opacity: 0;
-      transform: scale(0.94);
-      transition: opacity 0.75s cubic-bezier(0.22, 1, 0.36, 1), transform 0.75s cubic-bezier(0.22, 1, 0.36, 1);
-    }
-    .reveal-scale.visible {
-      opacity: 1;
-      transform: scale(1);
-    }
-
-    /* Efeito Tilt/Elevação refinado nos Cards */
-    .card-vibrant {
-      transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.35s ease, border-color 0.35s ease;
-    }
-    .card-vibrant:hover {
-      transform: translateY(-7px);
-    }
+    .card-vibrant { transition: transform .35s cubic-bezier(.22,1,.36,1), box-shadow .35s ease, border-color .35s ease; }
+    .card-vibrant:hover { transform: translateY(-7px); }
   </style>
-<style>*, ::before, ::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/* ! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com */*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}::after,::before{--tw-content:''}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:"Plus Jakarta Sans", sans-serif;font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border-width:0}.pointer-events-none{pointer-events:none}.visible{visibility:visible}.fixed{position:fixed}.absolute{position:absolute}.relative{position:relative}.sticky{position:sticky}.inset-8{inset:2rem}.-bottom-3{bottom:-0.75rem}.-left-24{left:-6rem}.-right-24{right:-6rem}.-top-28{top:-7rem}.bottom-0{bottom:0px}.bottom-10{bottom:2.5rem}.bottom-20{bottom:5rem}.bottom-5{bottom:1.25rem}.left-0{left:0px}.left-1\.5{left:0.375rem}.left-1\/2{left:50%}.left-1\/3{left:33.333333%}.left-10{left:2.5rem}.right-10{right:2.5rem}.right-5{right:1.25rem}.top-0{top:0px}.top-1\.5{top:0.375rem}.top-1\/3{top:33.333333%}.top-24{top:6rem}.top-5{top:1.25rem}.z-10{z-index:10}.z-50{z-index:50}.mx-auto{margin-left:auto;margin-right:auto}.mb-1\.5{margin-bottom:0.375rem}.mb-16{margin-bottom:4rem}.mb-2{margin-bottom:0.5rem}.mb-2\.5{margin-bottom:0.625rem}.mb-3{margin-bottom:0.75rem}.mb-4{margin-bottom:1rem}.mb-5{margin-bottom:1.25rem}.mb-6{margin-bottom:1.5rem}.mb-7{margin-bottom:1.75rem}.mr-1\.5{margin-right:0.375rem}.mt-1{margin-top:0.25rem}.mt-4{margin-top:1rem}.mt-6{margin-top:1.5rem}.block{display:block}.inline-block{display:inline-block}.flex{display:flex}.inline-flex{display:inline-flex}.grid{display:grid}.hidden{display:none}.aspect-square{aspect-ratio:1 / 1}.h-10{height:2.5rem}.h-11{height:2.75rem}.h-12{height:3rem}.h-14{height:3.5rem}.h-16{height:4rem}.h-2{height:0.5rem}.h-2\.5{height:0.625rem}.h-20{height:5rem}.h-6{height:1.5rem}.h-7{height:1.75rem}.h-72{height:18rem}.h-80{height:20rem}.h-9{height:2.25rem}.h-96{height:24rem}.h-\[420px\]{height:420px}.h-\[440px\]{height:440px}.h-full{height:100%}.w-10{width:2.5rem}.w-11{width:2.75rem}.w-12{width:3rem}.w-14{width:3.5rem}.w-16{width:4rem}.w-2{width:0.5rem}.w-2\.5{width:0.625rem}.w-6{width:1.5rem}.w-7{width:1.75rem}.w-72{width:18rem}.w-80{width:20rem}.w-9{width:2.25rem}.w-96{width:24rem}.w-\[420px\]{width:420px}.w-\[440px\]{width:440px}.w-\[90\%\]{width:90%}.w-full{width:100%}.min-w-0{min-width:0px}.max-w-2xl{max-width:42rem}.max-w-3xl{max-width:48rem}.max-w-7xl{max-width:80rem}.max-w-\[460px\]{max-width:460px}.max-w-md{max-width:28rem}.max-w-xl{max-width:36rem}.flex-1{flex:1 1 0%}.shrink-0{flex-shrink:0}.-translate-x-1\/2{--tw-translate-x:-50%;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.rotate-180{--tw-rotate:180deg;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}@keyframes ping{75%, 100%{transform:scale(2);opacity:0}}.animate-ping{animation:ping 1s cubic-bezier(0, 0, 0.2, 1) infinite}.cursor-pointer{cursor:pointer}.resize-none{resize:none}.grid-cols-1{grid-template-columns:repeat(1, minmax(0, 1fr))}.grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.grid-cols-3{grid-template-columns:repeat(3, minmax(0, 1fr))}.flex-col{flex-direction:column}.flex-wrap{flex-wrap:wrap}.items-start{align-items:flex-start}.items-center{align-items:center}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.gap-1\.5{gap:0.375rem}.gap-10{gap:2.5rem}.gap-12{gap:3rem}.gap-2{gap:0.5rem}.gap-2\.5{gap:0.625rem}.gap-3{gap:0.75rem}.gap-3\.5{gap:0.875rem}.gap-4{gap:1rem}.gap-7{gap:1.75rem}.gap-8{gap:2rem}.space-y-2 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.5rem * var(--tw-space-y-reverse))}.space-y-2\.5 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.625rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.625rem * var(--tw-space-y-reverse))}.space-y-3 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.75rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.75rem * var(--tw-space-y-reverse))}.space-y-4 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1rem * var(--tw-space-y-reverse))}.space-y-5 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1.25rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1.25rem * var(--tw-space-y-reverse))}.space-y-6 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1.5rem * var(--tw-space-y-reverse))}.overflow-hidden{overflow:hidden}.overflow-x-hidden{overflow-x:hidden}.scroll-smooth{scroll-behavior:smooth}.truncate{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.whitespace-nowrap{white-space:nowrap}.break-all{word-break:break-all}.rounded-2xl{border-radius:1rem}.rounded-3xl{border-radius:1.5rem}.rounded-\[14px\]{border-radius:14px}.rounded-\[2rem\]{border-radius:2rem}.rounded-full{border-radius:9999px}.rounded-xl{border-radius:0.75rem}.border{border-width:1px}.border-2{border-width:2px}.border-4{border-width:4px}.border-y{border-top-width:1px;border-bottom-width:1px}.border-b{border-bottom-width:1px}.border-t{border-top-width:1px}.border-t-2{border-top-width:2px}.border-amberGold-400{--tw-border-opacity:1;border-color:rgb(251 191 36 / var(--tw-border-opacity, 1))}.border-amberGold-400\/20{border-color:rgb(251 191 36 / 0.2)}.border-amberGold-400\/25{border-color:rgb(251 191 36 / 0.25)}.border-amberGold-400\/30{border-color:rgb(251 191 36 / 0.3)}.border-amberGold-400\/35{border-color:rgb(251 191 36 / 0.35)}.border-amberGold-400\/40{border-color:rgb(251 191 36 / 0.4)}.border-amberGold-400\/50{border-color:rgb(251 191 36 / 0.5)}.border-amberGold-500\/20{border-color:rgb(245 158 11 / 0.2)}.border-amberGold-500\/25{border-color:rgb(245 158 11 / 0.25)}.border-amberGold-500\/35{border-color:rgb(245 158 11 / 0.35)}.border-amberGold-500\/40{border-color:rgb(245 158 11 / 0.4)}.border-amberGold-500\/45{border-color:rgb(245 158 11 / 0.45)}.border-cream-100{--tw-border-opacity:1;border-color:rgb(254 246 228 / var(--tw-border-opacity, 1))}.border-emeraldLive-500{--tw-border-opacity:1;border-color:rgb(16 185 129 / var(--tw-border-opacity, 1))}.border-emeraldLive-500\/25{border-color:rgb(16 185 129 / 0.25)}.border-emeraldLive-500\/30{border-color:rgb(16 185 129 / 0.3)}.border-emeraldLive-500\/40{border-color:rgb(16 185 129 / 0.4)}.border-emeraldLive-500\/45{border-color:rgb(16 185 129 / 0.45)}.border-emeraldLive-600{--tw-border-opacity:1;border-color:rgb(5 150 105 / var(--tw-border-opacity, 1))}.border-emeraldLive-600\/30{border-color:rgb(5 150 105 / 0.3)}.border-forest-800\/30{border-color:rgb(17 71 52 / 0.3)}.border-forest-900\/15{border-color:rgb(11 51 37 / 0.15)}.border-terracotta-500\/25{border-color:rgb(249 115 22 / 0.25)}.border-terracotta-500\/35{border-color:rgb(249 115 22 / 0.35)}.border-terracotta-500\/45{border-color:rgb(249 115 22 / 0.45)}.border-white\/10{border-color:rgb(255 255 255 / 0.1)}.border-white\/15{border-color:rgb(255 255 255 / 0.15)}.bg-amberGold-300\/40{background-color:rgb(252 211 77 / 0.4)}.bg-amberGold-400{--tw-bg-opacity:1;background-color:rgb(251 191 36 / var(--tw-bg-opacity, 1))}.bg-amberGold-400\/20{background-color:rgb(251 191 36 / 0.2)}.bg-amberGold-400\/25{background-color:rgb(251 191 36 / 0.25)}.bg-amberGold-400\/40{background-color:rgb(251 191 36 / 0.4)}.bg-amberGold-500{--tw-bg-opacity:1;background-color:rgb(245 158 11 / var(--tw-bg-opacity, 1))}.bg-amberGold-500\/15{background-color:rgb(245 158 11 / 0.15)}.bg-amberGold-500\/20{background-color:rgb(245 158 11 / 0.2)}.bg-cream-100{--tw-bg-opacity:1;background-color:rgb(254 246 228 / var(--tw-bg-opacity, 1))}.bg-cream-200\/70{background-color:rgb(253 236 200 / 0.7)}.bg-cream-50{--tw-bg-opacity:1;background-color:rgb(255 251 235 / var(--tw-bg-opacity, 1))}.bg-emeraldLive-500{--tw-bg-opacity:1;background-color:rgb(16 185 129 / var(--tw-bg-opacity, 1))}.bg-emeraldLive-500\/15{background-color:rgb(16 185 129 / 0.15)}.bg-emeraldLive-500\/20{background-color:rgb(16 185 129 / 0.2)}.bg-emeraldLive-600{--tw-bg-opacity:1;background-color:rgb(5 150 105 / var(--tw-bg-opacity, 1))}.bg-forest-800{--tw-bg-opacity:1;background-color:rgb(17 71 52 / var(--tw-bg-opacity, 1))}.bg-forest-800\/80{background-color:rgb(17 71 52 / 0.8)}.bg-forest-900{--tw-bg-opacity:1;background-color:rgb(11 51 37 / var(--tw-bg-opacity, 1))}.bg-forest-900\/10{background-color:rgb(11 51 37 / 0.1)}.bg-forest-950{--tw-bg-opacity:1;background-color:rgb(6 35 25 / var(--tw-bg-opacity, 1))}.bg-forest-950\/30{background-color:rgb(6 35 25 / 0.3)}.bg-terracotta-500\/15{background-color:rgb(249 115 22 / 0.15)}.bg-terracotta-500\/20{background-color:rgb(249 115 22 / 0.2)}.bg-terracotta-600{--tw-bg-opacity:1;background-color:rgb(234 88 12 / var(--tw-bg-opacity, 1))}.bg-terracotta-600\/15{background-color:rgb(234 88 12 / 0.15)}.bg-white{--tw-bg-opacity:1;background-color:rgb(255 255 255 / var(--tw-bg-opacity, 1))}.bg-white\/10{background-color:rgb(255 255 255 / 0.1)}.bg-white\/5{background-color:rgb(255 255 255 / 0.05)}.bg-gradient-to-b{background-image:linear-gradient(to bottom, var(--tw-gradient-stops))}.bg-gradient-to-br{background-image:linear-gradient(to bottom right, var(--tw-gradient-stops))}.bg-gradient-to-r{background-image:linear-gradient(to right, var(--tw-gradient-stops))}.bg-gradient-to-tr{background-image:linear-gradient(to top right, var(--tw-gradient-stops))}.from-amberGold-300{--tw-gradient-from:#fcd34d var(--tw-gradient-from-position);--tw-gradient-to:rgb(252 211 77 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.from-amberGold-400{--tw-gradient-from:#fbbf24 var(--tw-gradient-from-position);--tw-gradient-to:rgb(251 191 36 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.from-amberGold-500{--tw-gradient-from:#f59e0b var(--tw-gradient-from-position);--tw-gradient-to:rgb(245 158 11 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.from-emeraldLive-500{--tw-gradient-from:#10b981 var(--tw-gradient-from-position);--tw-gradient-to:rgb(16 185 129 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.from-emeraldLive-500\/30{--tw-gradient-from:rgb(16 185 129 / 0.3) var(--tw-gradient-from-position);--tw-gradient-to:rgb(16 185 129 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.from-emeraldLive-600{--tw-gradient-from:#059669 var(--tw-gradient-from-position);--tw-gradient-to:rgb(5 150 105 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.from-forest-800\/90{--tw-gradient-from:rgb(17 71 52 / 0.9) var(--tw-gradient-from-position);--tw-gradient-to:rgb(17 71 52 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.from-forest-900{--tw-gradient-from:#0b3325 var(--tw-gradient-from-position);--tw-gradient-to:rgb(11 51 37 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.from-forest-950{--tw-gradient-from:#062319 var(--tw-gradient-from-position);--tw-gradient-to:rgb(6 35 25 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.from-terracotta-500{--tw-gradient-from:#f97316 var(--tw-gradient-from-position);--tw-gradient-to:rgb(249 115 22 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.from-terracotta-600{--tw-gradient-from:#ea580c var(--tw-gradient-from-position);--tw-gradient-to:rgb(234 88 12 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.via-amberGold-400{--tw-gradient-to:rgb(251 191 36 / 0)  var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), #fbbf24 var(--tw-gradient-via-position), var(--tw-gradient-to)}.via-amberGold-400\/25{--tw-gradient-to:rgb(251 191 36 / 0)  var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), rgb(251 191 36 / 0.25) var(--tw-gradient-via-position), var(--tw-gradient-to)}.via-emeraldLive-500{--tw-gradient-to:rgb(16 185 129 / 0)  var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), #10b981 var(--tw-gradient-via-position), var(--tw-gradient-to)}.via-emeraldLive-600{--tw-gradient-to:rgb(5 150 105 / 0)  var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), #059669 var(--tw-gradient-via-position), var(--tw-gradient-to)}.via-forest-900{--tw-gradient-to:rgb(11 51 37 / 0)  var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), #0b3325 var(--tw-gradient-via-position), var(--tw-gradient-to)}.to-amberGold-500{--tw-gradient-to:#f59e0b var(--tw-gradient-to-position)}.to-amberGold-600{--tw-gradient-to:#d97706 var(--tw-gradient-to-position)}.to-emeraldLive-500{--tw-gradient-to:#10b981 var(--tw-gradient-to-position)}.to-emeraldLive-600{--tw-gradient-to:#059669 var(--tw-gradient-to-position)}.to-emeraldLive-700{--tw-gradient-to:#047857 var(--tw-gradient-to-position)}.to-forest-700{--tw-gradient-to:#175e45 var(--tw-gradient-to-position)}.to-forest-800{--tw-gradient-to:#114734 var(--tw-gradient-to-position)}.to-forest-900{--tw-gradient-to:#0b3325 var(--tw-gradient-to-position)}.to-forest-950{--tw-gradient-to:#062319 var(--tw-gradient-to-position)}.to-forest-950\/95{--tw-gradient-to:rgb(6 35 25 / 0.95) var(--tw-gradient-to-position)}.to-terracotta-500{--tw-gradient-to:#f97316 var(--tw-gradient-to-position)}.to-terracotta-500\/25{--tw-gradient-to:rgb(249 115 22 / 0.25) var(--tw-gradient-to-position)}.to-terracotta-600{--tw-gradient-to:#ea580c var(--tw-gradient-to-position)}.bg-clip-text{-webkit-background-clip:text;background-clip:text}.p-0\.5{padding:0.125rem}.p-2\.5{padding:0.625rem}.p-3{padding:0.75rem}.p-3\.5{padding:0.875rem}.p-4{padding:1rem}.p-5{padding:1.25rem}.p-6{padding:1.5rem}.p-7{padding:1.75rem}.px-2\.5{padding-left:0.625rem;padding-right:0.625rem}.px-3{padding-left:0.75rem;padding-right:0.75rem}.px-3\.5{padding-left:0.875rem;padding-right:0.875rem}.px-4{padding-left:1rem;padding-right:1rem}.px-5{padding-left:1.25rem;padding-right:1.25rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.px-7{padding-left:1.75rem;padding-right:1.75rem}.px-8{padding-left:2rem;padding-right:2rem}.py-0\.5{padding-top:0.125rem;padding-bottom:0.125rem}.py-1{padding-top:0.25rem;padding-bottom:0.25rem}.py-1\.5{padding-top:0.375rem;padding-bottom:0.375rem}.py-16{padding-top:4rem;padding-bottom:4rem}.py-2{padding-top:0.5rem;padding-bottom:0.5rem}.py-20{padding-top:5rem;padding-bottom:5rem}.py-3{padding-top:0.75rem;padding-bottom:0.75rem}.py-3\.5{padding-top:0.875rem;padding-bottom:0.875rem}.py-4{padding-top:1rem;padding-bottom:1rem}.pb-10{padding-bottom:2.5rem}.pb-24{padding-bottom:6rem}.pb-6{padding-bottom:1.5rem}.pl-12{padding-left:3rem}.pt-1{padding-top:0.25rem}.pt-10{padding-top:2.5rem}.pt-14{padding-top:3.5rem}.pt-2{padding-top:0.5rem}.pt-3{padding-top:0.75rem}.pt-4{padding-top:1rem}.pt-5{padding-top:1.25rem}.pt-7{padding-top:1.75rem}.text-left{text-align:left}.text-center{text-align:center}.font-mono{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace}.font-sans{font-family:"Plus Jakarta Sans", sans-serif}.font-serif{font-family:"Cormorant Garamond", Georgia, serif}.text-2xl{font-size:1.5rem;line-height:2rem}.text-3xl{font-size:1.875rem;line-height:2.25rem}.text-4xl{font-size:2.25rem;line-height:2.5rem}.text-\[10px\]{font-size:10px}.text-\[11px\]{font-size:11px}.text-base{font-size:1rem;line-height:1.5rem}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-sm{font-size:0.875rem;line-height:1.25rem}.text-xl{font-size:1.25rem;line-height:1.75rem}.text-xs{font-size:0.75rem;line-height:1rem}.font-bold{font-weight:700}.font-extrabold{font-weight:800}.font-medium{font-weight:500}.font-semibold{font-weight:600}.uppercase{text-transform:uppercase}.italic{font-style:italic}.leading-\[1\.08\]{line-height:1.08}.leading-none{line-height:1}.leading-relaxed{line-height:1.625}.leading-tight{line-height:1.25}.tracking-tight{letter-spacing:-0.025em}.tracking-wide{letter-spacing:0.025em}.tracking-wider{letter-spacing:0.05em}.tracking-widest{letter-spacing:0.1em}.text-amberGold-300{--tw-text-opacity:1;color:rgb(252 211 77 / var(--tw-text-opacity, 1))}.text-amberGold-300\/90{color:rgb(252 211 77 / 0.9)}.text-amberGold-400{--tw-text-opacity:1;color:rgb(251 191 36 / var(--tw-text-opacity, 1))}.text-amberGold-600{--tw-text-opacity:1;color:rgb(217 119 6 / var(--tw-text-opacity, 1))}.text-cream-100{--tw-text-opacity:1;color:rgb(254 246 228 / var(--tw-text-opacity, 1))}.text-cream-100\/75{color:rgb(254 246 228 / 0.75)}.text-cream-100\/80{color:rgb(254 246 228 / 0.8)}.text-cream-100\/85{color:rgb(254 246 228 / 0.85)}.text-cream-100\/90{color:rgb(254 246 228 / 0.9)}.text-emerald-100{--tw-text-opacity:1;color:rgb(209 250 229 / var(--tw-text-opacity, 1))}.text-emerald-200{--tw-text-opacity:1;color:rgb(167 243 208 / var(--tw-text-opacity, 1))}.text-emerald-300{--tw-text-opacity:1;color:rgb(110 231 183 / var(--tw-text-opacity, 1))}.text-emerald-300\/90{color:rgb(110 231 183 / 0.9)}.text-emeraldLive-500{--tw-text-opacity:1;color:rgb(16 185 129 / var(--tw-text-opacity, 1))}.text-emeraldLive-600{--tw-text-opacity:1;color:rgb(5 150 105 / var(--tw-text-opacity, 1))}.text-emeraldLive-700{--tw-text-opacity:1;color:rgb(4 120 87 / var(--tw-text-opacity, 1))}.text-forest-800{--tw-text-opacity:1;color:rgb(17 71 52 / var(--tw-text-opacity, 1))}.text-forest-800\/75{color:rgb(17 71 52 / 0.75)}.text-forest-800\/80{color:rgb(17 71 52 / 0.8)}.text-forest-800\/85{color:rgb(17 71 52 / 0.85)}.text-forest-800\/90{color:rgb(17 71 52 / 0.9)}.text-forest-900{--tw-text-opacity:1;color:rgb(11 51 37 / var(--tw-text-opacity, 1))}.text-forest-900\/90{color:rgb(11 51 37 / 0.9)}.text-forest-950{--tw-text-opacity:1;color:rgb(6 35 25 / var(--tw-text-opacity, 1))}.text-orange-200{--tw-text-opacity:1;color:rgb(254 215 170 / var(--tw-text-opacity, 1))}.text-orange-200\/90{color:rgb(254 215 170 / 0.9)}.text-terracotta-500{--tw-text-opacity:1;color:rgb(249 115 22 / var(--tw-text-opacity, 1))}.text-terracotta-600{--tw-text-opacity:1;color:rgb(234 88 12 / var(--tw-text-opacity, 1))}.text-terracotta-700{--tw-text-opacity:1;color:rgb(194 65 12 / var(--tw-text-opacity, 1))}.text-transparent{color:transparent}.text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.antialiased{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.opacity-95{opacity:0.95}.shadow{--tw-shadow:0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-2xl{--tw-shadow:0 25px 50px -12px rgb(0 0 0 / 0.25);--tw-shadow-colored:0 25px 50px -12px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-emeraldGlow{--tw-shadow:0 12px 35px -6px rgba(16, 185, 129, 0.38);--tw-shadow-colored:0 12px 35px -6px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-goldGlow{--tw-shadow:0 12px 35px -6px rgba(245, 158, 11, 0.35);--tw-shadow-colored:0 12px 35px -6px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-lg{--tw-shadow:0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-md{--tw-shadow:0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-vibrant{--tw-shadow:0 20px 50px -12px rgba(6, 35, 25, 0.25);--tw-shadow-colored:0 20px 50px -12px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-xl{--tw-shadow:0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.outline-none{outline:2px solid transparent;outline-offset:2px}.blur-2xl{--tw-blur:blur(40px);filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.blur-3xl{--tw-blur:blur(64px);filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.drop-shadow-2xl{--tw-drop-shadow:drop-shadow(0 25px 25px rgb(0 0 0 / 0.15));filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.backdrop-blur-lg{--tw-backdrop-blur:blur(16px);-webkit-backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia)}.transition-all{transition-property:all;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-colors{transition-property:color, background-color, border-color, fill, stroke, -webkit-text-decoration-color;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, -webkit-text-decoration-color;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-transform{transition-property:transform;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.duration-200{transition-duration:200ms}.duration-300{transition-duration:300ms}.selection\:bg-amberGold-400 *::selection{--tw-bg-opacity:1;background-color:rgb(251 191 36 / var(--tw-bg-opacity, 1))}.selection\:text-forest-950 *::selection{--tw-text-opacity:1;color:rgb(6 35 25 / var(--tw-text-opacity, 1))}.selection\:bg-amberGold-400::selection{--tw-bg-opacity:1;background-color:rgb(251 191 36 / var(--tw-bg-opacity, 1))}.selection\:text-forest-950::selection{--tw-text-opacity:1;color:rgb(6 35 25 / var(--tw-text-opacity, 1))}.before\:absolute::before{content:var(--tw-content);position:absolute}.before\:inset-y-2::before{content:var(--tw-content);top:0.5rem;bottom:0.5rem}.before\:left-4::before{content:var(--tw-content);left:1rem}.before\:w-1::before{content:var(--tw-content);width:0.25rem}.before\:rounded-full::before{content:var(--tw-content);border-radius:9999px}.before\:bg-gradient-to-b::before{content:var(--tw-content);background-image:linear-gradient(to bottom, var(--tw-gradient-stops))}.before\:from-emeraldLive-500::before{content:var(--tw-content);--tw-gradient-from:#10b981 var(--tw-gradient-from-position);--tw-gradient-to:rgb(16 185 129 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.before\:via-amberGold-500::before{content:var(--tw-content);--tw-gradient-to:rgb(245 158 11 / 0)  var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), #f59e0b var(--tw-gradient-via-position), var(--tw-gradient-to)}.before\:to-terracotta-600::before{content:var(--tw-content);--tw-gradient-to:#ea580c var(--tw-gradient-to-position)}.hover\:-translate-y-0\.5:hover{--tw-translate-y:-0.125rem;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.hover\:-translate-y-1:hover{--tw-translate-y:-0.25rem;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.hover\:scale-110:hover{--tw-scale-x:1.1;--tw-scale-y:1.1;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.hover\:border-amberGold-400:hover{--tw-border-opacity:1;border-color:rgb(251 191 36 / var(--tw-border-opacity, 1))}.hover\:border-amberGold-600:hover{--tw-border-opacity:1;border-color:rgb(217 119 6 / var(--tw-border-opacity, 1))}.hover\:border-emeraldLive-600:hover{--tw-border-opacity:1;border-color:rgb(5 150 105 / var(--tw-border-opacity, 1))}.hover\:border-terracotta-600:hover{--tw-border-opacity:1;border-color:rgb(234 88 12 / var(--tw-border-opacity, 1))}.hover\:bg-forest-700:hover{--tw-bg-opacity:1;background-color:rgb(23 94 69 / var(--tw-bg-opacity, 1))}.hover\:bg-forest-800:hover{--tw-bg-opacity:1;background-color:rgb(17 71 52 / var(--tw-bg-opacity, 1))}.hover\:from-amberGold-400:hover{--tw-gradient-from:#fbbf24 var(--tw-gradient-from-position);--tw-gradient-to:rgb(251 191 36 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.hover\:from-emeraldLive-500:hover{--tw-gradient-from:#10b981 var(--tw-gradient-from-position);--tw-gradient-to:rgb(16 185 129 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.hover\:from-emeraldLive-600:hover{--tw-gradient-from:#059669 var(--tw-gradient-from-position);--tw-gradient-to:rgb(5 150 105 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.hover\:from-emeraldLive-700:hover{--tw-gradient-from:#047857 var(--tw-gradient-from-position);--tw-gradient-to:rgb(4 120 87 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.hover\:from-terracotta-500:hover{--tw-gradient-from:#f97316 var(--tw-gradient-from-position);--tw-gradient-to:rgb(249 115 22 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.hover\:to-amberGold-400:hover{--tw-gradient-to:#fbbf24 var(--tw-gradient-to-position)}.hover\:to-amberGold-600:hover{--tw-gradient-to:#d97706 var(--tw-gradient-to-position)}.hover\:to-emeraldLive-500:hover{--tw-gradient-to:#10b981 var(--tw-gradient-to-position)}.hover\:to-emeraldLive-600:hover{--tw-gradient-to:#059669 var(--tw-gradient-to-position)}.hover\:to-emeraldLive-700:hover{--tw-gradient-to:#047857 var(--tw-gradient-to-position)}.hover\:to-terracotta-500:hover{--tw-gradient-to:#f97316 var(--tw-gradient-to-position)}.hover\:text-amberGold-300:hover{--tw-text-opacity:1;color:rgb(252 211 77 / var(--tw-text-opacity, 1))}.hover\:text-amberGold-400:hover{--tw-text-opacity:1;color:rgb(251 191 36 / var(--tw-text-opacity, 1))}.hover\:text-emerald-300:hover{--tw-text-opacity:1;color:rgb(110 231 183 / var(--tw-text-opacity, 1))}.hover\:shadow-goldGlow:hover{--tw-shadow:0 12px 35px -6px rgba(245, 158, 11, 0.35);--tw-shadow-colored:0 12px 35px -6px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.hover\:shadow-vibrant:hover{--tw-shadow:0 20px 50px -12px rgba(6, 35, 25, 0.25);--tw-shadow-colored:0 20px 50px -12px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.focus\:border-emeraldLive-600:focus{--tw-border-opacity:1;border-color:rgb(5 150 105 / var(--tw-border-opacity, 1))}.focus\:ring-2:focus{--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000)}.focus\:ring-emeraldLive-500\/20:focus{--tw-ring-color:rgb(16 185 129 / 0.2)}.group:hover .group-hover\:scale-105{--tw-scale-x:1.05;--tw-scale-y:1.05;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.group:hover .group-hover\:scale-110{--tw-scale-x:1.1;--tw-scale-y:1.1;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.peer:checked ~ .peer-checked\:border-amberGold-500{--tw-border-opacity:1;border-color:rgb(245 158 11 / var(--tw-border-opacity, 1))}.peer:checked ~ .peer-checked\:border-emeraldLive-600{--tw-border-opacity:1;border-color:rgb(5 150 105 / var(--tw-border-opacity, 1))}.peer:checked ~ .peer-checked\:bg-amberGold-400\/20{background-color:rgb(251 191 36 / 0.2)}.peer:checked ~ .peer-checked\:bg-emeraldLive-500\/15{background-color:rgb(16 185 129 / 0.15)}.peer:checked ~ .peer-checked\:text-forest-950{--tw-text-opacity:1;color:rgb(6 35 25 / var(--tw-text-opacity, 1))}@media (min-width: 640px){.sm\:inline-flex{display:inline-flex}.sm\:h-16{height:4rem}.sm\:h-20{height:5rem}.sm\:w-16{width:4rem}.sm\:w-auto{width:auto}.sm\:grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.sm\:flex-row{flex-direction:row}.sm\:gap-6{gap:1.5rem}.sm\:p-10{padding:2.5rem}.sm\:p-8{padding:2rem}.sm\:p-9{padding:2.25rem}.sm\:px-6{padding-left:1.5rem;padding-right:1.5rem}.sm\:py-24{padding-top:6rem;padding-bottom:6rem}.sm\:py-28{padding-top:7rem;padding-bottom:7rem}.sm\:pb-32{padding-bottom:8rem}.sm\:pt-16{padding-top:4rem}.sm\:text-2xl{font-size:1.5rem;line-height:2rem}.sm\:text-3xl{font-size:1.875rem;line-height:2.25rem}.sm\:text-4xl{font-size:2.25rem;line-height:2.5rem}.sm\:text-5xl{font-size:3rem;line-height:1}.sm\:text-base{font-size:1rem;line-height:1.5rem}.sm\:text-lg{font-size:1.125rem;line-height:1.75rem}.sm\:text-sm{font-size:0.875rem;line-height:1.25rem}.sm\:text-xs{font-size:0.75rem;line-height:1rem}}@media (min-width: 768px){.md\:inline-block{display:inline-block}.md\:grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}}@media (min-width: 1024px){.lg\:col-span-2{grid-column:span 2 / span 2}.lg\:col-span-5{grid-column:span 5 / span 5}.lg\:col-span-6{grid-column:span 6 / span 6}.lg\:col-span-7{grid-column:span 7 / span 7}.lg\:mx-0{margin-left:0px;margin-right:0px}.lg\:grid-cols-12{grid-template-columns:repeat(12, minmax(0, 1fr))}.lg\:grid-cols-3{grid-template-columns:repeat(3, minmax(0, 1fr))}.lg\:grid-cols-4{grid-template-columns:repeat(4, minmax(0, 1fr))}.lg\:flex-row{flex-direction:row}.lg\:justify-start{justify-content:flex-start}.lg\:gap-12{gap:3rem}.lg\:p-14{padding:3.5rem}.lg\:px-8{padding-left:2rem;padding-right:2rem}.lg\:text-left{text-align:left}.lg\:text-5xl{font-size:3rem;line-height:1}.lg\:text-6xl{font-size:3.75rem;line-height:1}}@media (min-width: 1280px){.xl\:flex{display:flex}.xl\:hidden{display:none}}</style></head>
+</head>
 <body class="bg-cream-100 text-forest-950 font-sans antialiased selection:bg-amberGold-400 selection:text-forest-950 overflow-x-hidden">
 
-  <!-- ==================== 1. CABEÇALHO FIXO TRANSLÚCIDO ==================== -->
-  <header id="navbar" class="sticky top-0 z-50 w-full bg-forest-950/92 backdrop-blur-lg border-b border-amberGold-400/25 shadow-lg transition-all duration-300">
+  <!-- ==================== 1. CABEÇALHO FIXO ==================== -->
+  <header id="navbar" class="sticky top-0 z-50 w-full bg-forest-950/90 backdrop-blur-lg border-b border-amberGold-400/25 shadow-lg">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between h-20">
-        <!-- Marca & Identidade -->
         <a href="#inicio" class="flex items-center gap-3.5 group">
           <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-emeraldLive-500 via-emeraldLive-600 to-amberGold-500 p-0.5 shadow-goldGlow group-hover:scale-105 transition-transform">
             <div class="w-full h-full rounded-[14px] bg-forest-950 flex items-center justify-center">
-              <!-- Mini SVG Botânico -->
-              <svg class="w-7 h-7" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M18 31V13" stroke="#fbbf24" stroke-width="2.4" stroke-linecap="round"></path>
-                <path d="M18 19C12 19 8 14 8 8C14 8 18 12 18 19Z" fill="#10b981"></path>
-                <path d="M18 15C24 15 28 10 28 4C22 4 18 8 18 15Z" fill="#fbbf24"></path>
-                <circle cx="18" cy="7" r="2.2" fill="#ea580c"></circle>
+              <svg class="w-7 h-7" viewBox="0 0 36 36" fill="none">
+                <path d="M18 31V13" stroke="#fbbf24" stroke-width="2.4" stroke-linecap="round"/>
+                <path d="M18 19C12 19 8 14 8 8C14 8 18 12 18 19Z" fill="#10b981"/>
+                <path d="M18 15C24 15 28 10 28 4C22 4 18 8 18 15Z" fill="#fbbf24"/>
+                <circle cx="18" cy="7" r="2.2" fill="#ea580c"/>
               </svg>
             </div>
           </div>
           <div>
-            <span class="block font-serif text-xl sm:text-2xl font-bold text-white leading-none tracking-tight">
-              Dr. Francisco de Paula
-            </span>
-            <span class="block text-[11px] sm:text-xs font-semibold text-amberGold-300 tracking-wide mt-1">
-              CRN-4: 26101256 · FITO/CRN4/0151/2026
-            </span>
+            <span class="block font-serif text-xl sm:text-2xl font-bold text-white leading-none tracking-tight">Dr. Francisco de Paula</span>
+            <span class="block text-[11px] sm:text-xs font-semibold text-amberGold-300 tracking-wide mt-1">CRN-4: 26101256 · FITO/CRN4/0151/2026</span>
           </div>
         </a>
 
-        <!-- Navegação Desktop -->
         <nav class="hidden xl:flex items-center gap-7 text-sm font-semibold text-cream-100/90">
           <a href="#inicio" class="hover:text-amberGold-400 transition-colors">Início</a>
           <a href="#especialidades" class="hover:text-amberGold-400 transition-colors">Especialidades</a>
@@ -225,13 +108,11 @@
           <a href="#contato" class="hover:text-amberGold-400 transition-colors">Contato</a>
         </nav>
 
-        <!-- Botão CTA WhatsApp + Menu Mobile -->
         <div class="flex items-center gap-3">
-          <a href="https://wa.me/5521986807805?text=Olá%20Dr.%20Francisco!%20Gostaria%20de%20agendar%20uma%20consulta%20de%20Nutrição%20Integrativa%20e%20Fitoterapia." target="_blank" rel="noopener noreferrer" class="btn-shimmer hidden sm:inline-flex items-center gap-2.5 bg-gradient-to-r from-emeraldLive-500 to-emeraldLive-600 hover:from-emeraldLive-600 hover:to-emeraldLive-700 text-white text-sm font-bold px-5 py-3 rounded-full shadow-emeraldGlow transition-all duration-200">
+          <a href="https://wa.me/5521986807805?text=Ol%C3%A1%20Dr.%20Francisco!%20Gostaria%20de%20agendar%20uma%20consulta." target="_blank" rel="noopener noreferrer" class="btn-shimmer hidden sm:inline-flex items-center gap-2.5 bg-gradient-to-r from-emeraldLive-500 to-emeraldLive-600 hover:from-emeraldLive-600 hover:to-emeraldLive-700 text-white text-sm font-bold px-5 py-3 rounded-full shadow-emeraldGlow transition-all">
             <i class="fa-brands fa-whatsapp text-lg"></i>
             <span>Agendar Consulta</span>
           </a>
-
           <button id="mobile-menu-btn" type="button" aria-label="Abrir menu" class="xl:hidden p-2.5 rounded-xl bg-forest-800 text-amberGold-300 hover:bg-forest-700 transition-colors">
             <i id="menu-icon" class="fa-solid fa-bars text-xl"></i>
           </button>
@@ -239,36 +120,32 @@
       </div>
     </div>
 
-    <!-- Menu Mobile Expansível -->
     <div id="mobile-menu" class="hidden xl:hidden bg-forest-900 border-b border-amberGold-400/20 px-4 pt-3 pb-6 space-y-2 shadow-2xl">
       <a href="#inicio" class="mobile-link block px-4 py-3 rounded-xl text-base font-semibold text-white hover:bg-forest-800 hover:text-amberGold-300">Início</a>
-      <a href="#especialidades" class="mobile-link block px-4 py-3 rounded-xl text-base font-semibold text-white hover:bg-forest-800 hover:text-amberGold-300">Especialidades &amp; Pilares</a>
-      <a href="#ferramentas" class="mobile-link block px-4 py-3 rounded-xl text-base font-semibold text-white hover:bg-forest-800 hover:text-amberGold-300">Ferramentas Digitais &amp; Portfólio</a>
-      <a href="#sobre" class="mobile-link block px-4 py-3 rounded-xl text-base font-semibold text-white hover:bg-forest-800 hover:text-amberGold-300">Sobre &amp; Formação Acadêmica</a>
-      <a href="#como-funciona" class="mobile-link block px-4 py-3 rounded-xl text-base font-semibold text-white hover:bg-forest-800 hover:text-amberGold-300">Como Funciona a Consulta</a>
-      <a href="#contato" class="mobile-link block px-4 py-3 rounded-xl text-base font-semibold text-white hover:bg-forest-800 hover:text-amberGold-300">Enviar e Solicitar Contato</a>
+      <a href="#especialidades" class="mobile-link block px-4 py-3 rounded-xl text-base font-semibold text-white hover:bg-forest-800 hover:text-amberGold-300">Especialidades</a>
+      <a href="#ferramentas" class="mobile-link block px-4 py-3 rounded-xl text-base font-semibold text-white hover:bg-forest-800 hover:text-amberGold-300">Ferramentas Digitais</a>
+      <a href="#sobre" class="mobile-link block px-4 py-3 rounded-xl text-base font-semibold text-white hover:bg-forest-800 hover:text-amberGold-300">Sobre &amp; Formação</a>
+      <a href="#como-funciona" class="mobile-link block px-4 py-3 rounded-xl text-base font-semibold text-white hover:bg-forest-800 hover:text-amberGold-300">Como Funciona</a>
+      <a href="#contato" class="mobile-link block px-4 py-3 rounded-xl text-base font-semibold text-white hover:bg-forest-800 hover:text-amberGold-300">Contato</a>
       <div class="pt-3">
-        <a href="https://wa.me/5521986807805?text=Olá%20Dr.%20Francisco!%20Gostaria%20de%20agendar%20uma%20consulta%20nutricional." target="_blank" rel="noopener noreferrer" class="btn-shimmer flex items-center justify-center gap-2.5 w-full bg-gradient-to-r from-amberGold-500 to-terracotta-600 text-white font-bold py-3.5 px-5 rounded-2xl shadow-lg">
+        <a href="https://wa.me/5521986807805?text=Ol%C3%A1%20Dr.%20Francisco!" target="_blank" rel="noopener noreferrer" class="btn-shimmer flex items-center justify-center gap-2.5 w-full bg-gradient-to-r from-amberGold-500 to-terracotta-600 text-white font-bold py-3.5 px-5 rounded-2xl shadow-lg">
           <i class="fa-brands fa-whatsapp text-xl"></i>
-          <span>WhatsApp Direto: (21) 98680-7805</span>
+          <span>WhatsApp: (21) 98680-7805</span>
         </a>
       </div>
     </div>
   </header>
 
-  <!-- ==================== 2. HERO SECTION VIBRANTE COM ILUSTRAÇÃO SVG ANIMADA ==================== -->
+  <!-- ==================== 2. HERO — FOTO 1 INSERIDA ==================== -->
   <section id="inicio" class="relative bg-gradient-to-br from-forest-950 via-forest-900 to-forest-800 text-white pt-10 pb-24 sm:pt-16 sm:pb-32 overflow-hidden">
-    <!-- Luzes ambientes vibrantes -->
     <div class="absolute -top-28 -left-24 w-[440px] h-[440px] bg-emeraldLive-500/20 rounded-full blur-3xl pointer-events-none"></div>
     <div class="absolute top-1/3 -right-24 w-[420px] h-[420px] bg-amberGold-500/20 rounded-full blur-3xl pointer-events-none"></div>
-    <div class="absolute bottom-10 left-1/3 w-72 h-72 bg-terracotta-600/15 rounded-full blur-3xl pointer-events-none"></div>
 
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-        
-        <!-- Coluna de Conteúdo Principal -->
+
+        <!-- Conteúdo -->
         <div class="lg:col-span-7 space-y-6 text-center lg:text-left reveal visible">
-          <!-- Badges Oficiais -->
           <div class="flex flex-wrap items-center justify-center lg:justify-start gap-2.5">
             <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-emeraldLive-500/20 border border-emeraldLive-500/40 text-emerald-200 text-xs sm:text-sm font-bold">
               <span class="w-2.5 h-2.5 rounded-full bg-emeraldLive-500 animate-ping"></span>
@@ -285,23 +162,20 @@
           </h1>
 
           <p class="text-base sm:text-lg text-cream-100/90 leading-relaxed max-w-2xl mx-auto lg:mx-0">
-            Olá! Sou o <strong class="text-amberGold-300 font-bold">Dr. Francisco de Paula Gonçalves de Lima</strong>. Atendo no Rio de Janeiro (presencial e online) unindo ciência nutricional, bioquímica individualizada e prescrição habilitada de fitoterápicos para cuidar da sua saúde sem terrorismos alimentares.
+            Olá! Sou o <strong class="text-amberGold-300 font-bold">Dr. Francisco de Paula Gonçalves de Lima</strong>. Atendo no Rio de Janeiro (presencial e online) unindo ciência nutricional, bioquímica individualizada e prescrição habilitada de fitoterápicos.
           </p>
 
-          <!-- Botões de Ação (CTAs de Alto Impacto) -->
           <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
-            <a href="https://wa.me/5521986807805?text=Olá%20Dr.%20Francisco!%20Vim%20pela%20sua%20página%20e%20gostaria%20de%20agendar%20minha%20consulta%20nutricional." target="_blank" rel="noopener noreferrer" class="btn-shimmer w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-gradient-to-r from-emeraldLive-500 to-emeraldLive-600 hover:from-emeraldLive-600 hover:to-emeraldLive-700 text-white font-extrabold px-8 py-4 rounded-2xl shadow-emeraldGlow hover:-translate-y-1 transition-all duration-300 text-base">
+            <a href="https://wa.me/5521986807805?text=Ol%C3%A1%20Dr.%20Francisco!%20Gostaria%20de%20agendar." target="_blank" rel="noopener noreferrer" class="btn-shimmer w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-gradient-to-r from-emeraldLive-500 to-emeraldLive-600 hover:from-emeraldLive-600 hover:to-emeraldLive-700 text-white font-extrabold px-8 py-4 rounded-2xl shadow-emeraldGlow hover:-translate-y-1 transition-all text-base">
               <i class="fa-brands fa-whatsapp text-2xl"></i>
               <span>Agendar pelo WhatsApp</span>
             </a>
-
-            <a href="#ferramentas" class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 bg-forest-800/80 hover:bg-forest-700 text-amberGold-300 border-2 border-amberGold-400/50 font-bold px-7 py-4 rounded-2xl shadow-lg hover:-translate-y-1 transition-all duration-300 text-base">
+            <a href="#ferramentas" class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 bg-forest-800/80 hover:bg-forest-700 text-amberGold-300 border-2 border-amberGold-400/50 font-bold px-7 py-4 rounded-2xl shadow-lg hover:-translate-y-1 transition-all text-base">
               <i class="fa-solid fa-compass"></i>
-              <span>Acessar Ferramentas &amp; Portfólio</span>
+              <span>Ferramentas &amp; Portfólio</span>
             </a>
           </div>
 
-          <!-- Indicadores de Confiança -->
           <div class="grid grid-cols-3 gap-3 sm:gap-6 pt-5 border-t border-white/15 max-w-xl mx-auto lg:mx-0 text-left">
             <div class="bg-white/5 rounded-2xl p-3 border border-white/10">
               <span class="block text-amberGold-400 font-serif text-2xl sm:text-3xl font-bold leading-none">100%</span>
@@ -318,110 +192,43 @@
           </div>
         </div>
 
-        <!-- Coluna Direita: Ilustração Botânica/Nutricional Complexa e Animada -->
+        <!-- ⭐ FOTO 1 — Retrato profissional em moldura circular -->
         <div class="lg:col-span-5 flex justify-center reveal-scale visible">
-          <div class="relative w-full max-w-[460px] aspect-square flex items-center justify-center">
-            <!-- Halo luminoso atrás do SVG -->
-            <div class="absolute inset-8 rounded-full bg-gradient-to-tr from-emeraldLive-500/30 via-amberGold-400/25 to-terracotta-500/25 blur-2xl"></div>
+          <div class="relative w-full max-w-[420px] flex flex-col items-center pt-6">
 
-            <!-- SVG Vetorial Exclusivo: Órbita Molecular + Caduceu da Nutrição + Folhas Fitoterápicas -->
-            <svg viewBox="0 0 480 480" class="w-full h-full drop-shadow-2xl" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Ilustração botânica e molecular da Nutrição Integrativa e Fitoterapia">
-              <defs>
-                <linearGradient id="ringGold" x1="0%" y1="0%" x2="100%" y2="100%">
-                  <stop offset="0%" stop-color="#fbbf24"></stop>
-                  <stop offset="50%" stop-color="#10b981"></stop>
-                  <stop offset="100%" stop-color="#ea580c"></stop>
-                </linearGradient>
-                <linearGradient id="leafEmerald" x1="0%" y1="0%" x2="100%" y2="100%">
-                  <stop offset="0%" stop-color="#34d399"></stop>
-                  <stop offset="100%" stop-color="#059669"></stop>
-                </linearGradient>
-                <linearGradient id="leafGold" x1="0%" y1="0%" x2="100%" y2="100%">
-                  <stop offset="0%" stop-color="#fde68a"></stop>
-                  <stop offset="100%" stop-color="#f59e0b"></stop>
-                </linearGradient>
-                <linearGradient id="terracottaGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                  <stop offset="0%" stop-color="#fb923c"></stop>
-                  <stop offset="100%" stop-color="#ea580c"></stop>
-                </linearGradient>
-              </defs>
+            <!-- Halo luminoso -->
+            <div class="absolute inset-6 rounded-full bg-gradient-to-tr from-emeraldLive-500/40 via-amberGold-400/30 to-terracotta-500/30 blur-3xl pointer-events-none"></div>
 
-              <!-- Círculo Base Translúcido -->
-              <circle cx="240" cy="240" r="195" fill="#0b3325" fill-opacity="0.65" stroke="url(#ringGold)" stroke-width="2.5" stroke-dasharray="10 6"></circle>
-              <circle cx="240" cy="240" r="145" fill="#062319" fill-opacity="0.85" stroke="#10b981" stroke-opacity="0.35" stroke-width="1.5"></circle>
+            <!-- Foto circular com moldura -->
+            <div class="relative w-full aspect-square rounded-full overflow-hidden border-4 border-amberGold-400/80 shadow-vibrant bg-forest-900">
+              <img
+                src="https://i.imgur.com/y7BosdI.jpeg"
+                alt="Dr. Francisco de Paula Gonçalves de Lima — Nutricionista CRN-4 26101256"
+                class="w-full h-full object-cover object-top"
+                loading="eager"
+              >
+              <div class="pointer-events-none absolute inset-0 rounded-full ring-4 ring-emeraldLive-500/40 ring-offset-4 ring-offset-forest-900"></div>
+            </div>
 
-              <!-- Órbita Externa Animada com Moléculas Fitoterápicas -->
-              <g class="animate-orbit">
-                <circle cx="240" cy="240" r="185" stroke="#fbbf24" stroke-opacity="0.25" stroke-width="1.2"></circle>
-                <!-- Molécula Hexagonal Fitoterápica (Topo) -->
-                <g transform="translate(240, 55)">
-                  <polygon points="0,-16 14,-8 14,8 0,16 -14,8 -14,-8" fill="#062319" stroke="#fbbf24" stroke-width="2.5"></polygon>
-                  <circle cx="0" cy="0" r="4" fill="#10b981"></circle>
-                  <line x1="14" y1="-8" x2="23" y2="-13" stroke="#fbbf24" stroke-width="2"></line>
-                  <circle cx="25" cy="-14" r="3.5" fill="#ea580c"></circle>
-                </g>
-                <!-- Esfera Vitamínica (Direita) -->
-                <g transform="translate(425, 240)">
-                  <circle cx="0" cy="0" r="14" fill="url(#leafEmerald)" stroke="#fffbeb" stroke-width="2"></circle>
-                  <text x="0" y="4" text-anchor="middle" fill="#062319" font-size="11" font-weight="bold" font-family="sans-serif">D3</text>
-                </g>
-                <!-- Cápsula Natural (Base) -->
-                <g transform="translate(240, 425) rotate(35)">
-                  <rect x="-16" y="-8" width="32" height="16" rx="8" fill="url(#terracottaGrad)" stroke="#fef6e4" stroke-width="1.8"></rect>
-                  <line x1="0" y1="-8" x2="0" y2="8" stroke="#fef6e4" stroke-width="1.8"></line>
-                </g>
-                <!-- Mineral Essencial (Esquerda) -->
-                <g transform="translate(55, 240)">
-                  <circle cx="0" cy="0" r="14" fill="url(#leafGold)" stroke="#062319" stroke-width="2"></circle>
-                  <text x="0" y="4" text-anchor="middle" fill="#062319" font-size="10" font-weight="bold" font-family="sans-serif">Mg</text>
-                </g>
-              </g>
+            <!-- Selo CRN -->
+            <div class="absolute top-0 right-2 bg-forest-950/95 backdrop-blur border border-amberGold-400/60 text-amberGold-300 text-[10px] sm:text-xs font-extrabold px-3 py-1.5 rounded-full shadow-goldGlow flex items-center gap-1.5">
+              <i class="fa-solid fa-certificate"></i>
+              <span>CRN-4 26101256</span>
+            </div>
 
-              <!-- Órbita Interna Reversa -->
-              <g class="animate-orbit-reverse">
-                <circle cx="240" cy="240" r="118" stroke="#10b981" stroke-opacity="0.3" stroke-width="1.5" stroke-dasharray="6 8"></circle>
-                <circle cx="240" cy="122" r="6" fill="#fbbf24"></circle>
-                <circle cx="358" cy="240" r="6" fill="#ea580c"></circle>
-                <circle cx="240" cy="358" r="6" fill="#10b981"></circle>
-                <circle cx="122" cy="240" r="6" fill="#fcd34d"></circle>
-              </g>
+            <!-- Partículas -->
+            <div class="pointer-events-none absolute -top-1 -left-2 w-4 h-4 rounded-full bg-amberGold-400 sparkle-1"></div>
+            <div class="pointer-events-none absolute top-12 -right-3 w-3 h-3 rounded-full bg-emeraldLive-500 sparkle-2"></div>
+            <div class="pointer-events-none absolute bottom-12 -left-3 w-3 h-3 rounded-full bg-terracotta-500 sparkle-3"></div>
 
-              <!-- Emblema Central Flutuante: Caduceu da Nutrição + Folhas Botânicas -->
-              <g class="animate-float-slow">
-                <!-- Haste Central Dourada -->
-                <line x1="240" y1="138" x2="240" y2="342" stroke="url(#leafGold)" stroke-width="5.5" stroke-linecap="round"></line>
-                <circle cx="240" cy="132" r="9" fill="#fbbf24" stroke="#fffbeb" stroke-width="2"></circle>
-
-                <!-- Serpentes Estilizadas da Saúde/Nutrição -->
-                <path d="M240 165 C200 178, 280 205, 240 228 C200 250, 280 278, 240 305" stroke="#10b981" stroke-width="4.5" stroke-linecap="round" fill="none"></path>
-                <path d="M240 165 C280 178, 200 205, 240 228 C280 250, 200 278, 240 305" stroke="#fbbf24" stroke-width="3.5" stroke-linecap="round" fill="none"></path>
-
-                <!-- Grandes Folhas Fitoterápicas Laterais -->
-                <path d="M236 250 C175 245, 145 195, 155 150 C200 155, 234 195, 236 250 Z" fill="url(#leafEmerald)" stroke="#fef6e4" stroke-width="2"></path>
-                <path d="M236 250 C202 212, 178 182, 160 156" stroke="#062319" stroke-width="2" stroke-linecap="round"></path>
-
-                <path d="M244 235 C305 230, 335 180, 325 135 C280 140, 246 180, 244 235 Z" fill="url(#leafGold)" stroke="#062319" stroke-width="2"></path>
-                <path d="M244 235 C278 197, 302 167, 320 141" stroke="#062319" stroke-width="2" stroke-linecap="round"></path>
-
-                <!-- Fruto / Semente Vital na Base -->
-                <path d="M240 295 C215 295, 205 322, 240 340 C275 322, 265 295, 240 295 Z" fill="url(#terracottaGrad)" stroke="#fef6e4" stroke-width="2"></path>
-              </g>
-
-              <!-- Partículas Brilhantes Sutis -->
-              <circle cx="135" cy="115" r="4" fill="#fbbf24" class="sparkle-1"></circle>
-              <circle cx="350" cy="125" r="5" fill="#10b981" class="sparkle-2"></circle>
-              <circle cx="345" cy="355" r="4.5" fill="#fbbf24" class="sparkle-3"></circle>
-              <circle cx="130" cy="345" r="4" fill="#fb923c" class="sparkle-1"></circle>
-            </svg>
-
-            <!-- Cartão Flutuante Inferior de Destaque -->
+            <!-- Cartão flutuante -->
             <div class="animate-float-reverse absolute -bottom-3 left-1/2 -translate-x-1/2 w-[90%] sm:w-auto bg-cream-50 text-forest-950 px-5 py-3 rounded-2xl shadow-vibrant border-2 border-amberGold-400 flex items-center gap-3 whitespace-nowrap">
               <div class="w-9 h-9 rounded-xl bg-emeraldLive-600 text-white flex items-center justify-center shrink-0">
                 <i class="fa-solid fa-heart-pulse"></i>
               </div>
               <div>
-                <p class="text-xs font-extrabold text-forest-950">Ciência + Acolhimento Humanizado</p>
-                <p class="text-[11px] font-semibold text-emeraldLive-700">Presencial no Rio de Janeiro &amp; Teleconsulta</p>
+                <p class="text-xs font-extrabold text-forest-950">Ciência + Acolhimento Humano</p>
+                <p class="text-[11px] font-semibold text-emeraldLive-700">Presencial no RJ &amp; Teleconsulta</p>
               </div>
             </div>
           </div>
@@ -430,50 +237,34 @@
       </div>
     </div>
 
-    <!-- Divisor Ondulado SVG (Transição para Creme Aconchegante) -->
     <div class="absolute bottom-0 left-0 w-full overflow-hidden leading-none pointer-events-none">
       <svg class="relative block w-full h-12 sm:h-20" viewBox="0 0 1200 120" preserveAspectRatio="none">
-        <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V120H0Z" fill="#fef6e4"></path>
+        <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V120H0Z" fill="#fef6e4"/>
       </svg>
     </div>
   </section>
 
-  <!-- ==================== 3. PILARES DO ATENDIMENTO & ESPECIALIDADES (6 CARDS ILUSTRADOS) ==================== -->
+  <!-- ==================== 3. ESPECIALIDADES ==================== -->
   <section id="especialidades" class="py-16 sm:py-24 bg-cream-100 relative">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <!-- Cabeçalho -->
       <div class="text-center max-w-3xl mx-auto mb-16 reveal">
         <span class="inline-flex items-center gap-2 text-xs font-extrabold uppercase tracking-widest text-terracotta-700 bg-amberGold-300/40 px-4 py-1.5 rounded-full border border-amberGold-500/40 mb-3">
           <i class="fa-solid fa-seedling text-emeraldLive-600"></i>
           <span>Cuidado Integral &amp; Baseado em Evidências</span>
         </span>
-        <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-forest-950">
-          Pilares do Atendimento &amp; Especialidades
-        </h2>
-        <p class="text-forest-800/90 mt-4 text-base sm:text-lg leading-relaxed">
-          Cada plano terapêutico é construído sob medida para sua fisiologia, exames laboratoriais, rotina e história de vida.
-        </p>
+        <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-forest-950">Pilares do Atendimento &amp; Especialidades</h2>
+        <p class="text-forest-800/90 mt-4 text-base sm:text-lg leading-relaxed">Cada plano terapêutico é construído sob medida para sua fisiologia, exames laboratoriais, rotina e história de vida.</p>
       </div>
 
-      <!-- Grid com 6 Cards Ilustrados -->
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
-        
-        <!-- Pilar 1: Nutrição Clínica & Funcional -->
+        <!-- Pilar 1 -->
         <div class="card-vibrant reveal bg-cream-50 rounded-3xl p-7 border-2 border-emeraldLive-500/25 hover:border-emeraldLive-600 shadow-md hover:shadow-vibrant flex flex-col justify-between">
           <div>
             <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-forest-900 to-emeraldLive-700 p-3 flex items-center justify-center shadow-lg mb-5">
-              <!-- Mini SVG Exclusivo: Bioquímica & Metabolismo -->
-              <svg viewBox="0 0 48 48" class="w-full h-full" fill="none">
-                <path d="M18 8H30M21 8V17L12 33C10.5 35.8 12.5 39 15.6 39H32.4C35.5 39 37.5 35.8 36 33L27 17V8" stroke="#fbbf24" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
-                <path d="M15 29H33L35.5 34C36.3 35.6 35.1 37.5 33.3 37.5H14.7C12.9 37.5 11.7 35.6 12.5 34L15 29Z" fill="#10b981"></path>
-                <circle cx="22" cy="23" r="2.2" fill="#fde68a"></circle>
-                <circle cx="27" cy="19" r="1.8" fill="#ea580c"></circle>
-              </svg>
+              <i class="fa-solid fa-flask-vial text-3xl text-amberGold-400"></i>
             </div>
             <h3 class="font-serif text-2xl font-bold text-forest-950 mb-3">1. Nutrição Clínica &amp; Funcional</h3>
-            <p class="text-sm text-forest-800/90 leading-relaxed">
-              Planejamento alimentar individualizado baseado em bioquímica nutricional e interpretação detalhada de exames laboratoriais para controle de diabetes, hipertensão, dislipidemias, saúde intestinal e metabolismo.
-            </p>
+            <p class="text-sm text-forest-800/90 leading-relaxed">Planejamento alimentar individualizado baseado em bioquímica nutricional para controle de diabetes, hipertensão, dislipidemias, saúde intestinal e metabolismo.</p>
           </div>
           <div class="mt-6 pt-4 border-t border-amberGold-500/20 flex items-center justify-between text-xs font-extrabold text-emeraldLive-700">
             <span>Bioquímica &amp; Exames</span>
@@ -481,67 +272,45 @@
           </div>
         </div>
 
-        <!-- Pilar 2: Fitoterapia Clínica Aplicada -->
+        <!-- Pilar 2 -->
         <div class="card-vibrant reveal bg-cream-50 rounded-3xl p-7 border-2 border-amberGold-500/45 hover:border-amberGold-600 shadow-md hover:shadow-goldGlow flex flex-col justify-between relative">
-          <span class="absolute top-5 right-5 text-[11px] font-extrabold bg-forest-950 text-amberGold-300 px-3 py-1 rounded-full shadow">
-            CFN nº 680/2021
-          </span>
+          <span class="absolute top-5 right-5 text-[11px] font-extrabold bg-forest-950 text-amberGold-300 px-3 py-1 rounded-full shadow">CFN 680/2021</span>
           <div>
             <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-amberGold-500 to-terracotta-600 p-3 flex items-center justify-center shadow-lg mb-5">
-              <!-- Mini SVG Exclusivo: Almofariz & Folhas Fitoterápicas -->
-              <svg viewBox="0 0 48 48" class="w-full h-full" fill="none">
-                <path d="M10 24H38C38 32.8 31.7 39 24 39C16.3 39 10 32.8 10 24Z" fill="#062319" stroke="#fef6e4" stroke-width="2.5"></path>
-                <path d="M30 24L37 11" stroke="#fef6e4" stroke-width="3.5" stroke-linecap="round"></path>
-                <path d="M22 24C16 22 14 15 17 11C22 12 24 18 22 24Z" fill="#10b981" stroke="#fef6e4" stroke-width="1.5"></path>
-                <path d="M24 23C25 17 30 14 34 16C33 21 28 24 24 23Z" fill="#fde68a"></path>
-              </svg>
+              <i class="fa-solid fa-leaf text-3xl text-white"></i>
             </div>
             <h3 class="font-serif text-2xl font-bold text-forest-950 mb-3">2. Fitoterapia Clínica Aplicada</h3>
-            <p class="text-sm text-forest-800/90 leading-relaxed">
-              Prescrição habilitada (<strong>FITO/CRN4/0151/2026</strong>) de plantas medicinais, chás terapêuticos, tinturas e extratos secos padronizados conforme a Resolução CFN nº 680/2021 para sono, ansiedade, digestão e imunidade.
-            </p>
+            <p class="text-sm text-forest-800/90 leading-relaxed">Prescrição habilitada (<strong>FITO/CRN4/0151/2026</strong>) de plantas medicinais, chás terapêuticos, tinturas e extratos secos padronizados conforme Resolução CFN nº 680/2021.</p>
           </div>
           <div class="mt-6 pt-4 border-t border-amberGold-500/20 flex items-center justify-between text-xs font-extrabold text-terracotta-700">
             <span>FITO/CRN4/0151/2026</span>
-            <span class="px-2.5 py-1 rounded-full bg-amberGold-400/25">Habilitado CRN-4</span>
+            <span class="px-2.5 py-1 rounded-full bg-amberGold-400/25">Habilitado</span>
           </div>
         </div>
 
-        <!-- Pilar 3: Nutrição Esportiva & Performance -->
+        <!-- Pilar 3 -->
         <div class="card-vibrant reveal bg-cream-50 rounded-3xl p-7 border-2 border-emeraldLive-500/25 hover:border-emeraldLive-600 shadow-md hover:shadow-vibrant flex flex-col justify-between">
           <div>
             <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-emeraldLive-600 to-forest-900 p-3 flex items-center justify-center shadow-lg mb-5">
-              <!-- Mini SVG Exclusivo: Energia & Performance -->
-              <svg viewBox="0 0 48 48" class="w-full h-full" fill="none">
-                <circle cx="24" cy="24" r="16" stroke="#fbbf24" stroke-width="2.5" stroke-dasharray="4 3"></circle>
-                <path d="M26 10L15 26H24L22 38L33 22H24L26 10Z" fill="#fbbf24" stroke="#fef6e4" stroke-width="1.5" stroke-linejoin="round"></path>
-              </svg>
+              <i class="fa-solid fa-dumbbell text-3xl text-amberGold-400"></i>
             </div>
-            <h3 class="font-serif text-2xl font-bold text-forest-950 mb-3">3. Nutrição Esportiva &amp; Performance</h3>
-            <p class="text-sm text-forest-800/90 leading-relaxed">
-              Estratégias nutricionais periodizadas para hipertrofia muscular, emagrecimento com preservação de massa magra, melhora da composição corporal, rendimento nos treinos e recuperação muscular acelerada.
-            </p>
+            <h3 class="font-serif text-2xl font-bold text-forest-950 mb-3">3. Nutrição Esportiva</h3>
+            <p class="text-sm text-forest-800/90 leading-relaxed">Estratégias nutricionais periodizadas para hipertrofia, emagrecimento com preservação de massa magra, rendimento nos treinos e recuperação muscular.</p>
           </div>
           <div class="mt-6 pt-4 border-t border-amberGold-500/20 flex items-center justify-between text-xs font-extrabold text-emeraldLive-700">
             <span>Hipertrofia &amp; Definição</span>
-            <span class="px-2.5 py-1 rounded-full bg-emeraldLive-500/15">Alta Performance</span>
+            <span class="px-2.5 py-1 rounded-full bg-emeraldLive-500/15">Performance</span>
           </div>
         </div>
 
-        <!-- Pilar 4: Saúde do Idoso & Geriatria -->
+        <!-- Pilar 4 -->
         <div class="card-vibrant reveal bg-cream-50 rounded-3xl p-7 border-2 border-terracotta-500/25 hover:border-terracotta-600 shadow-md hover:shadow-vibrant flex flex-col justify-between">
           <div>
             <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-terracotta-600 to-amberGold-600 p-3 flex items-center justify-center shadow-lg mb-5">
-              <!-- Mini SVG Exclusivo: Cuidado & Vitalidade Geriátrica -->
-              <svg viewBox="0 0 48 48" class="w-full h-full" fill="none">
-                <path d="M24 38C24 38 10 29 10 18.5C10 13.8 13.8 10 18.5 10C21.2 10 23.6 11.3 24 13.2C24.4 11.3 26.8 10 29.5 10C34.2 10 38 13.8 38 18.5C38 29 24 38 24 38Z" fill="#fef6e4"></path>
-                <path d="M24 18V28M19 23H29" stroke="#ea580c" stroke-width="3" stroke-linecap="round"></path>
-              </svg>
+              <i class="fa-solid fa-heart-pulse text-3xl text-white"></i>
             </div>
             <h3 class="font-serif text-2xl font-bold text-forest-950 mb-3">4. Saúde do Idoso &amp; Geriatria</h3>
-            <p class="text-sm text-forest-800/90 leading-relaxed">
-              Avaliação nutricional geriátrica completa (MAN), prevenção e tratamento da sarcopenia, suporte proteico adequado, saúde óssea, cognitiva e adaptação culinária para manter autonomia e vitalidade.
-            </p>
+            <p class="text-sm text-forest-800/90 leading-relaxed">Avaliação nutricional geriátrica completa, prevenção da sarcopenia, suporte proteico adequado, saúde óssea e cognitiva para manter autonomia.</p>
           </div>
           <div class="mt-6 pt-4 border-t border-amberGold-500/20 flex items-center justify-between text-xs font-extrabold text-terracotta-700">
             <span>Longevidade Ativa</span>
@@ -549,708 +318,48 @@
           </div>
         </div>
 
-        <!-- Pilar 5: Reeducação Alimentar & Comportamento -->
+        <!-- Pilar 5 -->
         <div class="card-vibrant reveal bg-cream-50 rounded-3xl p-7 border-2 border-emeraldLive-500/25 hover:border-emeraldLive-600 shadow-md hover:shadow-vibrant flex flex-col justify-between">
           <div>
             <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-forest-900 to-forest-700 p-3 flex items-center justify-center shadow-lg mb-5">
-              <!-- Mini SVG Exclusivo: Prato Equilibrado & Autonomia -->
-              <svg viewBox="0 0 48 48" class="w-full h-full" fill="none">
-                <circle cx="24" cy="24" r="16" fill="#fef6e4" stroke="#10b981" stroke-width="3"></circle>
-                <path d="M24 12C17.4 12 12 17.4 12 24C12 30.6 17.4 36 24 36V12Z" fill="#10b981"></path>
-                <path d="M24 12C30.6 12 36 17.4 36 24H24V12Z" fill="#fbbf24"></path>
-                <path d="M24 24H36C36 30.6 30.6 36 24 36V24Z" fill="#ea580c"></path>
-              </svg>
+              <i class="fa-solid fa-utensils text-3xl text-amberGold-400"></i>
             </div>
-            <h3 class="font-serif text-2xl font-bold text-forest-950 mb-3">5. Reeducação Alimentar &amp; Comportamento</h3>
-            <p class="text-sm text-forest-800/90 leading-relaxed">
-              Construção de autonomia alimentar sem terrorismo nutricional ou dietas restritivas insustentáveis. Respeito à sua cultura, preferências, orçamento familiar e relação saudável com a comida.
-            </p>
+            <h3 class="font-serif text-2xl font-bold text-forest-950 mb-3">5. Reeducação Alimentar</h3>
+            <p class="text-sm text-forest-800/90 leading-relaxed">Construção de autonomia alimentar sem terrorismo nutricional ou dietas restritivas insustentáveis. Respeito à cultura, preferências e orçamento familiar.</p>
           </div>
           <div class="mt-6 pt-4 border-t border-amberGold-500/20 flex items-center justify-between text-xs font-extrabold text-emeraldLive-700">
-            <span>Sem Terrorismo Nutricional</span>
+            <span>Sem Restrição Extrema</span>
             <span class="px-2.5 py-1 rounded-full bg-emeraldLive-500/15">Sustentável</span>
           </div>
         </div>
 
-        <!-- Pilar 6: Suplementação Nutricional Baseada em Evidências -->
+        <!-- Pilar 6 -->
         <div class="card-vibrant reveal bg-cream-50 rounded-3xl p-7 border-2 border-amberGold-500/45 hover:border-amberGold-600 shadow-md hover:shadow-goldGlow flex flex-col justify-between">
           <div>
             <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-amberGold-500 to-emeraldLive-600 p-3 flex items-center justify-center shadow-lg mb-5">
-              <!-- Mini SVG Exclusivo: Micronutrientes & DRIs -->
-              <svg viewBox="0 0 48 48" class="w-full h-full" fill="none">
-                <polygon points="24,7 39,15.5 39,32.5 24,41 9,32.5 9,15.5" fill="#062319" stroke="#fef6e4" stroke-width="2.5"></polygon>
-                <circle cx="24" cy="24" r="6" fill="#fbbf24"></circle>
-                <circle cx="24" cy="12" r="2.5" fill="#10b981"></circle>
-                <circle cx="34" cy="30" r="2.5" fill="#ea580c"></circle>
-                <circle cx="14" cy="30" r="2.5" fill="#34d399"></circle>
-              </svg>
+              <i class="fa-solid fa-pills text-3xl text-white"></i>
             </div>
             <h3 class="font-serif text-2xl font-bold text-forest-950 mb-3">6. Suplementação Baseada em Evidências</h3>
-            <p class="text-sm text-forest-800/90 leading-relaxed">
-              Ajuste preciso de vitaminas, minerais, aminoácidos e compostos bioativos utilizando referências científicas (DRIs), corrigindo carências nutricionais reais com segurança e biodisponibilidade.
-            </p>
+            <p class="text-sm text-forest-800/90 leading-relaxed">Ajuste preciso de vitaminas, minerais, aminoácidos e compostos bioativos utilizando DRIs, corrigindo carências reais com segurança e biodisponibilidade.</p>
           </div>
           <div class="mt-6 pt-4 border-t border-amberGold-500/20 flex items-center justify-between text-xs font-extrabold text-amberGold-600">
-            <span>Precisão de Micronutrientes</span>
+            <span>Micronutrientes</span>
             <span class="px-2.5 py-1 rounded-full bg-amberGold-400/25">Ciência Pura</span>
           </div>
         </div>
-
       </div>
     </div>
   </section>
 
-  <!-- ==================== 4. ECOSSISTEMA DIGITAL & FERRAMENTAS DO CONSULTÓRIO (TODOS OS 3 LINKS) ==================== -->
+  <!-- ==================== 4. FERRAMENTAS DIGITAIS ==================== -->
   <section id="ferramentas" class="relative py-20 sm:py-28 bg-gradient-to-b from-forest-950 via-forest-900 to-forest-950 text-white overflow-hidden">
-    <!-- Divisor Superior Ondulado -->
-    <div class="absolute top-0 left-0 w-full overflow-hidden leading-none rotate-180 pointer-events-none">
-      <svg class="relative block w-full h-10 sm:h-16" viewBox="0 0 1200 120" preserveAspectRatio="none">
-        <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" fill="#fef6e4"></path>
-      </svg>
-    </div>
-
-    <!-- Brilhos de Fundo -->
     <div class="absolute top-24 left-10 w-80 h-80 bg-emeraldLive-500/15 rounded-full blur-3xl pointer-events-none"></div>
     <div class="absolute bottom-20 right-10 w-96 h-96 bg-amberGold-500/15 rounded-full blur-3xl pointer-events-none"></div>
 
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 pt-4">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
       <div class="text-center max-w-3xl mx-auto mb-16 reveal">
         <span class="inline-flex items-center gap-2 text-xs font-extrabold uppercase tracking-widest text-amberGold-300 bg-amberGold-500/15 px-4 py-1.5 rounded-full border border-amberGold-400/35 mb-3">
           <i class="fa-solid fa-laptop-medical"></i>
           <span>Portais Oficiais &amp; Tecnologia Nutricional</span>
         </span>
-        <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-white">
-          Ecossistema Digital &amp; Ferramentas do Consultório
-        </h2>
-        <p class="text-cream-100/85 mt-4 text-base sm:text-lg leading-relaxed">
-          Explore minhas plataformas oficiais, materiais educativos e a calculadora interativa de recomendações nutricionais (DRIs).
-        </p>
-      </div>
-
-      <!-- Grid com os 3 Links Oficiais em Destaque -->
-      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
-        
-        <!-- CARD 1: Portfólio & Atendimento Clínico Completo -->
-        <div class="card-vibrant reveal bg-gradient-to-b from-forest-800/90 to-forest-950/95 rounded-3xl p-7 sm:p-8 border-2 border-amberGold-400/40 hover:border-amberGold-400 shadow-vibrant flex flex-col justify-between">
-          <div>
-            <div class="flex items-center justify-between gap-3 mb-6">
-              <!-- Ilustração SVG Dedicada: Portal Clínico -->
-              <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-amberGold-400 to-terracotta-600 p-3 flex items-center justify-center shadow-goldGlow">
-                <svg viewBox="0 0 48 48" class="w-full h-full" fill="none">
-                  <rect x="6" y="10" width="36" height="26" rx="4" fill="#062319" stroke="#fef6e4" stroke-width="2.5"></rect>
-                  <path d="M16 39H32" stroke="#fef6e4" stroke-width="2.5" stroke-linecap="round"></path>
-                  <path d="M24 17V29M18 23H30" stroke="#fbbf24" stroke-width="3" stroke-linecap="round"></path>
-                </svg>
-              </div>
-              <span class="px-3 py-1 rounded-full bg-amberGold-400/20 border border-amberGold-400/40 text-amberGold-300 text-xs font-bold">
-                Portal Clínico
-              </span>
-            </div>
-
-            <h3 class="font-serif text-2xl sm:text-3xl font-bold text-white mb-3">
-              Portfólio &amp; Atendimento Clínico Completo
-            </h3>
-            <p class="text-sm text-cream-100/85 leading-relaxed mb-6">
-              Acesse meu portal principal com protocolos de atendimento, artigos sobre fitoterapia e nutrição clínica, orientações para pacientes e detalhes da minha atuação no Rio de Janeiro.
-            </p>
-          </div>
-
-          <div class="space-y-4 pt-4 border-t border-white/15">
-            <p class="text-[11px] font-mono text-amberGold-300/90 truncate">
-              dr-francisco-lima-nutricionista.infinityfree.io
-            </p>
-            <a href="https://dr-francisco-lima-nutricionista.infinityfree.io/" target="_blank" rel="noopener noreferrer" class="btn-shimmer w-full inline-flex items-center justify-center gap-2.5 bg-gradient-to-r from-amberGold-500 to-terracotta-600 hover:from-amberGold-400 hover:to-terracotta-500 text-white font-extrabold py-3.5 px-5 rounded-2xl shadow-lg transition-all">
-              <span>Visitar Portfólio Completo</span>
-              <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
-            </a>
-          </div>
-        </div>
-
-        <!-- CARD 2: DRI · Calculadora de Micronutrientes -->
-        <div class="card-vibrant reveal bg-gradient-to-b from-forest-800/90 to-forest-950/95 rounded-3xl p-7 sm:p-8 border-2 border-emeraldLive-500/45 hover:border-emeraldLive-400 shadow-vibrant flex flex-col justify-between">
-          <div>
-            <div class="flex items-center justify-between gap-3 mb-6">
-              <!-- Ilustração SVG Dedicada: Calculadora Científica DRI -->
-              <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-emeraldLive-400 to-emeraldLive-700 p-3 flex items-center justify-center shadow-emeraldGlow">
-                <svg viewBox="0 0 48 48" class="w-full h-full" fill="none">
-                  <rect x="10" y="6" width="28" height="36" rx="5" fill="#062319" stroke="#fef6e4" stroke-width="2.5"></rect>
-                  <rect x="15" y="11" width="18" height="8" rx="2" fill="#10b981"></rect>
-                  <circle cx="17" cy="25" r="2.2" fill="#fbbf24"></circle>
-                  <circle cx="24" cy="25" r="2.2" fill="#fef6e4"></circle>
-                  <circle cx="31" cy="25" r="2.2" fill="#ea580c"></circle>
-                  <circle cx="17" cy="32" r="2.2" fill="#fef6e4"></circle>
-                  <circle cx="24" cy="32" r="2.2" fill="#fbbf24"></circle>
-                  <circle cx="31" cy="32" r="2.2" fill="#10b981"></circle>
-                </svg>
-              </div>
-              <span class="px-3 py-1 rounded-full bg-emeraldLive-500/20 border border-emeraldLive-400/40 text-emerald-200 text-xs font-bold">
-                App Interativo
-              </span>
-            </div>
-
-            <h3 class="font-serif text-2xl sm:text-3xl font-bold text-white mb-3">
-              DRI · Calculadora de Micronutrientes
-            </h3>
-            <p class="text-sm text-cream-100/85 leading-relaxed mb-6">
-              Ferramenta interativa para consulta rápida das <strong>Dietary Reference Intakes (DRIs)</strong>: necessidades diárias de vitaminas e minerais por idade, sexo, gestação e lactação.
-            </p>
-          </div>
-
-          <div class="space-y-4 pt-4 border-t border-white/15">
-            <p class="text-[11px] font-mono text-emerald-300/90 truncate">
-              padovani-dri.onrender.com
-            </p>
-            <a href="https://padovani-dri.onrender.com/" target="_blank" rel="noopener noreferrer" class="btn-shimmer w-full inline-flex items-center justify-center gap-2.5 bg-gradient-to-r from-emeraldLive-500 to-emeraldLive-600 hover:from-emeraldLive-400 hover:to-emeraldLive-500 text-white font-extrabold py-3.5 px-5 rounded-2xl shadow-lg transition-all">
-              <span>Abrir Calculadora DRI</span>
-              <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
-            </a>
-          </div>
-        </div>
-
-        <!-- CARD 3: Página Oficial GitHub Pages (Atencioso Francisco Lima) -->
-        <div class="card-vibrant reveal bg-gradient-to-b from-forest-800/90 to-forest-950/95 rounded-3xl p-7 sm:p-8 border-2 border-terracotta-500/45 hover:border-terracotta-400 shadow-vibrant flex flex-col justify-between">
-          <div>
-            <div class="flex items-center justify-between gap-3 mb-6">
-              <!-- Ilustração SVG Dedicada: Atendimento Humanizado & GitHub Hub -->
-              <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-terracotta-500 to-amberGold-500 p-3 flex items-center justify-center shadow-goldGlow">
-                <svg viewBox="0 0 48 48" class="w-full h-full" fill="none">
-                  <circle cx="24" cy="24" r="17" fill="#062319" stroke="#fef6e4" stroke-width="2.5"></circle>
-                  <path d="M24 33C24 33 14 26.5 14 19.5C14 16.4 16.4 14 19.5 14C21.3 14 23 14.9 24 16.3C25 14.9 26.7 14 28.5 14C31.6 14 34 16.4 34 19.5C34 26.5 24 33 24 33Z" fill="#fbbf24"></path>
-                  <path d="M24 14C24 10 27 8 30 9C29 12 26 14 24 14Z" fill="#10b981"></path>
-                </svg>
-              </div>
-              <span class="px-3 py-1 rounded-full bg-terracotta-500/20 border border-terracotta-400/40 text-orange-200 text-xs font-bold">
-                Hub Oficial
-              </span>
-            </div>
-
-            <h3 class="font-serif text-2xl sm:text-3xl font-bold text-white mb-3">
-              Atencioso Francisco Lima · Página Oficial
-            </h3>
-            <p class="text-sm text-cream-100/85 leading-relaxed mb-6">
-              Conheça minha página institucional dedicada ao atendimento atencioso, filosofia da Nutrição Integrativa, pilares clínicos e canais diretos de acolhimento ao paciente.
-            </p>
-          </div>
-
-          <div class="space-y-4 pt-4 border-t border-white/15">
-            <p class="text-[11px] font-mono text-orange-200/90 truncate">
-              hgl23rj.github.io/Atencioso-Francisco-Lima-Nutricionista
-            </p>
-            <a href="https://hgl23rj.github.io/Atencioso-Francisco-Lima-Nutricionista/" target="_blank" rel="noopener noreferrer" class="btn-shimmer w-full inline-flex items-center justify-center gap-2.5 bg-gradient-to-r from-terracotta-600 to-amberGold-500 hover:from-terracotta-500 hover:to-amberGold-400 text-white font-extrabold py-3.5 px-5 rounded-2xl shadow-lg transition-all">
-              <span>Acessar Página Oficial</span>
-              <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
-            </a>
-          </div>
-        </div>
-
-      </div>
-    </div>
-
-    <!-- Divisor Ondulado Inferior -->
-    <div class="absolute bottom-0 left-0 w-full overflow-hidden leading-none pointer-events-none">
-      <svg class="relative block w-full h-12 sm:h-16" viewBox="0 0 1200 120" preserveAspectRatio="none">
-        <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V120H0Z" fill="#fffbeb"></path>
-      </svg>
-    </div>
-  </section>
-
-  <!-- ==================== 5. SOBRE DR. FRANCISCO DE PAULA GONÇALVES DE LIMA ==================== -->
-  <section id="sobre" class="py-16 sm:py-24 bg-cream-50">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
-        
-        <!-- Coluna Trajetória Humanizada & Registros -->
-        <div class="lg:col-span-6 space-y-6 reveal">
-          <span class="inline-flex items-center gap-2 text-xs font-extrabold uppercase tracking-widest text-forest-900 bg-emeraldLive-500/20 px-4 py-1.5 rounded-full border border-emeraldLive-600/30">
-            <i class="fa-solid fa-user-doctor text-emeraldLive-700"></i>
-            <span>Trajetória Clínica &amp; Humana</span>
-          </span>
-
-          <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-forest-950 leading-tight">
-            Sobre o Dr. Francisco de Paula Gonçalves de Lima
-          </h2>
-
-          <p class="text-forest-900/90 text-base leading-relaxed">
-            Sou nutricionista clínico no Rio de Janeiro e acredito profundamente na escuta ativa, no respeito à individualidade biológica e na ciência aplicada com empatia. Minha atuação integra o cuidado clínico particular à experiência na <strong>Atenção Primária à Saúde (SUS)</strong> no Rio de Janeiro, onde acompanho pacientes em todas as fases da vida.
-          </p>
-
-          <p class="text-forest-900/90 text-base leading-relaxed">
-            Com habilitação oficial pelo Conselho Regional de Nutricionistas para prescrição de <strong>Fitoterapia (FITO/CRN4/0151/2026)</strong>, utilizo plantas medicinais, alimentos funcionais e suplementação baseada em evidências como aliados poderosos na prevenção e no tratamento de desequilíbrios metabólicos.
-          </p>
-
-          <!-- Badges de Registro Destacados -->
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
-            <div class="bg-forest-950 text-white p-5 rounded-2xl border-2 border-emeraldLive-500 shadow-lg flex items-center gap-4">
-              <div class="w-12 h-12 rounded-xl bg-emeraldLive-500 text-forest-950 flex items-center justify-center text-xl shrink-0 font-bold">
-                <i class="fa-solid fa-id-card"></i>
-              </div>
-              <div>
-                <span class="block text-[11px] font-bold uppercase tracking-wider text-emerald-300">Registro Profissional</span>
-                <strong class="text-base font-extrabold text-white">CRN-4: 26101256</strong>
-              </div>
-            </div>
-
-            <div class="bg-forest-950 text-white p-5 rounded-2xl border-2 border-amberGold-400 shadow-lg flex items-center gap-4">
-              <div class="w-12 h-12 rounded-xl bg-amberGold-400 text-forest-950 flex items-center justify-center text-xl shrink-0 font-bold">
-                <i class="fa-solid fa-leaf"></i>
-              </div>
-              <div>
-                <span class="block text-[11px] font-bold uppercase tracking-wider text-amberGold-300">Habilitação Fitoterapia</span>
-                <strong class="text-base font-extrabold text-white">FITO/CRN4/0151/2026</strong>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Coluna Formação Acadêmica & Experiência (Timeline Vibrante) -->
-        <div class="lg:col-span-6 reveal bg-cream-100 rounded-3xl p-7 sm:p-9 border-2 border-amberGold-500/35 shadow-vibrant">
-          <h3 class="font-serif text-2xl sm:text-3xl font-bold text-forest-950 mb-7 flex items-center gap-3">
-            <span class="w-11 h-11 rounded-xl bg-forest-950 text-amberGold-400 flex items-center justify-center text-lg">
-              <i class="fa-solid fa-graduation-cap"></i>
-            </span>
-            <span>Formação Acadêmica &amp; Atuação</span>
-          </h3>
-
-          <div class="space-y-6 relative before:absolute before:inset-y-2 before:left-4 before:w-1 before:rounded-full before:bg-gradient-to-b before:from-emeraldLive-500 before:via-amberGold-500 before:to-terracotta-600">
-            
-            <!-- Item 1 -->
-            <div class="relative pl-12">
-              <span class="absolute left-1.5 top-1.5 w-6 h-6 rounded-full bg-emeraldLive-600 border-4 border-cream-100 shadow"></span>
-              <span class="inline-block text-[11px] font-extrabold uppercase tracking-wider text-emeraldLive-700 bg-emeraldLive-500/15 px-2.5 py-0.5 rounded-full">Graduação</span>
-              <h4 class="text-lg font-extrabold text-forest-950 mt-1">Bacharelado em Nutrição</h4>
-              <p class="text-sm font-bold text-forest-800">Universidade Estácio de Sá (Unesa — Rio de Janeiro)</p>
-              <p class="text-xs text-forest-800/85 mt-1 leading-relaxed">
-                Sólida formação clínica, dietoterápica e em saúde coletiva, com foco na promoção integral da saúde.
-              </p>
-            </div>
-
-            <!-- Item 2 -->
-            <div class="relative pl-12">
-              <span class="absolute left-1.5 top-1.5 w-6 h-6 rounded-full bg-amberGold-500 border-4 border-cream-100 shadow"></span>
-              <span class="inline-block text-[11px] font-extrabold uppercase tracking-wider text-amberGold-600 bg-amberGold-400/25 px-2.5 py-0.5 rounded-full">Pós-Graduação Lato Sensu · 400h</span>
-              <h4 class="text-lg font-extrabold text-forest-950 mt-1">Fitoterapia e Suplementação Nutricional</h4>
-              <p class="text-sm font-bold text-forest-800">Faculdade Focus</p>
-              <p class="text-xs text-forest-800/85 mt-1 leading-relaxed">
-                Especialização de 400 horas dedicada à prescrição clínica segura de plantas medicinais, fitoterápicos e suplementos nutricionais (Resolução CFN nº 680/2021).
-              </p>
-            </div>
-
-            <!-- Item 3 -->
-            <div class="relative pl-12">
-              <span class="absolute left-1.5 top-1.5 w-6 h-6 rounded-full bg-terracotta-600 border-4 border-cream-100 shadow"></span>
-              <span class="inline-block text-[11px] font-extrabold uppercase tracking-wider text-terracotta-700 bg-terracotta-500/15 px-2.5 py-0.5 rounded-full">Qualificação Profissional</span>
-              <h4 class="text-lg font-extrabold text-forest-950 mt-1">Plantas Medicinais e Fitoterápicos na Atenção Básica</h4>
-              <p class="text-sm font-bold text-forest-800">Fiocruz / Ministério da Saúde</p>
-              <p class="text-xs text-forest-800/85 mt-1 leading-relaxed">
-                Capacitação técnica no uso racional, ético e integrado de plantas medicinais e fitoterápicos no cuidado em saúde pública e privada.
-              </p>
-            </div>
-
-            <!-- Item 4 -->
-            <div class="relative pl-12">
-              <span class="absolute left-1.5 top-1.5 w-6 h-6 rounded-full bg-forest-900 border-4 border-cream-100 shadow"></span>
-              <span class="inline-block text-[11px] font-extrabold uppercase tracking-wider text-forest-900 bg-forest-900/10 px-2.5 py-0.5 rounded-full">Prática Clínica &amp; Saúde Pública</span>
-              <h4 class="text-lg font-extrabold text-forest-950 mt-1">Atendimento Particular &amp; Atenção Primária à Saúde (SUS)</h4>
-              <p class="text-sm font-bold text-forest-800">Rio de Janeiro — RJ</p>
-              <p class="text-xs text-forest-800/85 mt-1 leading-relaxed">
-                Acompanhamento nutricional humanizado voltado à prevenção de agravos, saúde do idoso, doenças crônicas e qualidade de vida.
-              </p>
-            </div>
-
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ==================== 6. COMO FUNCIONA A CONSULTA (4 ETAPAS ILUSTRADAS) ==================== -->
-  <section id="como-funciona" class="py-16 sm:py-24 bg-cream-200/70 border-y border-amberGold-500/25">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center max-w-3xl mx-auto mb-16 reveal">
-        <span class="inline-flex items-center gap-2 text-xs font-extrabold uppercase tracking-widest text-forest-950 bg-amberGold-400/40 px-4 py-1.5 rounded-full mb-3">
-          <i class="fa-solid fa-route text-terracotta-600"></i>
-          <span>Jornada do Paciente</span>
-        </span>
-        <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-forest-950">
-          Como Funciona a Consulta
-        </h2>
-        <p class="text-forest-800/90 mt-4 text-base sm:text-lg leading-relaxed">
-          Um processo transparente, acolhedor e estruturado em 4 etapas para garantir resultados reais e duradouros.
-        </p>
-      </div>
-
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-7">
-        
-        <!-- Etapa 1 -->
-        <div class="card-vibrant reveal bg-cream-50 rounded-3xl p-7 border-2 border-emeraldLive-500/30 shadow-md relative">
-          <div class="w-12 h-12 rounded-2xl bg-forest-950 text-amberGold-400 font-serif text-2xl font-bold flex items-center justify-center shadow mb-5">
-            01
-          </div>
-          <h3 class="font-serif text-2xl font-bold text-forest-950 mb-2.5">Escuta Acolhedora &amp; Anamnese</h3>
-          <p class="text-sm text-forest-800/90 leading-relaxed">
-            Conversa detalhada sobre seu histórico clínico, rotina de trabalho, sono, digestão, preferências alimentares, hábitos e objetivos pessoais.
-          </p>
-        </div>
-
-        <!-- Etapa 2 -->
-        <div class="card-vibrant reveal bg-cream-50 rounded-3xl p-7 border-2 border-amberGold-500/40 shadow-md relative">
-          <div class="w-12 h-12 rounded-2xl bg-emeraldLive-600 text-white font-serif text-2xl font-bold flex items-center justify-center shadow mb-5">
-            02
-          </div>
-          <h3 class="font-serif text-2xl font-bold text-forest-950 mb-2.5">Avaliação Física &amp; Bioquímica</h3>
-          <p class="text-sm text-forest-800/90 leading-relaxed">
-            Análise criteriosa de exames laboratoriais recentes, rastreamento de sinais e sintomas nutricionais e avaliação antropométrica completa.
-          </p>
-        </div>
-
-        <!-- Etapa 3 -->
-        <div class="card-vibrant reveal bg-cream-50 rounded-3xl p-7 border-2 border-terracotta-500/35 shadow-md relative">
-          <div class="w-12 h-12 rounded-2xl bg-amberGold-500 text-forest-950 font-serif text-2xl font-bold flex items-center justify-center shadow mb-5">
-            03
-          </div>
-          <h3 class="font-serif text-2xl font-bold text-forest-950 mb-2.5">Plano Alimentar &amp; Fitoterapia</h3>
-          <p class="text-sm text-forest-800/90 leading-relaxed">
-            Entrega do seu plano alimentar prático e individualizado, acompanhado de lista de substituições e prescrição fitoterápica/suplementar quando indicada.
-          </p>
-        </div>
-
-        <!-- Etapa 4 -->
-        <div class="card-vibrant reveal bg-cream-50 rounded-3xl p-7 border-2 border-forest-800/30 shadow-md relative">
-          <div class="w-12 h-12 rounded-2xl bg-terracotta-600 text-white font-serif text-2xl font-bold flex items-center justify-center shadow mb-5">
-            04
-          </div>
-          <h3 class="font-serif text-2xl font-bold text-forest-950 mb-2.5">Acompanhamento Contínuo</h3>
-          <p class="text-sm text-forest-800/90 leading-relaxed">
-            Suporte direto para esclarecimento de dúvidas, ajustes de rota conforme sua evolução e monitoramento contínuo da sua saúde.
-          </p>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ==================== 7. SEÇÃO "ENVIAR E SOLICITAR CONTATO" & AGENDAMENTO ==================== -->
-  <section id="contato" class="py-16 sm:py-24 bg-cream-100">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="bg-gradient-to-br from-forest-950 via-forest-900 to-forest-800 rounded-[2rem] p-6 sm:p-10 lg:p-14 border-2 border-amberGold-400/40 shadow-vibrant text-white">
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-start">
-          
-          <!-- Coluna Esquerda: Canais Diretos -->
-          <div class="lg:col-span-5 space-y-6 reveal">
-            <span class="inline-flex items-center gap-2 text-xs font-extrabold uppercase tracking-widest text-amberGold-300 bg-amberGold-500/15 px-4 py-1.5 rounded-full border border-amberGold-400/30">
-              <i class="fa-solid fa-paper-plane"></i>
-              <span>Atendimento Rápido &amp; Atencioso</span>
-            </span>
-
-            <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight">
-              Enviar e Solicitar Contato
-            </h2>
-
-            <p class="text-cream-100/85 text-sm sm:text-base leading-relaxed">
-              Dê o primeiro passo para transformar sua saúde com acolhimento e ciência. Preencha o formulário ou clique nos botões abaixo para falar diretamente comigo.
-            </p>
-
-            <div class="space-y-4 pt-2">
-              <!-- Botão Direto WhatsApp -->
-              <a href="https://wa.me/5521986807805?text=Olá%20Dr.%20Francisco!%20Gostaria%20de%20solicitar%20informações%20sobre%20consulta%20nutricional." target="_blank" rel="noopener noreferrer" class="btn-shimmer flex items-center gap-4 p-4 rounded-2xl bg-gradient-to-r from-emeraldLive-600 to-emeraldLive-500 hover:from-emeraldLive-500 hover:to-emeraldLive-400 text-white shadow-emeraldGlow transition-all group">
-                <div class="w-12 h-12 rounded-xl bg-forest-950/30 flex items-center justify-center text-2xl shrink-0 group-hover:scale-110 transition-transform">
-                  <i class="fa-brands fa-whatsapp"></i>
-                </div>
-                <div>
-                  <span class="block text-xs font-bold uppercase tracking-wider text-emerald-100">WhatsApp Direto</span>
-                  <strong class="text-lg font-extrabold text-white">(21) 98680-7805</strong>
-                </div>
-              </a>
-
-              <!-- E-mails Diretos -->
-              <div class="p-4 rounded-2xl bg-white/10 border border-white/15 space-y-2.5">
-                <div class="flex items-center gap-3">
-                  <div class="w-10 h-10 rounded-xl bg-amberGold-400 text-forest-950 flex items-center justify-center text-base shrink-0">
-                    <i class="fa-solid fa-envelope"></i>
-                  </div>
-                  <div class="min-w-0 flex-1">
-                    <span class="block text-xs font-bold text-amberGold-300">E-mails Institucionais</span>
-                    <a href="mailto:depaulalima958@gmail.com" class="block text-sm font-bold text-white hover:text-amberGold-300 truncate transition-colors">
-                      depaulalima958@gmail.com
-                    </a>
-                    <a href="mailto:limadepaula470@gmail.com" class="block text-sm font-bold text-white hover:text-amberGold-300 truncate transition-colors">
-                      limadepaula470@gmail.com
-                    </a>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Localização -->
-              <div class="flex items-center gap-4 p-4 rounded-2xl bg-white/10 border border-white/15">
-                <div class="w-10 h-10 rounded-xl bg-terracotta-600 text-white flex items-center justify-center text-base shrink-0">
-                  <i class="fa-solid fa-location-dot"></i>
-                </div>
-                <div>
-                  <span class="block text-xs font-bold text-orange-200">Atendimento</span>
-                  <strong class="text-sm font-bold text-white">Rio de Janeiro – RJ · Presencial &amp; Online</strong>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Coluna Direita: Formulário Interativo Gerador de WhatsApp -->
-          <div class="lg:col-span-7 reveal bg-cream-50 text-forest-950 rounded-3xl p-6 sm:p-9 border-2 border-amberGold-400 shadow-2xl">
-            <h3 class="font-serif text-2xl sm:text-3xl font-bold text-forest-950 mb-1.5">
-              Solicite seu Atendimento pelo WhatsApp
-            </h3>
-            <p class="text-xs sm:text-sm text-forest-800/80 mb-6">
-              Preencha os dados abaixo. Sua mensagem será montada automaticamente e enviada para o WhatsApp <strong>(21) 98680-7805</strong> com um clique!
-            </p>
-
-            <form id="whatsapp-form" class="space-y-5">
-              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <div>
-                  <label for="nome" class="block text-xs font-extrabold uppercase tracking-wider text-forest-900 mb-1.5">
-                    Seu Nome Completo *
-                  </label>
-                  <input type="text" id="nome" name="nome" required="" placeholder="Ex: Ana Beatriz Souza" class="w-full px-4 py-3.5 rounded-xl bg-white border-2 border-forest-900/15 focus:border-emeraldLive-600 focus:ring-2 focus:ring-emeraldLive-500/20 outline-none text-sm font-medium transition-all">
-                </div>
-
-                <div>
-                  <label for="objetivo" class="block text-xs font-extrabold uppercase tracking-wider text-forest-900 mb-1.5">
-                    Objetivo Principal *
-                  </label>
-                  <select id="objetivo" name="objetivo" class="w-full px-4 py-3.5 rounded-xl bg-white border-2 border-forest-900/15 focus:border-emeraldLive-600 focus:ring-2 focus:ring-emeraldLive-500/20 outline-none text-sm font-semibold transition-all">
-                    <option value="Emagrecimento Saudável">Emagrecimento Saudável</option>
-                    <option value="Fitoterapia Clínica">Fitoterapia Clínica</option>
-                    <option value="Saúde do Idoso &amp; Geriatria">Saúde do Idoso &amp; Geriatria</option>
-                    <option value="Nutrição Esportiva &amp; Performance">Nutrição Esportiva &amp; Performance</option>
-                    <option value="Clínica Geral &amp; Exames">Clínica Geral &amp; Exames</option>
-                  </select>
-                </div>
-              </div>
-
-              <div>
-                <span class="block text-xs font-extrabold uppercase tracking-wider text-forest-900 mb-2">
-                  Modalidade de Atendimento *
-                </span>
-                <div class="grid grid-cols-2 gap-3">
-                  <label class="cursor-pointer">
-                    <input type="radio" name="modalidade" value="Presencial (Rio de Janeiro - RJ)" checked="" class="peer sr-only">
-                    <div class="text-center py-3 px-4 rounded-xl bg-white border-2 border-forest-900/15 peer-checked:border-emeraldLive-600 peer-checked:bg-emeraldLive-500/15 peer-checked:text-forest-950 text-xs sm:text-sm font-bold text-forest-800/75 transition-all">
-                      <i class="fa-solid fa-hospital-user mr-1.5 text-emeraldLive-600"></i>Presencial (RJ)
-                    </div>
-                  </label>
-                  <label class="cursor-pointer">
-                    <input type="radio" name="modalidade" value="Consulta Online (Teleconsulta)" class="peer sr-only">
-                    <div class="text-center py-3 px-4 rounded-xl bg-white border-2 border-forest-900/15 peer-checked:border-amberGold-500 peer-checked:bg-amberGold-400/20 peer-checked:text-forest-950 text-xs sm:text-sm font-bold text-forest-800/75 transition-all">
-                      <i class="fa-solid fa-video mr-1.5 text-amberGold-600"></i>Online
-                    </div>
-                  </label>
-                </div>
-              </div>
-
-              <div>
-                <label for="mensagem" class="block text-xs font-extrabold uppercase tracking-wider text-forest-900 mb-1.5">
-                  Mensagem ou Dúvida (Opcional)
-                </label>
-                <textarea id="mensagem" name="mensagem" rows="3" placeholder="Conte brevemente sobre sua rotina, sintomas ou o que você busca na consulta..." class="w-full px-4 py-3 rounded-xl bg-white border-2 border-forest-900/15 focus:border-emeraldLive-600 focus:ring-2 focus:ring-emeraldLive-500/20 outline-none text-sm font-medium transition-all resize-none"></textarea>
-              </div>
-
-              <!-- Feedback inline sem alert() -->
-              <div id="form-feedback" class="hidden p-3.5 rounded-xl bg-emeraldLive-500/15 border border-emeraldLive-600 text-forest-950 text-xs font-bold"></div>
-
-              <button type="submit" class="btn-shimmer w-full flex items-center justify-center gap-3 bg-gradient-to-r from-emeraldLive-600 via-emeraldLive-500 to-amberGold-500 hover:from-emeraldLive-700 hover:to-amberGold-600 text-white font-extrabold py-4 px-6 rounded-2xl shadow-xl hover:-translate-y-0.5 transition-all duration-200 text-sm sm:text-base">
-                <i class="fa-brands fa-whatsapp text-2xl"></i>
-                <span>Enviar Solicitação no WhatsApp Agora</span>
-              </button>
-            </form>
-          </div>
-
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ==================== 8. RODAPÉ INSTITUCIONAL COMPLETO ==================== -->
-  <footer class="bg-forest-950 text-cream-100 border-t-2 border-amberGold-400/30 pt-14 pb-10">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pb-10 border-b border-white/15">
-        
-        <!-- Coluna 1: Assinatura Profissional -->
-        <div class="lg:col-span-2 space-y-3">
-          <div class="flex items-center gap-3">
-            <div class="w-11 h-11 rounded-2xl bg-gradient-to-br from-emeraldLive-500 to-amberGold-500 flex items-center justify-center text-forest-950 font-bold text-lg shadow">
-              <i class="fa-solid fa-leaf"></i>
-            </div>
-            <div>
-              <h3 class="font-serif text-xl sm:text-2xl font-bold text-white">Dr. Francisco de Paula Gonçalves de Lima</h3>
-              <p class="text-xs font-bold text-amberGold-300">Nutricionista – CRN-4 26101256 | FITO/CRN4/0151/2026</p>
-            </div>
-          </div>
-          <p class="text-sm text-cream-100/80 max-w-md leading-relaxed pt-1">
-            Nutrição Integrativa, Clínica, Esportiva, Geriátrica e Fitoterapia Clínica no Rio de Janeiro. Atendimento nutricional contínuo, ético e humanizado.
-          </p>
-        </div>
-
-        <!-- Coluna 2: Ecossistema & Portais -->
-        <div>
-          <h4 class="text-xs font-extrabold uppercase tracking-wider text-amberGold-300 mb-4">Portais &amp; Ferramentas</h4>
-          <ul class="space-y-2.5 text-sm">
-            <li>
-              <a href="https://dr-francisco-lima-nutricionista.infinityfree.io/" target="_blank" rel="noopener noreferrer" class="hover:text-amberGold-300 transition-colors inline-flex items-center gap-1.5">
-                <span>Portfólio Clínico Completo</span>
-                <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
-              </a>
-            </li>
-            <li>
-              <a href="https://padovani-dri.onrender.com/" target="_blank" rel="noopener noreferrer" class="hover:text-amberGold-300 transition-colors inline-flex items-center gap-1.5">
-                <span>DRI · Calculadora de Micronutrientes</span>
-                <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
-              </a>
-            </li>
-            <li>
-              <a href="https://hgl23rj.github.io/Atencioso-Francisco-Lima-Nutricionista/" target="_blank" rel="noopener noreferrer" class="hover:text-amberGold-300 transition-colors inline-flex items-center gap-1.5">
-                <span>Atencioso Francisco Lima (GitHub)</span>
-                <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
-              </a>
-            </li>
-          </ul>
-        </div>
-
-        <!-- Coluna 3: Contato Direto -->
-        <div>
-          <h4 class="text-xs font-extrabold uppercase tracking-wider text-amberGold-300 mb-4">Contato Direto</h4>
-          <ul class="space-y-2.5 text-sm">
-            <li>
-              <a href="https://wa.me/5521986807805?text=Olá%20Dr.%20Francisco!%20Gostaria%20de%20agendar%20uma%20consulta%20nutricional." target="_blank" rel="noopener noreferrer" class="hover:text-emerald-300 transition-colors flex items-center gap-2 font-bold">
-                <i class="fa-brands fa-whatsapp text-emeraldLive-500 text-base"></i>
-                <span>(21) 98680-7805</span>
-              </a>
-            </li>
-            <li class="flex items-center gap-2 text-xs break-all">
-              <i class="fa-solid fa-envelope text-amberGold-400 shrink-0"></i>
-              <a href="mailto:depaulalima958@gmail.com" class="hover:text-amberGold-300 transition-colors">depaulalima958@gmail.com</a>
-            </li>
-            <li class="flex items-center gap-2 text-xs break-all">
-              <i class="fa-solid fa-envelope text-amberGold-400 shrink-0"></i>
-              <a href="mailto:limadepaula470@gmail.com" class="hover:text-amberGold-300 transition-colors">limadepaula470@gmail.com</a>
-            </li>
-            <li class="flex items-center gap-2 text-xs">
-              <i class="fa-solid fa-location-dot text-terracotta-500 shrink-0"></i>
-              <span>Rio de Janeiro - RJ</span>
-            </li>
-          </ul>
-        </div>
-
-      </div>
-
-      <!-- Assinatura Técnica Obrigatória -->
-      <div class="pt-7 flex flex-col lg:flex-row items-center justify-between gap-4 text-xs text-cream-100/75 text-center lg:text-left">
-        <p class="font-semibold text-cream-100">
-          Dr. Francisco de Paula Gonçalves de Lima · Nutricionista – CRN-4 26101256 | FITO/CRN4/0151/2026 | Rio de Janeiro - RJ | Atendimento Nutricional Contínuo
-        </p>
-        <p>© 2026 · Todos os direitos reservados.</p>
-      </div>
-    </div>
-  </footer>
-
-  <!-- ==================== 9. BOTÃO FLUTUANTE DO WHATSAPP COM ANEL PULSANTE E TOOLTIP ==================== -->
-  <div class="fixed bottom-5 right-5 z-50 flex items-center gap-3 group">
-    <!-- Tooltip interativo -->
-    <span class="hidden md:inline-block bg-forest-950 text-amberGold-300 border border-amberGold-400/50 text-xs font-extrabold px-3.5 py-2 rounded-full shadow-xl opacity-95 group-hover:scale-105 transition-transform">
-      Fale com seu nutricionista
-    </span>
-
-    <a href="https://wa.me/5521986807805?text=Olá%20Dr.%20Francisco!%20Gostaria%20de%20falar%20com%20você%20sobre%20atendimento%20nutricional." target="_blank" rel="noopener noreferrer" aria-label="Fale com seu nutricionista pelo WhatsApp" class="whatsapp-ring relative flex items-center justify-center w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-gradient-to-br from-emeraldLive-500 to-emeraldLive-700 hover:from-emeraldLive-400 hover:to-emeraldLive-600 text-white shadow-2xl hover:scale-110 transition-all duration-200">
-      <i class="fa-brands fa-whatsapp text-3xl"></i>
-    </a>
-  </div>
-
-  <!-- ==================== JAVASCRIPT: MENU, ANIMAÇÕES DE SCROLL E WHATSAPP ==================== -->
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      // 1. Menu Mobile
-      const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-      const mobileMenu = document.getElementById('mobile-menu');
-      const menuIcon = document.getElementById('menu-icon');
-      const mobileLinks = document.querySelectorAll('.mobile-link');
-
-      if (mobileMenuBtn && mobileMenu) {
-        mobileMenuBtn.addEventListener('click', () => {
-          const isHidden = mobileMenu.classList.contains('hidden');
-          mobileMenu.classList.toggle('hidden');
-          menuIcon.className = isHidden ? 'fa-solid fa-xmark text-xl' : 'fa-solid fa-bars text-xl';
-        });
-
-        mobileLinks.forEach(link => {
-          link.addEventListener('click', () => {
-            mobileMenu.classList.add('hidden');
-            menuIcon.className = 'fa-solid fa-bars text-xl';
-          });
-        });
-      }
-
-      // 2. IntersectionObserver para animações suaves ao rolar (fade-up / scale-in)
-      const revealElements = document.querySelectorAll('.reveal, .reveal-scale');
-      if ('IntersectionObserver' in window) {
-        const observer = new IntersectionObserver((entries, obs) => {
-          entries.forEach(entry => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add('visible');
-              obs.unobserve(entry.target);
-            }
-          });
-        }, {
-          threshold: 0.12,
-          rootMargin: '0px 0px -40px 0px'
-        });
-
-        revealElements.forEach(el => observer.observe(el));
-      } else {
-        revealElements.forEach(el => el.classList.add('visible'));
-      }
-
-      // 3. Formulário de Solicitação de Contato -> Redirecionamento Automático WhatsApp
-      const whatsappForm = document.getElementById('whatsapp-form');
-      const feedbackBox = document.getElementById('form-feedback');
-
-      if (whatsappForm) {
-        whatsappForm.addEventListener('submit', (e) => {
-          e.preventDefault();
-
-          try {
-            const nome = document.getElementById('nome').value.trim();
-            const objetivo = document.getElementById('objetivo').value;
-            const modalidadeEl = document.querySelector('input[name="modalidade"]:checked');
-            const modalidade = modalidadeEl ? modalidadeEl.value : 'A definir';
-            const mensagemExtra = document.getElementById('mensagem').value.trim();
-
-            if (!nome) {
-              feedbackBox.textContent = 'Por favor, preencha o seu nome para continuar.';
-              feedbackBox.classList.remove('hidden');
-              return;
-            }
-
-            let texto = `Olá Dr. Francisco de Paula! Gostaria de solicitar contato para atendimento nutricional.\n\n`;
-            texto += `*Nome:* ${nome}\n`;
-            texto += `*Objetivo Principal:* ${objetivo}\n`;
-            texto += `*Modalidade:* ${modalidade}\n`;
-            if (mensagemExtra) {
-              texto += `*Mensagem:* ${mensagemExtra}\n`;
-            }
-
-            const phone = '5521986807805';
-            const whatsappUrl = `https://wa.me/${phone}?text=${encodeURIComponent(texto)}`;
-
-            feedbackBox.textContent = 'Tudo pronto! Abrindo o WhatsApp do Dr. Francisco de Paula (21) 98680-7805...';
-            feedbackBox.classList.remove('hidden');
-
-            window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
-          } catch (err) {
-            console.error('Erro ao gerar link do WhatsApp:', err);
-            feedbackBox.textContent = 'Clique no botão verde do WhatsApp (21) 98680-7805 para falar diretamente.';
-            feedbackBox.classList.remove('hidden');
-          }
-        });
-      }
-    });
-  </script>
-
-</body></html>
+        <h2 class="font
