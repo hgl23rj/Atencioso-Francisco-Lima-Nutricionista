@@ -1,16 +1,15 @@
 <!DOCTYPE html>
 <html lang="pt-BR" class="scroll-smooth">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="google-site-verification" content="google694236ae3d54fc6f">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Dr. Francisco de Paula | Nutrição Integrativa &amp; Fitoterapia Clínica — CRN-4 26101256</title>
-  <meta name="description" content="Nutrição Integrativa, Clínica, Esportiva, Geriátrica e Fitoterapia Clínica no Rio de Janeiro com o Dr. Francisco de Paula Gonçalves de Lima (CRN-4: 26101256 | FITO/CRN4/0151/2026).">
+  <meta name="description" content="Nutrição Integrativa, Clínica, Esportiva, Geriátrica e Fitoterapia Clínica no Rio de Janeiro com o Dr. Francisco de Paula Gonçalves de Lima (CRN-4: 26101256 | FITO/CRN4/0151/2026)." />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600;1,700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600;1,700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
 
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
@@ -41,12 +40,16 @@
   <style>
     @keyframes floatSlow { 0%,100%{transform:translateY(0) rotate(0)} 50%{transform:translateY(-14px) rotate(2deg)} }
     @keyframes floatReverse { 0%,100%{transform:translateY(0) rotate(0)} 50%{transform:translateY(12px) rotate(-2.5deg)} }
+    @keyframes spinOrbit { from{transform:rotate(0deg)} to{transform:rotate(360deg)} }
+    @keyframes spinOrbitReverse { from{transform:rotate(360deg)} to{transform:rotate(0deg)} }
     @keyframes pulseSparkle { 0%,100%{opacity:.35;transform:scale(.85)} 50%{opacity:1;transform:scale(1.2)} }
     @keyframes shimmerSweep { 0%{transform:translateX(-120%) skewX(-20deg)} 100%{transform:translateX(220%) skewX(-20deg)} }
     @keyframes pulseRing { 0%{transform:scale(.95);opacity:.85} 70%{transform:scale(1.45);opacity:0} 100%{transform:scale(1.45);opacity:0} }
 
     .animate-float-slow { animation: floatSlow 6s ease-in-out infinite; }
     .animate-float-reverse { animation: floatReverse 7s ease-in-out infinite; }
+    .animate-orbit { transform-origin:240px 240px; animation: spinOrbit 34s linear infinite; }
+    .animate-orbit-reverse { transform-origin:240px 240px; animation: spinOrbitReverse 26s linear infinite; }
     .sparkle-1 { animation: pulseSparkle 3.2s ease-in-out infinite; }
     .sparkle-2 { animation: pulseSparkle 4.1s ease-in-out .8s infinite; }
     .sparkle-3 { animation: pulseSparkle 2.8s ease-in-out 1.5s infinite; }
@@ -54,28 +57,28 @@
     .btn-shimmer { position: relative; overflow: hidden; }
     .btn-shimmer::after {
       content:''; position:absolute; top:0; left:0; width:45%; height:100%;
-      background: linear-gradient(90deg, transparent, rgba(255,255,255,.35), transparent);
+      background:linear-gradient(90deg, transparent, rgba(255,255,255,.35), transparent);
       animation: shimmerSweep 3.4s infinite; pointer-events:none;
     }
 
     .whatsapp-ring::before {
       content:''; position:absolute; inset:-4px; border-radius:9999px;
-      border:2px solid #fbbf24; background: rgba(16,185,129,.35);
+      border:2px solid #fbbf24; background:rgba(16,185,129,.35);
       animation: pulseRing 2.2s cubic-bezier(.24,0,.38,1) infinite; z-index:-1;
     }
 
-    .reveal { opacity:0; transform:translateY(28px); transition: opacity .75s cubic-bezier(.22,1,.36,1), transform .75s cubic-bezier(.22,1,.36,1); }
+    .reveal { opacity:0; transform:translateY(28px); transition:opacity .75s cubic-bezier(.22,1,.36,1), transform .75s cubic-bezier(.22,1,.36,1); }
     .reveal.visible { opacity:1; transform:translateY(0); }
-    .reveal-scale { opacity:0; transform:scale(.94); transition: opacity .75s cubic-bezier(.22,1,.36,1), transform .75s cubic-bezier(.22,1,.36,1); }
+    .reveal-scale { opacity:0; transform:scale(.94); transition:opacity .75s cubic-bezier(.22,1,.36,1), transform .75s cubic-bezier(.22,1,.36,1); }
     .reveal-scale.visible { opacity:1; transform:scale(1); }
 
-    .card-vibrant { transition: transform .35s cubic-bezier(.22,1,.36,1), box-shadow .35s ease, border-color .35s ease; }
+    .card-vibrant { transition:transform .35s cubic-bezier(.22,1,.36,1), box-shadow .35s ease, border-color .35s ease; }
     .card-vibrant:hover { transform: translateY(-7px); }
   </style>
 </head>
 <body class="bg-cream-100 text-forest-950 font-sans antialiased selection:bg-amberGold-400 selection:text-forest-950 overflow-x-hidden">
 
-  <!-- ==================== 1. CABEÇALHO FIXO ==================== -->
+  <!-- ============ 1. CABEÇALHO ============ -->
   <header id="navbar" class="sticky top-0 z-50 w-full bg-forest-950/90 backdrop-blur-lg border-b border-amberGold-400/25 shadow-lg">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between h-20">
@@ -100,7 +103,7 @@
           <a href="#inicio" class="hover:text-amberGold-400 transition-colors">Início</a>
           <a href="#especialidades" class="hover:text-amberGold-400 transition-colors">Especialidades</a>
           <a href="#ferramentas" class="hover:text-amberGold-400 transition-colors flex items-center gap-1.5">
-            <span>Ferramentas Digitais</span>
+            <span>Ferramentas</span>
             <span class="w-2 h-2 rounded-full bg-amberGold-400 animate-ping"></span>
           </a>
           <a href="#sobre" class="hover:text-amberGold-400 transition-colors">Sobre &amp; Formação</a>
@@ -109,9 +112,8 @@
         </nav>
 
         <div class="flex items-center gap-3">
-          <a href="https://wa.me/5521986807805?text=Ol%C3%A1%20Dr.%20Francisco!%20Gostaria%20de%20agendar%20uma%20consulta." target="_blank" rel="noopener noreferrer" class="btn-shimmer hidden sm:inline-flex items-center gap-2.5 bg-gradient-to-r from-emeraldLive-500 to-emeraldLive-600 hover:from-emeraldLive-600 hover:to-emeraldLive-700 text-white text-sm font-bold px-5 py-3 rounded-full shadow-emeraldGlow transition-all">
-            <i class="fa-brands fa-whatsapp text-lg"></i>
-            <span>Agendar Consulta</span>
+          <a href="https://wa.me/5521986807805?text=Ol%C3%A1%20Dr.%20Francisco!" target="_blank" rel="noopener noreferrer" class="btn-shimmer hidden sm:inline-flex items-center gap-2.5 bg-gradient-to-r from-emeraldLive-500 to-emeraldLive-600 hover:from-emeraldLive-600 hover:to-emeraldLive-700 text-white text-sm font-bold px-5 py-3 rounded-full shadow-emeraldGlow transition-all">
+            <i class="fa-brands fa-whatsapp text-lg"></i><span>Agendar Consulta</span>
           </a>
           <button id="mobile-menu-btn" type="button" aria-label="Abrir menu" class="xl:hidden p-2.5 rounded-xl bg-forest-800 text-amberGold-300 hover:bg-forest-700 transition-colors">
             <i id="menu-icon" class="fa-solid fa-bars text-xl"></i>
@@ -129,17 +131,17 @@
       <a href="#contato" class="mobile-link block px-4 py-3 rounded-xl text-base font-semibold text-white hover:bg-forest-800 hover:text-amberGold-300">Contato</a>
       <div class="pt-3">
         <a href="https://wa.me/5521986807805?text=Ol%C3%A1%20Dr.%20Francisco!" target="_blank" rel="noopener noreferrer" class="btn-shimmer flex items-center justify-center gap-2.5 w-full bg-gradient-to-r from-amberGold-500 to-terracotta-600 text-white font-bold py-3.5 px-5 rounded-2xl shadow-lg">
-          <i class="fa-brands fa-whatsapp text-xl"></i>
-          <span>WhatsApp: (21) 98680-7805</span>
+          <i class="fa-brands fa-whatsapp text-xl"></i><span>WhatsApp: (21) 98680-7805</span>
         </a>
       </div>
     </div>
   </header>
 
-  <!-- ==================== 2. HERO — FOTO 1 INSERIDA ==================== -->
+  <!-- ============ 2. HERO COM FOTO 1 ============ -->
   <section id="inicio" class="relative bg-gradient-to-br from-forest-950 via-forest-900 to-forest-800 text-white pt-10 pb-24 sm:pt-16 sm:pb-32 overflow-hidden">
     <div class="absolute -top-28 -left-24 w-[440px] h-[440px] bg-emeraldLive-500/20 rounded-full blur-3xl pointer-events-none"></div>
     <div class="absolute top-1/3 -right-24 w-[420px] h-[420px] bg-amberGold-500/20 rounded-full blur-3xl pointer-events-none"></div>
+    <div class="absolute bottom-10 left-1/3 w-72 h-72 bg-terracotta-600/15 rounded-full blur-3xl pointer-events-none"></div>
 
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
@@ -166,13 +168,11 @@
           </p>
 
           <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
-            <a href="https://wa.me/5521986807805?text=Ol%C3%A1%20Dr.%20Francisco!%20Gostaria%20de%20agendar." target="_blank" rel="noopener noreferrer" class="btn-shimmer w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-gradient-to-r from-emeraldLive-500 to-emeraldLive-600 hover:from-emeraldLive-600 hover:to-emeraldLive-700 text-white font-extrabold px-8 py-4 rounded-2xl shadow-emeraldGlow hover:-translate-y-1 transition-all text-base">
-              <i class="fa-brands fa-whatsapp text-2xl"></i>
-              <span>Agendar pelo WhatsApp</span>
+            <a href="https://wa.me/5521986807805?text=Ol%C3%A1%20Dr.%20Francisco!" target="_blank" rel="noopener noreferrer" class="btn-shimmer w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-gradient-to-r from-emeraldLive-500 to-emeraldLive-600 hover:from-emeraldLive-600 hover:to-emeraldLive-700 text-white font-extrabold px-8 py-4 rounded-2xl shadow-emeraldGlow hover:-translate-y-1 transition-all text-base">
+              <i class="fa-brands fa-whatsapp text-2xl"></i><span>Agendar pelo WhatsApp</span>
             </a>
             <a href="#ferramentas" class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 bg-forest-800/80 hover:bg-forest-700 text-amberGold-300 border-2 border-amberGold-400/50 font-bold px-7 py-4 rounded-2xl shadow-lg hover:-translate-y-1 transition-all text-base">
-              <i class="fa-solid fa-compass"></i>
-              <span>Ferramentas &amp; Portfólio</span>
+              <i class="fa-solid fa-compass"></i><span>Ferramentas &amp; Portfólio</span>
             </a>
           </div>
 
@@ -192,40 +192,26 @@
           </div>
         </div>
 
-        <!-- ⭐ FOTO 1 — Retrato profissional em moldura circular -->
+        <!-- FOTO 1 — Retrato profissional -->
         <div class="lg:col-span-5 flex justify-center reveal-scale visible">
           <div class="relative w-full max-w-[420px] flex flex-col items-center pt-6">
-
-            <!-- Halo luminoso -->
             <div class="absolute inset-6 rounded-full bg-gradient-to-tr from-emeraldLive-500/40 via-amberGold-400/30 to-terracotta-500/30 blur-3xl pointer-events-none"></div>
 
-            <!-- Foto circular com moldura -->
             <div class="relative w-full aspect-square rounded-full overflow-hidden border-4 border-amberGold-400/80 shadow-vibrant bg-forest-900">
-              <img
-                src="https://i.imgur.com/y7BosdI.jpeg"
-                alt="Dr. Francisco de Paula Gonçalves de Lima — Nutricionista CRN-4 26101256"
-                class="w-full h-full object-cover object-top"
-                loading="eager"
-              >
+              <img src="https://i.imgur.com/y7BosdI.jpeg" alt="Dr. Francisco de Paula Gonçalves de Lima — Nutricionista CRN-4 26101256" class="w-full h-full object-cover object-top" loading="eager" />
               <div class="pointer-events-none absolute inset-0 rounded-full ring-4 ring-emeraldLive-500/40 ring-offset-4 ring-offset-forest-900"></div>
             </div>
 
-            <!-- Selo CRN -->
             <div class="absolute top-0 right-2 bg-forest-950/95 backdrop-blur border border-amberGold-400/60 text-amberGold-300 text-[10px] sm:text-xs font-extrabold px-3 py-1.5 rounded-full shadow-goldGlow flex items-center gap-1.5">
-              <i class="fa-solid fa-certificate"></i>
-              <span>CRN-4 26101256</span>
+              <i class="fa-solid fa-certificate"></i><span>CRN-4 26101256</span>
             </div>
 
-            <!-- Partículas -->
             <div class="pointer-events-none absolute -top-1 -left-2 w-4 h-4 rounded-full bg-amberGold-400 sparkle-1"></div>
             <div class="pointer-events-none absolute top-12 -right-3 w-3 h-3 rounded-full bg-emeraldLive-500 sparkle-2"></div>
             <div class="pointer-events-none absolute bottom-12 -left-3 w-3 h-3 rounded-full bg-terracotta-500 sparkle-3"></div>
 
-            <!-- Cartão flutuante -->
             <div class="animate-float-reverse absolute -bottom-3 left-1/2 -translate-x-1/2 w-[90%] sm:w-auto bg-cream-50 text-forest-950 px-5 py-3 rounded-2xl shadow-vibrant border-2 border-amberGold-400 flex items-center gap-3 whitespace-nowrap">
-              <div class="w-9 h-9 rounded-xl bg-emeraldLive-600 text-white flex items-center justify-center shrink-0">
-                <i class="fa-solid fa-heart-pulse"></i>
-              </div>
+              <div class="w-9 h-9 rounded-xl bg-emeraldLive-600 text-white flex items-center justify-center shrink-0"><i class="fa-solid fa-heart-pulse"></i></div>
               <div>
                 <p class="text-xs font-extrabold text-forest-950">Ciência + Acolhimento Humano</p>
                 <p class="text-[11px] font-semibold text-emeraldLive-700">Presencial no RJ &amp; Teleconsulta</p>
@@ -233,7 +219,6 @@
             </div>
           </div>
         </div>
-
       </div>
     </div>
 
@@ -244,114 +229,101 @@
     </div>
   </section>
 
-  <!-- ==================== 3. ESPECIALIDADES ==================== -->
+  <!-- ============ 3. ESPECIALIDADES ============ -->
   <section id="especialidades" class="py-16 sm:py-24 bg-cream-100 relative">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center max-w-3xl mx-auto mb-16 reveal">
         <span class="inline-flex items-center gap-2 text-xs font-extrabold uppercase tracking-widest text-terracotta-700 bg-amberGold-300/40 px-4 py-1.5 rounded-full border border-amberGold-500/40 mb-3">
-          <i class="fa-solid fa-seedling text-emeraldLive-600"></i>
-          <span>Cuidado Integral &amp; Baseado em Evidências</span>
+          <i class="fa-solid fa-seedling text-emeraldLive-600"></i><span>Cuidado Integral &amp; Baseado em Evidências</span>
         </span>
         <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-forest-950">Pilares do Atendimento &amp; Especialidades</h2>
-        <p class="text-forest-800/90 mt-4 text-base sm:text-lg leading-relaxed">Cada plano terapêutico é construído sob medida para sua fisiologia, exames laboratoriais, rotina e história de vida.</p>
+        <p class="text-forest-800/90 mt-4 text-base sm:text-lg leading-relaxed">Cada plano terapêutico é construído sob medida para sua fisiologia, exames, rotina e história de vida.</p>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
-        <!-- Pilar 1 -->
         <div class="card-vibrant reveal bg-cream-50 rounded-3xl p-7 border-2 border-emeraldLive-500/25 hover:border-emeraldLive-600 shadow-md hover:shadow-vibrant flex flex-col justify-between">
           <div>
             <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-forest-900 to-emeraldLive-700 p-3 flex items-center justify-center shadow-lg mb-5">
               <i class="fa-solid fa-flask-vial text-3xl text-amberGold-400"></i>
             </div>
             <h3 class="font-serif text-2xl font-bold text-forest-950 mb-3">1. Nutrição Clínica &amp; Funcional</h3>
-            <p class="text-sm text-forest-800/90 leading-relaxed">Planejamento alimentar individualizado baseado em bioquímica nutricional para controle de diabetes, hipertensão, dislipidemias, saúde intestinal e metabolismo.</p>
+            <p class="text-sm text-forest-800/90 leading-relaxed">Planejamento alimentar individualizado baseado em bioquímica nutricional e interpretação de exames para diabetes, hipertensão, dislipidemias, saúde intestinal e metabolismo.</p>
           </div>
           <div class="mt-6 pt-4 border-t border-amberGold-500/20 flex items-center justify-between text-xs font-extrabold text-emeraldLive-700">
-            <span>Bioquímica &amp; Exames</span>
-            <span class="px-2.5 py-1 rounded-full bg-emeraldLive-500/15">Individualizado</span>
+            <span>Bioquímica &amp; Exames</span><span class="px-2.5 py-1 rounded-full bg-emeraldLive-500/15">Individualizado</span>
           </div>
         </div>
 
-        <!-- Pilar 2 -->
         <div class="card-vibrant reveal bg-cream-50 rounded-3xl p-7 border-2 border-amberGold-500/45 hover:border-amberGold-600 shadow-md hover:shadow-goldGlow flex flex-col justify-between relative">
           <span class="absolute top-5 right-5 text-[11px] font-extrabold bg-forest-950 text-amberGold-300 px-3 py-1 rounded-full shadow">CFN 680/2021</span>
           <div>
             <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-amberGold-500 to-terracotta-600 p-3 flex items-center justify-center shadow-lg mb-5">
               <i class="fa-solid fa-leaf text-3xl text-white"></i>
             </div>
-            <h3 class="font-serif text-2xl font-bold text-forest-950 mb-3">2. Fitoterapia Clínica Aplicada</h3>
-            <p class="text-sm text-forest-800/90 leading-relaxed">Prescrição habilitada (<strong>FITO/CRN4/0151/2026</strong>) de plantas medicinais, chás terapêuticos, tinturas e extratos secos padronizados conforme Resolução CFN nº 680/2021.</p>
+            <h3 class="font-serif text-2xl font-bold text-forest-950 mb-3">2. Fitoterapia Clínica</h3>
+            <p class="text-sm text-forest-800/90 leading-relaxed">Prescrição habilitada (<strong>FITO/CRN4/0151/2026</strong>) de plantas medicinais, chás, tinturas e extratos secos conforme Resolução CFN nº 680/2021.</p>
           </div>
           <div class="mt-6 pt-4 border-t border-amberGold-500/20 flex items-center justify-between text-xs font-extrabold text-terracotta-700">
-            <span>FITO/CRN4/0151/2026</span>
-            <span class="px-2.5 py-1 rounded-full bg-amberGold-400/25">Habilitado</span>
+            <span>FITO/CRN4/0151/2026</span><span class="px-2.5 py-1 rounded-full bg-amberGold-400/25">Habilitado</span>
           </div>
         </div>
 
-        <!-- Pilar 3 -->
         <div class="card-vibrant reveal bg-cream-50 rounded-3xl p-7 border-2 border-emeraldLive-500/25 hover:border-emeraldLive-600 shadow-md hover:shadow-vibrant flex flex-col justify-between">
           <div>
             <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-emeraldLive-600 to-forest-900 p-3 flex items-center justify-center shadow-lg mb-5">
               <i class="fa-solid fa-dumbbell text-3xl text-amberGold-400"></i>
             </div>
             <h3 class="font-serif text-2xl font-bold text-forest-950 mb-3">3. Nutrição Esportiva</h3>
-            <p class="text-sm text-forest-800/90 leading-relaxed">Estratégias nutricionais periodizadas para hipertrofia, emagrecimento com preservação de massa magra, rendimento nos treinos e recuperação muscular.</p>
+            <p class="text-sm text-forest-800/90 leading-relaxed">Estratégias periodizadas para hipertrofia, emagrecimento com preservação de massa magra, rendimento e recuperação muscular.</p>
           </div>
           <div class="mt-6 pt-4 border-t border-amberGold-500/20 flex items-center justify-between text-xs font-extrabold text-emeraldLive-700">
-            <span>Hipertrofia &amp; Definição</span>
-            <span class="px-2.5 py-1 rounded-full bg-emeraldLive-500/15">Performance</span>
+            <span>Performance</span><span class="px-2.5 py-1 rounded-full bg-emeraldLive-500/15">Alta Performance</span>
           </div>
         </div>
 
-        <!-- Pilar 4 -->
         <div class="card-vibrant reveal bg-cream-50 rounded-3xl p-7 border-2 border-terracotta-500/25 hover:border-terracotta-600 shadow-md hover:shadow-vibrant flex flex-col justify-between">
           <div>
             <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-terracotta-600 to-amberGold-600 p-3 flex items-center justify-center shadow-lg mb-5">
               <i class="fa-solid fa-heart-pulse text-3xl text-white"></i>
             </div>
             <h3 class="font-serif text-2xl font-bold text-forest-950 mb-3">4. Saúde do Idoso &amp; Geriatria</h3>
-            <p class="text-sm text-forest-800/90 leading-relaxed">Avaliação nutricional geriátrica completa, prevenção da sarcopenia, suporte proteico adequado, saúde óssea e cognitiva para manter autonomia.</p>
+            <p class="text-sm text-forest-800/90 leading-relaxed">Avaliação geriátrica completa (MAN), prevenção de sarcopenia, suporte proteico, saúde óssea e cognitiva para manter autonomia.</p>
           </div>
           <div class="mt-6 pt-4 border-t border-amberGold-500/20 flex items-center justify-between text-xs font-extrabold text-terracotta-700">
-            <span>Longevidade Ativa</span>
-            <span class="px-2.5 py-1 rounded-full bg-terracotta-500/15">Antissarcopenia</span>
+            <span>Longevidade Ativa</span><span class="px-2.5 py-1 rounded-full bg-terracotta-500/15">Antissarcopenia</span>
           </div>
         </div>
 
-        <!-- Pilar 5 -->
         <div class="card-vibrant reveal bg-cream-50 rounded-3xl p-7 border-2 border-emeraldLive-500/25 hover:border-emeraldLive-600 shadow-md hover:shadow-vibrant flex flex-col justify-between">
           <div>
             <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-forest-900 to-forest-700 p-3 flex items-center justify-center shadow-lg mb-5">
               <i class="fa-solid fa-utensils text-3xl text-amberGold-400"></i>
             </div>
             <h3 class="font-serif text-2xl font-bold text-forest-950 mb-3">5. Reeducação Alimentar</h3>
-            <p class="text-sm text-forest-800/90 leading-relaxed">Construção de autonomia alimentar sem terrorismo nutricional ou dietas restritivas insustentáveis. Respeito à cultura, preferências e orçamento familiar.</p>
+            <p class="text-sm text-forest-800/90 leading-relaxed">Construção de autonomia alimentar sem terrorismo nutricional nem dietas restritivas insustentáveis. Respeito à cultura e preferências.</p>
           </div>
           <div class="mt-6 pt-4 border-t border-amberGold-500/20 flex items-center justify-between text-xs font-extrabold text-emeraldLive-700">
-            <span>Sem Restrição Extrema</span>
-            <span class="px-2.5 py-1 rounded-full bg-emeraldLive-500/15">Sustentável</span>
+            <span>Sem Restrição Extrema</span><span class="px-2.5 py-1 rounded-full bg-emeraldLive-500/15">Sustentável</span>
           </div>
         </div>
 
-        <!-- Pilar 6 -->
         <div class="card-vibrant reveal bg-cream-50 rounded-3xl p-7 border-2 border-amberGold-500/45 hover:border-amberGold-600 shadow-md hover:shadow-goldGlow flex flex-col justify-between">
           <div>
             <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-amberGold-500 to-emeraldLive-600 p-3 flex items-center justify-center shadow-lg mb-5">
               <i class="fa-solid fa-pills text-3xl text-white"></i>
             </div>
             <h3 class="font-serif text-2xl font-bold text-forest-950 mb-3">6. Suplementação Baseada em Evidências</h3>
-            <p class="text-sm text-forest-800/90 leading-relaxed">Ajuste preciso de vitaminas, minerais, aminoácidos e compostos bioativos utilizando DRIs, corrigindo carências reais com segurança e biodisponibilidade.</p>
+            <p class="text-sm text-forest-800/90 leading-relaxed">Ajuste preciso de vitaminas, minerais e compostos bioativos com base em DRIs, corrigindo carências reais com segurança.</p>
           </div>
           <div class="mt-6 pt-4 border-t border-amberGold-500/20 flex items-center justify-between text-xs font-extrabold text-amberGold-600">
-            <span>Micronutrientes</span>
-            <span class="px-2.5 py-1 rounded-full bg-amberGold-400/25">Ciência Pura</span>
+            <span>Micronutrientes</span><span class="px-2.5 py-1 rounded-full bg-amberGold-400/25">Ciência Pura</span>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ==================== 4. FERRAMENTAS DIGITAIS ==================== -->
+  <!-- ============ 4. FERRAMENTAS DIGITAIS ============ -->
   <section id="ferramentas" class="relative py-20 sm:py-28 bg-gradient-to-b from-forest-950 via-forest-900 to-forest-950 text-white overflow-hidden">
     <div class="absolute top-24 left-10 w-80 h-80 bg-emeraldLive-500/15 rounded-full blur-3xl pointer-events-none"></div>
     <div class="absolute bottom-20 right-10 w-96 h-96 bg-amberGold-500/15 rounded-full blur-3xl pointer-events-none"></div>
@@ -359,7 +331,430 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
       <div class="text-center max-w-3xl mx-auto mb-16 reveal">
         <span class="inline-flex items-center gap-2 text-xs font-extrabold uppercase tracking-widest text-amberGold-300 bg-amberGold-500/15 px-4 py-1.5 rounded-full border border-amberGold-400/35 mb-3">
-          <i class="fa-solid fa-laptop-medical"></i>
-          <span>Portais Oficiais &amp; Tecnologia Nutricional</span>
+          <i class="fa-solid fa-laptop-medical"></i><span>Portais Oficiais &amp; Tecnologia Nutricional</span>
         </span>
-        <h2 class="font
+        <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-white">Ecossistema Digital &amp; Ferramentas</h2>
+        <p class="text-cream-100/85 mt-4 text-base sm:text-lg leading-relaxed">Explore minhas plataformas oficiais, materiais educativos e a calculadora interativa de DRIs.</p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <div class="card-vibrant reveal bg-gradient-to-b from-forest-800/90 to-forest-950/95 rounded-3xl p-7 sm:p-8 border-2 border-amberGold-400/40 hover:border-amberGold-400 shadow-vibrant flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between gap-3 mb-6">
+              <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-amberGold-400 to-terracotta-600 p-3 flex items-center justify-center shadow-goldGlow">
+                <i class="fa-solid fa-briefcase-medical text-3xl text-forest-950"></i>
+              </div>
+              <span class="px-3 py-1 rounded-full bg-amberGold-400/20 border border-amberGold-400/40 text-amberGold-300 text-xs font-bold">Portal Clínico</span>
+            </div>
+            <h3 class="font-serif text-2xl sm:text-3xl font-bold text-white mb-3">Portfólio &amp; Atendimento Clínico</h3>
+            <p class="text-sm text-cream-100/85 leading-relaxed mb-6">Meu portal principal com protocolos, artigos sobre fitoterapia e detalhes da atuação no Rio de Janeiro.</p>
+          </div>
+          <div class="space-y-4 pt-4 border-t border-white/15">
+            <p class="text-[11px] font-mono text-amberGold-300/90 truncate">dr-francisco-lima-nutricionista.infinityfree.io</p>
+            <a href="https://dr-francisco-lima-nutricionista.infinityfree.io/" target="_blank" rel="noopener noreferrer" class="btn-shimmer w-full inline-flex items-center justify-center gap-2.5 bg-gradient-to-r from-amberGold-500 to-terracotta-600 hover:from-amberGold-400 hover:to-terracotta-500 text-white font-extrabold py-3.5 px-5 rounded-2xl shadow-lg">
+              <span>Visitar Portfólio</span><i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="card-vibrant reveal bg-gradient-to-b from-forest-800/90 to-forest-950/95 rounded-3xl p-7 sm:p-8 border-2 border-emeraldLive-500/45 hover:border-emeraldLive-400 shadow-vibrant flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between gap-3 mb-6">
+              <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-emeraldLive-400 to-emeraldLive-700 p-3 flex items-center justify-center shadow-emeraldGlow">
+                <i class="fa-solid fa-calculator text-3xl text-forest-950"></i>
+              </div>
+              <span class="px-3 py-1 rounded-full bg-emeraldLive-500/20 border border-emeraldLive-400/40 text-emerald-200 text-xs font-bold">App Interativo</span>
+            </div>
+            <h3 class="font-serif text-2xl sm:text-3xl font-bold text-white mb-3">DRI · Calculadora de Micronutrientes</h3>
+            <p class="text-sm text-cream-100/85 leading-relaxed mb-6">Consulta rápida das <strong>Dietary Reference Intakes</strong>: necessidades diárias por idade, sexo, gestação e lactação.</p>
+          </div>
+          <div class="space-y-4 pt-4 border-t border-white/15">
+            <p class="text-[11px] font-mono text-emerald-300/90 truncate">padovani-dri.onrender.com</p>
+            <a href="https://padovani-dri.onrender.com/" target="_blank" rel="noopener noreferrer" class="btn-shimmer w-full inline-flex items-center justify-center gap-2.5 bg-gradient-to-r from-emeraldLive-500 to-emeraldLive-600 hover:from-emeraldLive-400 hover:to-emeraldLive-500 text-white font-extrabold py-3.5 px-5 rounded-2xl shadow-lg">
+              <span>Abrir Calculadora DRI</span><i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="card-vibrant reveal bg-gradient-to-b from-forest-800/90 to-forest-950/95 rounded-3xl p-7 sm:p-8 border-2 border-terracotta-500/45 hover:border-terracotta-400 shadow-vibrant flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between gap-3 mb-6">
+              <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-terracotta-500 to-amberGold-500 p-3 flex items-center justify-center shadow-goldGlow">
+                <i class="fa-solid fa-hand-holding-heart text-3xl text-forest-950"></i>
+              </div>
+              <span class="px-3 py-1 rounded-full bg-terracotta-500/20 border border-terracotta-400/40 text-orange-200 text-xs font-bold">Hub Oficial</span>
+            </div>
+            <h3 class="font-serif text-2xl sm:text-3xl font-bold text-white mb-3">Atencioso Francisco Lima</h3>
+            <p class="text-sm text-cream-100/85 leading-relaxed mb-6">Página institucional dedicada ao atendimento atencioso, filosofia da Nutrição Integrativa e canais de acolhimento.</p>
+          </div>
+          <div class="space-y-4 pt-4 border-t border-white/15">
+            <p class="text-[11px] font-mono text-orange-200/90 truncate">hgl23rj.github.io/Atencioso-Francisco-Lima-Nutricionista</p>
+            <a href="https://hgl23rj.github.io/Atencioso-Francisco-Lima-Nutricionista/" target="_blank" rel="noopener noreferrer" class="btn-shimmer w-full inline-flex items-center justify-center gap-2.5 bg-gradient-to-r from-terracotta-600 to-amberGold-500 hover:from-terracotta-500 hover:to-amberGold-400 text-white font-extrabold py-3.5 px-5 rounded-2xl shadow-lg">
+              <span>Acessar Página</span><i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 5. SOBRE COM FOTO 2 ============ -->
+  <section id="sobre" class="py-16 sm:py-24 bg-cream-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+
+        <!-- Coluna esquerda -->
+        <div class="lg:col-span-6 space-y-6 reveal">
+          <!-- FOTO 2 — Consultório -->
+          <div class="relative rounded-3xl overflow-hidden border-4 border-amberGold-400/60 shadow-vibrant">
+            <img src="https://i.imgur.com/DNO0S51.jpeg" alt="Dr. Francisco de Paula em atendimento nutricional no Rio de Janeiro" class="w-full h-72 sm:h-80 object-cover object-center" loading="lazy" />
+            <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-forest-950/95 via-forest-950/70 to-transparent p-4 sm:p-5">
+              <p class="text-amberGold-300 text-xs font-extrabold uppercase tracking-widest">Consultório · Rio de Janeiro</p>
+              <p class="text-white text-sm sm:text-base font-bold mt-0.5">Atendimento presencial humanizado</p>
+            </div>
+            <div class="absolute top-3 right-3 bg-forest-950/95 border border-emeraldLive-500/60 text-emerald-200 text-[10px] sm:text-xs font-extrabold px-2.5 py-1 rounded-full flex items-center gap-1.5 shadow-lg">
+              <i class="fa-solid fa-id-card"></i><span>CRN-4 26101256</span>
+            </div>
+          </div>
+
+          <span class="inline-flex items-center gap-2 text-xs font-extrabold uppercase tracking-widest text-forest-900 bg-emeraldLive-500/20 px-4 py-1.5 rounded-full border border-emeraldLive-600/30">
+            <i class="fa-solid fa-user-doctor text-emeraldLive-700"></i><span>Trajetória Clínica &amp; Humana</span>
+          </span>
+
+          <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-forest-950 leading-tight">
+            Sobre o Dr. Francisco de Paula Gonçalves de Lima
+          </h2>
+
+          <p class="text-forest-900/90 text-base leading-relaxed">
+            Sou nutricionista clínico no Rio de Janeiro e acredito profundamente na escuta ativa, no respeito à individualidade biológica e na ciência aplicada com empatia. Minha atuação integra o cuidado clínico particular à experiência na <strong>Atenção Primária à Saúde (SUS)</strong> no Rio de Janeiro, onde acompanho pacientes em todas as fases da vida.
+          </p>
+
+          <p class="text-forest-900/90 text-base leading-relaxed">
+            Com habilitação oficial pelo Conselho Regional de Nutricionistas para prescrição de <strong>Fitoterapia (FITO/CRN4/0151/2026)</strong>, utilizo plantas medicinais, alimentos funcionais e suplementação baseada em evidências como aliados poderosos na prevenção e no tratamento de desequilíbrios metabólicos.
+          </p>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+            <div class="bg-forest-950 text-white p-5 rounded-2xl border-2 border-emeraldLive-500 shadow-lg flex items-center gap-4">
+              <div class="w-12 h-12 rounded-xl bg-emeraldLive-500 text-forest-950 flex items-center justify-center text-xl shrink-0 font-bold">
+                <i class="fa-solid fa-id-card"></i>
+              </div>
+              <div>
+                <span class="block text-[11px] font-bold uppercase tracking-wider text-emerald-300">Registro Profissional</span>
+                <strong class="text-base font-extrabold text-white">CRN-4: 26101256</strong>
+              </div>
+            </div>
+            <div class="bg-forest-950 text-white p-5 rounded-2xl border-2 border-amberGold-400 shadow-lg flex items-center gap-4">
+              <div class="w-12 h-12 rounded-xl bg-amberGold-400 text-forest-950 flex items-center justify-center text-xl shrink-0 font-bold">
+                <i class="fa-solid fa-leaf"></i>
+              </div>
+              <div>
+                <span class="block text-[11px] font-bold uppercase tracking-wider text-amberGold-300">Habilitação Fitoterapia</span>
+                <strong class="text-base font-extrabold text-white">FITO/CRN4/0151/2026</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Formação -->
+        <div class="lg:col-span-6 reveal bg-cream-100 rounded-3xl p-7 sm:p-9 border-2 border-amberGold-500/35 shadow-vibrant">
+          <h3 class="font-serif text-2xl sm:text-3xl font-bold text-forest-950 mb-7 flex items-center gap-3">
+            <span class="w-11 h-11 rounded-xl bg-forest-950 text-amberGold-400 flex items-center justify-center text-lg"><i class="fa-solid fa-graduation-cap"></i></span>
+            <span>Formação Acadêmica &amp; Atuação</span>
+          </h3>
+
+          <div class="space-y-6 relative before:absolute before:inset-y-2 before:left-4 before:w-1 before:rounded-full before:bg-gradient-to-b before:from-emeraldLive-500 before:via-amberGold-500 before:to-terracotta-600">
+            <div class="relative pl-12">
+              <span class="absolute left-1.5 top-1.5 w-6 h-6 rounded-full bg-emeraldLive-600 border-4 border-cream-100 shadow"></span>
+              <span class="inline-block text-[11px] font-extrabold uppercase tracking-wider text-emeraldLive-700 bg-emeraldLive-500/15 px-2.5 py-0.5 rounded-full">Graduação</span>
+              <h4 class="text-lg font-extrabold text-forest-950 mt-1">Bacharelado em Nutrição</h4>
+              <p class="text-sm font-bold text-forest-800">Universidade Estácio de Sá (Unesa — Rio de Janeiro)</p>
+              <p class="text-xs text-forest-800/85 mt-1 leading-relaxed">Sólida formação clínica, dietoterápica e em saúde coletiva.</p>
+            </div>
+            <div class="relative pl-12">
+              <span class="absolute left-1.5 top-1.5 w-6 h-6 rounded-full bg-amberGold-500 border-4 border-cream-100 shadow"></span>
+              <span class="inline-block text-[11px] font-extrabold uppercase tracking-wider text-amberGold-600 bg-amberGold-400/25 px-2.5 py-0.5 rounded-full">Pós-Graduação · 400h</span>
+              <h4 class="text-lg font-extrabold text-forest-950 mt-1">Fitoterapia e Suplementação Nutricional</h4>
+              <p class="text-sm font-bold text-forest-800">Faculdade Focus</p>
+              <p class="text-xs text-forest-800/85 mt-1 leading-relaxed">Prescrição clínica segura de plantas medicinais e suplementos (Resolução CFN nº 680/2021).</p>
+            </div>
+            <div class="relative pl-12">
+              <span class="absolute left-1.5 top-1.5 w-6 h-6 rounded-full bg-terracotta-600 border-4 border-cream-100 shadow"></span>
+              <span class="inline-block text-[11px] font-extrabold uppercase tracking-wider text-terracotta-700 bg-terracotta-500/15 px-2.5 py-0.5 rounded-full">Qualificação Profissional</span>
+              <h4 class="text-lg font-extrabold text-forest-950 mt-1">Plantas Medicinais e Fitoterápicos na Atenção Básica</h4>
+              <p class="text-sm font-bold text-forest-800">Fiocruz / Ministério da Saúde</p>
+              <p class="text-xs text-forest-800/85 mt-1 leading-relaxed">Uso racional, ético e integrado de plantas medicinais no cuidado em saúde.</p>
+            </div>
+            <div class="relative pl-12">
+              <span class="absolute left-1.5 top-1.5 w-6 h-6 rounded-full bg-forest-900 border-4 border-cream-100 shadow"></span>
+              <span class="inline-block text-[11px] font-extrabold uppercase tracking-wider text-forest-900 bg-forest-900/10 px-2.5 py-0.5 rounded-full">Prática Clínica</span>
+              <h4 class="text-lg font-extrabold text-forest-950 mt-1">Atendimento Particular &amp; Atenção Primária (SUS)</h4>
+              <p class="text-sm font-bold text-forest-800">Rio de Janeiro — RJ</p>
+              <p class="text-xs text-forest-800/85 mt-1 leading-relaxed">Acompanhamento humanizado em prevenção, saúde do idoso e doenças crônicas.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 6. COMO FUNCIONA ============ -->
+  <section id="como-funciona" class="py-16 sm:py-24 bg-cream-200/70 border-y border-amberGold-500/25">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+        <span class="inline-flex items-center gap-2 text-xs font-extrabold uppercase tracking-widest text-forest-950 bg-amberGold-400/40 px-4 py-1.5 rounded-full mb-3">
+          <i class="fa-solid fa-route text-terracotta-600"></i><span>Jornada do Paciente</span>
+        </span>
+        <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-forest-950">Como Funciona a Consulta</h2>
+        <p class="text-forest-800/90 mt-4 text-base sm:text-lg leading-relaxed">Um processo transparente, acolhedor e estruturado em 4 etapas.</p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-7">
+        <div class="card-vibrant reveal bg-cream-50 rounded-3xl p-7 border-2 border-emeraldLive-500/30 shadow-md">
+          <div class="w-12 h-12 rounded-2xl bg-forest-950 text-amberGold-400 font-serif text-2xl font-bold flex items-center justify-center shadow mb-5">01</div>
+          <h3 class="font-serif text-2xl font-bold text-forest-950 mb-2.5">Escuta &amp; Anamnese</h3>
+          <p class="text-sm text-forest-800/90 leading-relaxed">Conversa detalhada sobre histórico, rotina, sono, digestão, preferências e objetivos.</p>
+        </div>
+        <div class="card-vibrant reveal bg-cream-50 rounded-3xl p-7 border-2 border-amberGold-500/40 shadow-md">
+          <div class="w-12 h-12 rounded-2xl bg-emeraldLive-600 text-white font-serif text-2xl font-bold flex items-center justify-center shadow mb-5">02</div>
+          <h3 class="font-serif text-2xl font-bold text-forest-950 mb-2.5">Avaliação Física &amp; Bioquímica</h3>
+          <p class="text-sm text-forest-800/90 leading-relaxed">Análise de exames recentes, sintomas nutricionais e avaliação antropométrica completa.</p>
+        </div>
+        <div class="card-vibrant reveal bg-cream-50 rounded-3xl p-7 border-2 border-terracotta-500/35 shadow-md">
+          <div class="w-12 h-12 rounded-2xl bg-amberGold-500 text-forest-950 font-serif text-2xl font-bold flex items-center justify-center shadow mb-5">03</div>
+          <h3 class="font-serif text-2xl font-bold text-forest-950 mb-2.5">Plano &amp; Fitoterapia</h3>
+          <p class="text-sm text-forest-800/90 leading-relaxed">Plano alimentar prático, lista de substituições e prescrição fitoterápica quando indicada.</p>
+        </div>
+        <div class="card-vibrant reveal bg-cream-50 rounded-3xl p-7 border-2 border-forest-800/30 shadow-md">
+          <div class="w-12 h-12 rounded-2xl bg-terracotta-600 text-white font-serif text-2xl font-bold flex items-center justify-center shadow mb-5">04</div>
+          <h3 class="font-serif text-2xl font-bold text-forest-950 mb-2.5">Acompanhamento Contínuo</h3>
+          <p class="text-sm text-forest-800/90 leading-relaxed">Suporte para dúvidas, ajustes conforme evolução e monitoramento da sua saúde.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 7. CONTATO ============ -->
+  <section id="contato" class="py-16 sm:py-24 bg-cream-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="bg-gradient-to-br from-forest-950 via-forest-900 to-forest-800 rounded-[2rem] p-6 sm:p-10 lg:p-14 border-2 border-amberGold-400/40 shadow-vibrant text-white">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-start">
+
+          <div class="lg:col-span-5 space-y-6 reveal">
+            <span class="inline-flex items-center gap-2 text-xs font-extrabold uppercase tracking-widest text-amberGold-300 bg-amberGold-500/15 px-4 py-1.5 rounded-full border border-amberGold-400/30">
+              <i class="fa-solid fa-paper-plane"></i><span>Atendimento Rápido</span>
+            </span>
+            <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight">Enviar e Solicitar Contato</h2>
+            <p class="text-cream-100/85 text-sm sm:text-base leading-relaxed">Dê o primeiro passo para transformar sua saúde com acolhimento e ciência.</p>
+
+            <div class="space-y-4 pt-2">
+              <a href="https://wa.me/5521986807805" target="_blank" rel="noopener noreferrer" class="btn-shimmer flex items-center gap-4 p-4 rounded-2xl bg-gradient-to-r from-emeraldLive-600 to-emeraldLive-500 hover:from-emeraldLive-500 hover:to-emeraldLive-400 text-white shadow-emeraldGlow transition-all group">
+                <div class="w-12 h-12 rounded-xl bg-forest-950/30 flex items-center justify-center text-2xl shrink-0"><i class="fa-brands fa-whatsapp"></i></div>
+                <div>
+                  <span class="block text-xs font-bold uppercase tracking-wider text-emerald-100">WhatsApp Direto</span>
+                  <strong class="text-lg font-extrabold text-white">(21) 98680-7805</strong>
+                </div>
+              </a>
+
+              <div class="p-4 rounded-2xl bg-white/10 border border-white/15">
+                <div class="flex items-center gap-3">
+                  <div class="w-10 h-10 rounded-xl bg-amberGold-400 text-forest-950 flex items-center justify-center text-base shrink-0"><i class="fa-solid fa-envelope"></i></div>
+                  <div class="min-w-0 flex-1">
+                    <span class="block text-xs font-bold text-amberGold-300">E-mails</span>
+                    <a href="mailto:depaulalima958@gmail.com" class="block text-sm font-bold text-white hover:text-amberGold-300 truncate">depaulalima958@gmail.com</a>
+                    <a href="mailto:limadepaula470@gmail.com" class="block text-sm font-bold text-white hover:text-amberGold-300 truncate">limadepaula470@gmail.com</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="flex items-center gap-4 p-4 rounded-2xl bg-white/10 border border-white/15">
+                <div class="w-10 h-10 rounded-xl bg-terracotta-600 text-white flex items-center justify-center text-base shrink-0"><i class="fa-solid fa-location-dot"></i></div>
+                <div>
+                  <span class="block text-xs font-bold text-orange-200">Atendimento</span>
+                  <strong class="text-sm font-bold text-white">Rio de Janeiro – RJ · Presencial &amp; Online</strong>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="lg:col-span-7 reveal bg-cream-50 text-forest-950 rounded-3xl p-6 sm:p-9 border-2 border-amberGold-400 shadow-2xl">
+            <h3 class="font-serif text-2xl sm:text-3xl font-bold text-forest-950 mb-1.5">Solicite seu Atendimento</h3>
+            <p class="text-xs sm:text-sm text-forest-800/80 mb-6">Sua mensagem será montada automaticamente e enviada para o WhatsApp (21) 98680-7805.</p>
+
+            <form id="whatsapp-form" class="space-y-5">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label for="nome" class="block text-xs font-extrabold uppercase tracking-wider text-forest-900 mb-1.5">Nome Completo *</label>
+                  <input type="text" id="nome" required placeholder="Ex: Ana Beatriz Souza" class="w-full px-4 py-3.5 rounded-xl bg-white border-2 border-forest-900/15 focus:border-emeraldLive-600 focus:ring-2 focus:ring-emeraldLive-500/20 outline-none text-sm font-medium" />
+                </div>
+                <div>
+                  <label for="objetivo" class="block text-xs font-extrabold uppercase tracking-wider text-forest-900 mb-1.5">Objetivo Principal *</label>
+                  <select id="objetivo" class="w-full px-4 py-3.5 rounded-xl bg-white border-2 border-forest-900/15 focus:border-emeraldLive-600 outline-none text-sm font-semibold">
+                    <option value="Emagrecimento Saudável">Emagrecimento Saudável</option>
+                    <option value="Fitoterapia Clínica">Fitoterapia Clínica</option>
+                    <option value="Saúde do Idoso & Geriatria">Saúde do Idoso &amp; Geriatria</option>
+                    <option value="Nutrição Esportiva">Nutrição Esportiva</option>
+                    <option value="Clínica Geral">Clínica Geral</option>
+                  </select>
+                </div>
+              </div>
+
+              <div>
+                <span class="block text-xs font-extrabold uppercase tracking-wider text-forest-900 mb-2">Modalidade *</span>
+                <div class="grid grid-cols-2 gap-3">
+                  <label class="cursor-pointer">
+                    <input type="radio" name="modalidade" value="Presencial (RJ)" checked class="peer sr-only" />
+                    <div class="text-center py-3 px-4 rounded-xl bg-white border-2 border-forest-900/15 peer-checked:border-emeraldLive-600 peer-checked:bg-emeraldLive-500/15 text-xs sm:text-sm font-bold text-forest-800/75 peer-checked:text-forest-950">
+                      <i class="fa-solid fa-hospital-user mr-1.5 text-emeraldLive-600"></i>Presencial
+                    </div>
+                  </label>
+                  <label class="cursor-pointer">
+                    <input type="radio" name="modalidade" value="Online" class="peer sr-only" />
+                    <div class="text-center py-3 px-4 rounded-xl bg-white border-2 border-forest-900/15 peer-checked:border-amberGold-500 peer-checked:bg-amberGold-400/20 text-xs sm:text-sm font-bold text-forest-800/75 peer-checked:text-forest-950">
+                      <i class="fa-solid fa-video mr-1.5 text-amberGold-600"></i>Online
+                    </div>
+                  </label>
+                </div>
+              </div>
+
+              <div>
+                <label for="mensagem" class="block text-xs font-extrabold uppercase tracking-wider text-forest-900 mb-1.5">Mensagem (Opcional)</label>
+                <textarea id="mensagem" rows="3" placeholder="Conte brevemente sobre sua rotina ou o que busca na consulta..." class="w-full px-4 py-3 rounded-xl bg-white border-2 border-forest-900/15 focus:border-emeraldLive-600 outline-none text-sm font-medium resize-none"></textarea>
+              </div>
+
+              <div id="form-feedback" class="hidden p-3.5 rounded-xl bg-emeraldLive-500/15 border border-emeraldLive-600 text-forest-950 text-xs font-bold"></div>
+
+              <button type="submit" class="btn-shimmer w-full flex items-center justify-center gap-3 bg-gradient-to-r from-emeraldLive-600 via-emeraldLive-500 to-amberGold-500 hover:from-emeraldLive-700 hover:to-amberGold-600 text-white font-extrabold py-4 px-6 rounded-2xl shadow-xl hover:-translate-y-0.5 transition-all text-sm sm:text-base">
+                <i class="fa-brands fa-whatsapp text-2xl"></i>
+                <span>Enviar no WhatsApp Agora</span>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 8. RODAPÉ ============ -->
+  <footer class="bg-forest-950 text-cream-100 border-t-2 border-amberGold-400/30 pt-14 pb-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pb-10 border-b border-white/15">
+        <div class="lg:col-span-2 space-y-3">
+          <div class="flex items-center gap-3">
+            <div class="w-11 h-11 rounded-2xl bg-gradient-to-br from-emeraldLive-500 to-amberGold-500 flex items-center justify-center text-forest-950 font-bold text-lg shadow">
+              <i class="fa-solid fa-leaf"></i>
+            </div>
+            <div>
+              <h3 class="font-serif text-xl sm:text-2xl font-bold text-white">Dr. Francisco de Paula Gonçalves de Lima</h3>
+              <p class="text-xs font-bold text-amberGold-300">Nutricionista – CRN-4 26101256 | FITO/CRN4/0151/2026</p>
+            </div>
+          </div>
+          <p class="text-sm text-cream-100/80 max-w-md leading-relaxed pt-1">Nutrição Integrativa, Clínica, Esportiva, Geriátrica e Fitoterapia Clínica no Rio de Janeiro. Atendimento contínuo, ético e humanizado.</p>
+        </div>
+
+        <div>
+          <h4 class="text-xs font-extrabold uppercase tracking-wider text-amberGold-300 mb-4">Portais</h4>
+          <ul class="space-y-2.5 text-sm">
+            <li><a href="https://dr-francisco-lima-nutricionista.infinityfree.io/" target="_blank" rel="noopener noreferrer" class="hover:text-amberGold-300 inline-flex items-center gap-1.5">Portfólio Clínico <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i></a></li>
+            <li><a href="https://padovani-dri.onrender.com/" target="_blank" rel="noopener noreferrer" class="hover:text-amberGold-300 inline-flex items-center gap-1.5">DRI Calculadora <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i></a></li>
+            <li><a href="https://hgl23rj.github.io/Atencioso-Francisco-Lima-Nutricionista/" target="_blank" rel="noopener noreferrer" class="hover:text-amberGold-300 inline-flex items-center gap-1.5">Hub GitHub <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i></a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-xs font-extrabold uppercase tracking-wider text-amberGold-300 mb-4">Contato</h4>
+          <ul class="space-y-2.5 text-sm">
+            <li><a href="https://wa.me/5521986807805" target="_blank" rel="noopener noreferrer" class="hover:text-emerald-300 flex items-center gap-2 font-bold"><i class="fa-brands fa-whatsapp text-emeraldLive-500 text-base"></i>(21) 98680-7805</a></li>
+            <li class="flex items-center gap-2 text-xs break-all"><i class="fa-solid fa-envelope text-amberGold-400 shrink-0"></i><a href="mailto:depaulalima958@gmail.com" class="hover:text-amberGold-300">depaulalima958@gmail.com</a></li>
+            <li class="flex items-center gap-2 text-xs break-all"><i class="fa-solid fa-envelope text-amberGold-400 shrink-0"></i><a href="mailto:limadepaula470@gmail.com" class="hover:text-amberGold-300">limadepaula470@gmail.com</a></li>
+            <li class="flex items-center gap-2 text-xs"><i class="fa-solid fa-location-dot text-terracotta-500 shrink-0"></i><span>Rio de Janeiro - RJ</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="pt-7 flex flex-col lg:flex-row items-center justify-between gap-4 text-xs text-cream-100/75 text-center lg:text-left">
+        <p class="font-semibold text-cream-100">Dr. Francisco de Paula Gonçalves de Lima · CRN-4 26101256 | FITO/CRN4/0151/2026 | Rio de Janeiro - RJ</p>
+        <p>© 2026 · Todos os direitos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============ 9. BOTÃO FLUTUANTE WHATSAPP ============ -->
+  <div class="fixed bottom-5 right-5 z-50 flex items-center gap-3 group">
+    <span class="hidden md:inline-block bg-forest-950 text-amberGold-300 border border-amberGold-400/50 text-xs font-extrabold px-3.5 py-2 rounded-full shadow-xl group-hover:scale-105 transition-transform">Fale com seu nutricionista</span>
+    <a href="https://wa.me/5521986807805" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" class="whatsapp-ring relative flex items-center justify-center w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-gradient-to-br from-emeraldLive-500 to-emeraldLive-700 hover:from-emeraldLive-400 hover:to-emeraldLive-600 text-white shadow-2xl hover:scale-110 transition-all">
+      <i class="fa-brands fa-whatsapp text-3xl"></i>
+    </a>
+  </div>
+
+  <!-- ============ 10. JAVASCRIPT ============ -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+      const mobileMenu = document.getElementById('mobile-menu');
+      const menuIcon = document.getElementById('menu-icon');
+      const mobileLinks = document.querySelectorAll('.mobile-link');
+
+      if (mobileMenuBtn && mobileMenu) {
+        mobileMenuBtn.addEventListener('click', () => {
+          const isHidden = mobileMenu.classList.contains('hidden');
+          mobileMenu.classList.toggle('hidden');
+          menuIcon.className = isHidden ? 'fa-solid fa-xmark text-xl' : 'fa-solid fa-bars text-xl';
+        });
+        mobileLinks.forEach(link => {
+          link.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+            menuIcon.className = 'fa-solid fa-bars text-xl';
+          });
+        });
+      }
+
+      const revealElements = document.querySelectorAll('.reveal, .reveal-scale');
+      if ('IntersectionObserver' in window) {
+        const observer = new IntersectionObserver((entries, obs) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+              obs.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+        revealElements.forEach(el => observer.observe(el));
+      } else {
+        revealElements.forEach(el => el.classList.add('visible'));
+      }
+
+      const whatsappForm = document.getElementById('whatsapp-form');
+      const feedbackBox = document.getElementById('form-feedback');
+      if (whatsappForm) {
+        whatsappForm.addEventListener('submit', (e) => {
+          e.preventDefault();
+          try {
+            const nome = document.getElementById('nome').value.trim();
+            const objetivo = document.getElementById('objetivo').value;
+            const modalidadeEl = document.querySelector('input[name="modalidade"]:checked');
+            const modalidade = modalidadeEl ? modalidadeEl.value : 'A definir';
+            const mensagemExtra = document.getElementById('mensagem').value.trim();
+
+            if (!nome) {
+              feedbackBox.textContent = 'Por favor, preencha o seu nome para continuar.';
+              feedbackBox.classList.remove('hidden');
+              return;
+            }
+            let texto = `Olá Dr. Francisco! Gostaria de solicitar contato para atendimento nutricional.\n\n`;
+            texto += `*Nome:* ${nome}\n*Objetivo:* ${objetivo}\n*Modalidade:* ${modalidade}\n`;
+            if (mensagemExtra) texto += `*Mensagem:* ${mensagemExtra}\n`;
+
+            feedbackBox.textContent = 'Abrindo o WhatsApp (21) 98680-7805...';
+            feedbackBox.classList.remove('hidden');
+            window.open(`https://wa.me/5521986807805?text=${encodeURIComponent(texto)}`, '_blank', 'noopener,noreferrer');
+          } catch (err) {
+            console.error(err);
+            feedbackBox.textContent = 'Clique no botão verde do WhatsApp para falar diretamente.';
+            feedbackBox.classList.remove('hidden');
+          }
+        });
+      }
+    });
+  </script>
+</body>
+</html>
